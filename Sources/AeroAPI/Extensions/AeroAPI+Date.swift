@@ -3,8 +3,8 @@ import Foundation
 #if !os(macOS)
 extension Date {
     public static func day(_ day: Int,
-                  of year: Int,
-                  in timezone: TimeZone! = TimeZone(secondsFromGMT: 0)) throws -> (Date, Date) {
+                        of year: Int,
+                        in timezone: TimeZone! = TimeZone(secondsFromGMT: 0)) throws -> (Date, Date) {
         var calendar = Calendar.current
         calendar.timeZone = timezone
         
@@ -15,7 +15,7 @@ extension Date {
         startOfDay.minute = 0
         
         guard let start = calendar.date(from: startOfDay)
-        else { throw NSError() } // THROW: startDateCreationInvalid
+        else { throw AeroAPIError.startDateCreationInvalid }
         
         var endOfDay = DateComponents()
         endOfDay.year = year
@@ -24,20 +24,26 @@ extension Date {
         endOfDay.minute = 0
         
         guard let end = calendar.date(from: endOfDay)
-        else { throw NSError() } // THROW: endDateCreationInvalid
+        else { throw AeroAPIError.endDateCreationInvalid }
         
         return (start, end)
     }
     
+    /// Get day of year of date in given time zone
+    /// - Parameter timezone: TimeZone
+    /// - Returns: Number of day of year in the specified TimeZone
     public func dayOfYear(in timezone: TimeZone! = TimeZone(secondsFromGMT: 0)) throws -> Int {
         var calendar = Calendar.current
         calendar.timeZone = timezone
         
         guard let day = calendar.ordinality(of: .day, in: .year, for: self)
-        else { throw NSError() }
+        else { throw NSError() } // THROW:
         return day
     }
     
+    /// Get year of date in the given time zone
+    /// - Parameter timezone: TimeZone
+    /// - Returns: Year for the day of the Date in specified TimeZone
     public func year(in timezone: TimeZone! = TimeZone(secondsFromGMT: 0)) throws -> Int {
         let formatter = DateFormatter()
         formatter.timeZone = timezone
@@ -45,7 +51,7 @@ extension Date {
         
         let string = formatter.string(from: self)
         guard let int = Int(string)
-        else { throw NSError() }
+        else { throw NSError() } // THROW:
         
         return int
     }

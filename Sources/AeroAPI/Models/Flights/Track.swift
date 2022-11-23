@@ -11,7 +11,8 @@ import Foundation
 import CoreLocation
 
 public struct FlightTrackResponse: Codable {
-    var url: String?
+    var links: [String]?
+    var numPages: Int?
     var positions: [FlightTrack]?
 }
 
@@ -93,7 +94,12 @@ extension AeroAPI {
         guard let positions = decoded.positions, !(positions.isEmpty)
         else { throw AeroAPIError.failedDecodingFlightTrackResponse }
         
+        guard !(positions.isEmpty)
+        else { throw AeroAPIError.flightTrackEmpty }
+        
         return decoded
     }
+    
+    // MARK: - AeroAPI Private
 }
 

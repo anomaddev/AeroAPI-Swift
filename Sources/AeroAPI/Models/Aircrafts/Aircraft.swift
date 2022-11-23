@@ -8,18 +8,18 @@
 // Core iOS
 import UIKit
 
-class Aircraft: Codable {
+public class Aircraft: Codable {
     
-    var name: String?
-    var iata: String?
-    var icao: String?
-    var mach: Double?
-    var range: Int?
+    public var name: String?
+    public var iata: String?
+    public var ident: String?
+    public var cruise: Double?
+    public var range: Int?
     
-    var icon: String?
+}
     
-    var image: UIImage?
-    { UIImage(named: icao ?? "plane") }
+//    var image: UIImage?
+//    { UIImage(named: icao ?? "plane") }
     
 //    var distance: Distance? {
 //        if let range = range { return Distance(is: range, in: .kilometers) }
@@ -41,7 +41,6 @@ class Aircraft: Codable {
 //        self.range  = NumberFormatter().number(from: row[4])?.int
 //        self.icon   = IconAsset.plane.raw
 //    }
-}
 
 extension String {
 //    var aircraftIcao: Aircraft? {

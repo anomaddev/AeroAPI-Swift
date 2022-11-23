@@ -14,10 +14,22 @@ public enum AeroAPIError: Error {
     /// Could not generate URL from components of AeroAPIRequest
     case invalidURLFromComponents
     
+    // Date errors
+    /// start date for search cannot be completed
+    case startDateCreationInvalid
+    /// end date for search cannot be completed
+    case endDateCreationInvalid
+    
+    // Flight Track errors
+    /// flight track response is empty
+    case flightTrackEmpty
+    
     // Decoder errors
     /// failed to decode ScheduledFlightResponse
     case failedDecodingScheduledFlightResponse
+    /// failed to decode FlightDataResponse
     case failedDecodingFlightDataResponse
+    /// failed to decode FlightTrackResponse
     case failedDecodingFlightTrackResponse
     
     /// Generic error
@@ -40,15 +52,26 @@ extension AeroAPIError: CustomStringConvertible {
         case .invalidURLFromComponents:
             return "Could not generate URL from components of AeroAPIRequest."
             
+        case .startDateCreationInvalid:
+            return "Failed to create start date using calendar"
+            
+        case .endDateCreationInvalid:
+            return "Failed to create end date using calendar"
+            
         case .failedDecodingScheduledFlightResponse:
             return "Failed to decode the ScheduledFlightResponse"
             
         case .failedDecodingFlightDataResponse:
             return "Failed to decode the FlightDataResponse"
             
+        // MARK: - desc,FlightTrack
+        case .flightTrackEmpty:
+            return "Flight Track response is empty"
+            
         case .failedDecodingFlightTrackResponse:
             return "Failed to decode the FlightTrackResponse"
-            
+         
+        // MARK: - desc,Generic
         case .fall:
             return "An ignorable generic error occured."
             
@@ -80,6 +103,18 @@ extension AeroAPIError: LocalizedError {
                 comment: "URL Invalid"
             )
             
+        case .startDateCreationInvalid:
+            return NSLocalizedString(
+                "Failed to create start date in day range extension",
+                comment: "failed date creation"
+            )
+            
+        case .endDateCreationInvalid:
+            return NSLocalizedString(
+                "Failed to create end date in day range extension",
+                comment: "failed date creation"
+            )
+            
         case .failedDecodingScheduledFlightResponse:
             return NSLocalizedString(
                 "Failed to decode ScheduledFlightResponse",
@@ -92,12 +127,20 @@ extension AeroAPIError: LocalizedError {
                 comment: "failed decoding"
             )
             
+        // MARK: - errorDesc,FlightTrack
+        case .flightTrackEmpty:
+            return NSLocalizedString(
+                "FlightTrackResponse is empty with no positions",
+                comment: "no positions returned"
+            )
+            
         case .failedDecodingFlightTrackResponse:
             return NSLocalizedString(
                 "Failed to decode FlightTrackResponse",
                 comment: "failed decoding"
             )
             
+        // MARK: - errorDesc,Generic
         case .fall:
             return NSLocalizedString(
                 "An ignorable generic error occured.",

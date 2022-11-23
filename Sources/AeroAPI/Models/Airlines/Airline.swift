@@ -8,29 +8,28 @@
 // Core iOS
 import Foundation
 
-class Airline: Codable {
+public class Airline: Codable {
     
-    var _id: String = ""
-    var icao: String?
-    var iata: String?
-    var name: String?
-    var callsign: String?
-    var country: String?
-    var active: Bool = false
-    var logo: String = ""
+    public var id: Int
+    public var ident: String?
+    public var iata: String?
+    public var name: String?
+    public var callsign: String?
+    public var country: String?
+    public var active: Bool = false
     
-    var operates: String?
-    var facebook: String?
-    var twitter: String?
-    var instagram: String?
-    var youtube: String?
-    var phone: String?
-    var reservations: String?
-    var email: String?
-    var website: String?
+    public var operates: String?
+    public var facebook: String?
+    public var twitter: String?
+    public var instagram: String?
+    public var youtube: String?
+    public var phone: String?
+    public var reservations: String?
+    public var email: String?
+    public var website: String?
     // @Persisted var hubs: List<Airport?>
-    var loyalty: String?
-    var ally: String?
+    public var loyalty: String?
+    public var ally: String?
     
 }
     

@@ -25,8 +25,8 @@ public struct ScheduledFlightRequest: AeroAPIRequest {
         self.year = year
         self.origin = origin
         
-        var fills: [RequestFilters] = filters + [.origin(origin.icao!)]
-        if let dest = destination { fills.append(.destination(dest.icao!)) }
+        var fills: [RequestFilters] = filters + [.origin(origin.ident)]
+        if let dest = destination { fills.append(.destination(dest.ident)) }
         self.filters = fills
     }
     
