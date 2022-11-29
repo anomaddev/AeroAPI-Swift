@@ -41,7 +41,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
     
     case ScheduledDelay = "Scheduled / Delayed"
     
-    var hasArrived: Bool {
+    public var hasArrived: Bool {
         switch self {
         case .GateArrival,
             .DelayedArrival,
@@ -50,7 +50,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
-    var isTaxiing: Bool {
+    public var isTaxiing: Bool {
         switch self {
         case .Taxiing,
             .TaxxingDelayed,
@@ -60,7 +60,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
-    var isInflight: Bool {
+    public var isInflight: Bool {
         switch self {
         case .OnTime,
             .EnRoute,
@@ -71,7 +71,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
-    var isDelayed: Bool {
+    public var isDelayed: Bool {
         switch self {
         case .Delayed,
             .EnrouteDelayed,
@@ -82,7 +82,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
-    var hasDiverted: Bool {
+    public var hasDiverted: Bool {
         switch self {
         case .Diverted,
             .ReturnedToGate: return true
@@ -90,36 +90,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
-//    var color: UIColor {
-//        switch self {
-//        case .Scheduled,
-//            .Unknown,
-//            .ResultUnknown: return .primary
-//
-//        case .OnTime,
-//            .EnrouteOnTime,
-//            .EnRoute,
-//            .Taxiing,
-//            .LandedTaxiing,
-//            .LeftGate,
-//            .Arrived,
-//            .GateArrival:
-//            return .success
-//
-//        case .Delayed,
-//            .EnrouteDelayed,
-//            .DelayedArrival,
-//            .TaxxingDelayed,
-//            .ScheduledDelay: return .warning
-//
-//        case .Cancelled,
-//            .Diverted,
-//            .ReturnedToGate: return .error
-//        }
-//
-//    }
-    
-    var label: String {
+    public var label: String {
         switch self {
         case .Scheduled: return "Scheduled"
             

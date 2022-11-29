@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 import ZippyJSON
 
 #if !os(macOS)
@@ -109,7 +110,13 @@ public class AeroAPI {
     }
     
     // MARK: - Caching Functions
-    public func loadAirports() async throws -> [Airport] {
+    public func loadCache() throws {
+        AeroAPI.allAirports = try loadAirports()
+        AeroAPI.allAirlines = try loadAirlines()
+        AeroAPI.allAircraft = try loadAircraft()
+    }
+    
+    private func loadAirports() throws -> [Airport] {
         guard let path = Bundle.module.url(forResource: "airports", withExtension: "json")
         else { throw NSError() } // THROW:
         
@@ -118,7 +125,7 @@ public class AeroAPI {
         return airports
     }
     
-    public func loadAirlines() async throws -> [Airline] {
+    private func loadAirlines() throws -> [Airline] {
         guard let path = Bundle.module.url(forResource: "airlines", withExtension: "json")
         else { throw NSError() } // THROW:
         
@@ -127,7 +134,7 @@ public class AeroAPI {
         return airlines
     }
     
-    public func loadAircraft() async throws -> [Aircraft] {
+    private func loadAircraft() throws -> [Aircraft] {
         guard let path = Bundle.module.url(forResource: "aircraft", withExtension: "json")
         else { throw NSError() } // THROW:
         

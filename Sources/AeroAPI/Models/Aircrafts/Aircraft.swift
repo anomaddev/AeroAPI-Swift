@@ -17,6 +17,11 @@ public class Aircraft: Codable {
     public var range: Int?
     
 }
+
+extension String {
+    public var aircraft: Aircraft?
+    { AeroAPI.allAircraft.first(where: { $0.ident == self || $0.iata == self }) }
+}
     
 //    var image: UIImage?
 //    { UIImage(named: icao ?? "plane") }
@@ -42,7 +47,6 @@ public class Aircraft: Codable {
 //        self.icon   = IconAsset.plane.raw
 //    }
 
-extension String {
 //    var aircraftIcao: Aircraft? {
 //        do {
 //            let aircraft = Models.allAircraft
@@ -84,4 +88,3 @@ extension String {
 //        else { throw NSError() }
 //        return plane
 //    }
-}

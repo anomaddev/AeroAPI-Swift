@@ -1,6 +1,6 @@
 import Foundation
+import NomadToolsX
 import Combine
-import Alamofire
 
 #if !os(macOS)
 public struct ScheduledFlightResponse: Codable {
@@ -46,16 +46,6 @@ public struct ScheduledFlightRequest: AeroAPIRequest {
 /// AeroAPI object for flight schedule search
 public struct ScheduledFlight: Codable {
     
-    public var id: String!
-    public var atlasId: String? {
-        let airports: String = "\(origin)-\(destination)"
-        guard let day = try? scheduledOut.dayOfYear(in: .init(abbreviation: "GMT")),
-              let year = try? scheduledOut.year(in: .init(abbreviation: "GMT"))
-        else { return nil }
-        
-        return "\(ident)_\(airports)_\(year)-\(day)"
-    }
-    
     public var faFlightId: String?
     
     public var ident: String
@@ -92,6 +82,12 @@ public struct ScheduledFlight: Codable {
     public var updated: Date!
 //    var changes: [FlightChange]?
     public var archived: Bool?
+    
+    public var originAirport: Airport
+    { origin.airport! }
+    
+    public var destinationAirport: Airport
+    { destination.airport! }
 }
 
 extension AeroAPI {

@@ -37,12 +37,11 @@ public struct FlightTrackRequest: AeroAPIRequest {
 }
 
 public struct FlightTrackDoc: Codable {
-    var faId: String
-//    var atlasId: String
-    var ident: String?
-    var status: FlightStatus
-    var updated: Date
-    var track: [FlightTrack]
+    public var faId: String
+    public var ident: String?
+    public var status: FlightStatus
+    public var updated: Date
+    public var track: [FlightTrack]
     
     public init(track: [FlightTrack], flightData: Flight) {
         updated = Date()
@@ -56,18 +55,18 @@ public struct FlightTrackDoc: Codable {
 
 public struct FlightTrack: Codable {
     /// This is only null when faId was used to get track
-    var faFlightId: String?
+    public var faFlightId: String?
     
-    var altitude: Int
-    var altitudeChange: AltChange
-    var groundspeed: Int
-    var heading: Int
-    var latitude: Double
-    var longitude: Double
-    var timestamp: Date
-    var updateType: UpdateType
+    public var altitude: Int
+    public var altitudeChange: AltChange
+    public var groundspeed: Int
+    public var heading: Int
+    public var latitude: Double
+    public var longitude: Double
+    public var timestamp: Date
+    public var updateType: UpdateType
     
-    var coord: CLLocationCoordinate2D
+    public var coord: CLLocationCoordinate2D
     { .init(latitude: latitude, longitude: longitude) }
 }
 

@@ -5,6 +5,9 @@ import CoreLocation
 #if !os(macOS)
 public class Airport: Codable {
     
+    static public var UKWN: Airport
+    { AeroAPI.allAirports.first(where: { $0.ident == "UKNN" })! }
+    
     static public func spoof(_ tampa: Bool! = true) -> Airport
     { return .init(tampa: tampa) }
     
@@ -62,6 +65,11 @@ public class Airport: Codable {
 
 struct AeroAirport: Codable {
     
+}
+
+extension String {
+    public var airport: Airport?
+    { AeroAPI.allAirports.first(where: { $0.ident == self || $0.iata == self }) }
 }
 
 #endif

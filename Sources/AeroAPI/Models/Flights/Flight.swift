@@ -9,6 +9,7 @@
 import UIKit
 
 // Utilities
+import NomadToolsX
 
 public struct FlightDataResponse: Codable {
     public var numPages: Int! = 1
@@ -43,17 +44,6 @@ public struct FlightDataRequest: AeroAPIRequest {
 
 public struct Flight: Codable {
     
-    public var id: String?
-//    var atlasId: String? {
-//        let airports: String = "\(origin)-\(destination)"
-//        guard let timzone = origin.timezone,
-//              let day = try? scheduledOut.dayOfYear(in: timzone),
-//              let year = try? scheduledOut.year(in: timzone)
-//        else { return nil }
-//
-//        return "\(ident)_\(airports)_\(year)-\(day)"
-//    }
-    
     public var ident: String
     public var identIcao: String?
     public var identIata: String?
@@ -70,8 +60,8 @@ public struct Flight: Codable {
     public var diverted: Bool
     public var cancelled: Bool
     public var positionOnly: Bool
-//    var origin: FlightAirport
-//    var destination: FlightAirport
+    public var origin: FlightAirport
+    public var destination: FlightAirport
     public var departureDelay: Int?
     public var arrivalDelay: Int?
     public var filedEte: Int?
@@ -113,40 +103,37 @@ public struct Flight: Codable {
     public var updated: Date? = Date()
 //    var changes: [FlightChange]? = []
     
-    // Computed
-//    var airline: Airline
-//    { (operatorIcao?.airlineIcao ?? operatorIata?.airlineIata)! }
-//
-//    var delayed: Bool
-//    { departureDelay ?? 0 > 0 || arrivalDelay ?? 0 > 0 }
-//
-//    var ultiDepart: Date
-//    { actualOut ?? estimatedOut ?? scheduledOut }
-//
-//    var ultiArrive: Date
-//    { actualIn ?? estimatedIn ?? scheduledIn }
-//
-//    var duration: Int {
-//        guard let actualOut = actualOut,
-//              let actualIn = actualIn
-//        else { return (scheduledIn.since1970 - scheduledOut.since1970).int }
-//        return (actualIn.since1970 - actualOut.since1970).int
-//    }
-//
-//    var distance: Distance
-//    { Distance(from: origin.airport.coordinate, to: destination.airport.coordinate) }
-//
-//    var mapFlight: MapFlight
-//    { MapFlight(origin: origin.airport, destination: destination.airport, id: atlasId) }
-//
-//    var departureDate: Date
-//    { return (actualOut ?? estimatedOut ?? scheduledOut)! }
-//
-//    var arrivalDate: Date
-//    { return (actualIn ?? estimatedIn ?? scheduledIn)! }
-//
-//    var remaining: (Int, Int, Int)
-//    { ((estimatedIn ?? scheduledIn)!.int - Date().seconds).HMS() }
+    // MARK: - Computed
+    public var airline: Airline
+    { (operatorIcao ?? operatorIata)!.airline! }
+
+    public var delayed: Bool
+    { departureDelay ?? 0 > 0 || arrivalDelay ?? 0 > 0 }
+
+    public var ultiDepart: Date
+    { actualOut ?? estimatedOut ?? scheduledOut }
+
+    public var ultiArrive: Date
+    { actualIn ?? estimatedIn ?? scheduledIn }
+
+    public var duration: Int {
+        guard let actualOut = actualOut,
+              let actualIn = actualIn
+        else { return (scheduledIn.since1970 - scheduledOut.since1970) }
+        return (actualIn.since1970 - actualOut.since1970)
+    }
+
+    public var distance: Distance
+    { Distance(from: origin.airport.coordinate, to: destination.airport.coordinate) }
+
+    public var departureDate: Date
+    { return (actualOut ?? estimatedOut ?? scheduledOut)! }
+
+    public var arrivalDate: Date
+    { return (actualIn ?? estimatedIn ?? scheduledIn)! }
+    
+    public var remaining: (Int, Int, Int)
+    { ((estimatedIn ?? scheduledIn)!.since1970 - Date().since1970).HMS() }
 }
 
 extension AeroAPI {

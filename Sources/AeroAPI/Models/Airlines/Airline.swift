@@ -6,12 +6,13 @@
 //
 
 // Core iOS
-import Foundation
+import UIKit
 
 public class Airline: Codable {
     
+    // MARK: - Codable
     public var id: Int
-    public var ident: String?
+    public var ident: String
     public var iata: String?
     public var name: String?
     public var callsign: String?
@@ -27,10 +28,18 @@ public class Airline: Codable {
     public var reservations: String?
     public var email: String?
     public var website: String?
-    // @Persisted var hubs: List<Airport?>
     public var loyalty: String?
     public var ally: String?
     
+    // MARK: - Computed
+    public var icon: UIImage?
+    { UIImage(named: ident, in: Bundle.module, compatibleWith: nil) }
+    
+}
+
+extension String {
+    public var airline: Airline?
+    { AeroAPI.allAirlines.first(where: { $0.ident == self || $0.iata == self }) }
 }
     
 //    var icon: UIImage? {
