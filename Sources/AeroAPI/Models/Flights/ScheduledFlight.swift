@@ -1,6 +1,6 @@
 import Foundation
 import NomadToolsX
-import Combine
+import SwiftDate
 
 #if !os(macOS)
 public struct ScheduledFlightResponse: Codable {
@@ -88,6 +88,32 @@ public struct ScheduledFlight: Codable {
     
     public var destinationAirport: Airport
     { destination.airport! }
+    
+    // MARK: - Scheduled Flight Functions
+    public func data() async throws -> Flight {
+        let historical = scheduledIn.since1970 < (Date() - 1.days).since1970
+        
+        guard let timezone = originAirport.timezone
+        else { throw NSError() } // THROW: invalidOriginTimezone
+        
+        let day = try scheduledOut.dayOfYear(in: timezone)
+        let year = try scheduledOut.year(in: timezone)
+        let range = try Date.day(day, of: year, in: timezone)
+        
+        let request = FlightDataRequest(ident: ident, filters: [
+            .startDate(range.0),
+            .endDate(range.1)
+        ], historical: historical)
+        
+        let flights = try await AeroAPI.manager
+            .getFlightData(request)
+            .flights
+        
+        guard let flight = (flights?.first { $0.faFlightId == faFlightId })
+        else { throw NSError() } // THROW: noFlightDataForScheduledFlight
+        
+        return flight
+    }
 }
 
 extension AeroAPI {

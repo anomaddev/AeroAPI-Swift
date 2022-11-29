@@ -27,7 +27,12 @@ public struct FlightDataRequest: AeroAPIRequest {
                 type: IdentType! = .designator,
                 filters: [RequestFilters]! = [],
                 historical: Bool! = false) {
-        self.ident = ident
+        
+        if type == .atlasId {
+            
+            self.ident = ""
+        } else { self.ident = ident }
+        
         self.historical = historical
         self.filters = filters + [.identType(type.rawValue)]
     }
@@ -39,6 +44,7 @@ public struct FlightDataRequest: AeroAPIRequest {
         case designator
         case faId = "fa_flight_id"
         case registration
+        case atlasId
     }
 }
 
