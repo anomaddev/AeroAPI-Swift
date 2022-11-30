@@ -30,6 +30,16 @@ public struct ScheduledFlightRequest: AeroAPIRequest {
         self.filters = fills
     }
     
+    public init(for day: Int,
+                of year: Int,
+                from origin: Airport,
+                ident: String) {
+        self.day = day
+        self.year = year
+        self.origin = origin
+        self.filters = [.ident(ident)]
+    }
+    
     public func path() throws -> String {
         guard let zone = origin.timezone // this is based off coordinate in real class
         else { throw NSError() } // THROW:
@@ -110,6 +120,27 @@ public struct ScheduledFlight: Codable {
             .flights
         
         guard let flight = (flights?.first { $0.faFlightId == faFlightId })
+        else { throw NSError() } // THROW: noFlightDataForScheduledFlight
+        
+        return flight
+    }
+    
+    public func update() async throws -> ScheduledFlight {
+        // TODO: Account for historical
+        
+        guard let timezone = originAirport.timezone
+        else { throw NSError() } // THROW: invalidOriginTimezone
+        
+        let day = try scheduledOut.dayOfYear(in: timezone)
+        let year = try scheduledOut.year(in: timezone)
+        
+        let request = ScheduledFlightRequest(for: day, of: year, from: originAirport, ident: ident)
+        let flight = try await AeroAPI.manager
+            .getScheduled(request)
+            .scheduled?
+            .first { $0.ident == ident }
+       
+        guard let flight = flight
         else { throw NSError() } // THROW: noFlightDataForScheduledFlight
         
         return flight
