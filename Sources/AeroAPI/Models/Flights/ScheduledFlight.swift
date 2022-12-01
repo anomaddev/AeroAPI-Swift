@@ -110,7 +110,7 @@ public struct ScheduledFlight: Codable {
         let year = try scheduledOut.year(in: timezone)
         let range = try Date.day(day, of: year, in: timezone)
         
-        let request = FlightDataRequest(ident: ident, filters: [
+        let request = try FlightDataRequest(ident: ident, filters: [
             .startDate(range.0),
             .endDate(range.1)
         ], historical: historical)

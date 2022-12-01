@@ -10,6 +10,7 @@ import UIKit
 
 // Utilities
 import NomadToolsX
+import SwiftDate
 
 public struct FlightDataResponse: Codable {
     public var numPages: Int! = 1
@@ -23,17 +24,40 @@ public struct FlightDataRequest: AeroAPIRequest {
     public var historical: Bool! = false
     public var filters: [RequestFilters]
     
+    // TODO: Add error checks and throws
+    public init(atlasId: String, filters: [RequestFilters]! = []) throws {
+        let split = atlasId.split(separator: "_")
+        let flightno = split.first!.string
+        print(flightno)
+        
+        let rsplit = split[1].split(separator: "-").compactMap { $0.string.airport }
+        let origin = rsplit.first!
+        let destination = rsplit.last!
+        
+        let date = split[2].split(separator: "-")
+        let year = Int(date.first!)!
+        let day = Int(date.last!)!
+        
+        let range = try Date.day(day, of: year, in: origin.timezone)
+        
+        self.ident = flightno
+        self.historical = range.1.since1970 < (Date() - 1.days).since1970
+        self.filters = (filters + [
+            .identType(IdentType.designator.rawValue),
+            .origin(origin.ident),
+            .destination(destination.ident),
+            .startDate(range.0),
+            .endDate(range.1)
+        ])
+    }
+    
     public init(ident: String,
                 type: IdentType! = .designator,
                 filters: [RequestFilters]! = [],
-                historical: Bool! = false) {
-        
-        if type == .atlasId {
-            
-            self.ident = ""
-        } else { self.ident = ident }
+                historical: Bool! = false) throws {
         
         self.historical = historical
+        self.ident = ident
         self.filters = filters + [.identType(type.rawValue)]
     }
     
@@ -44,7 +68,6 @@ public struct FlightDataRequest: AeroAPIRequest {
         case designator
         case faId = "fa_flight_id"
         case registration
-        case atlasId
     }
 }
 

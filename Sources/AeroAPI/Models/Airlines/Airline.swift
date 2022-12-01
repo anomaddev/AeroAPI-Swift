@@ -11,7 +11,6 @@ import UIKit
 public class Airline: Codable {
     
     // MARK: - Codable
-    public var id: Int
     public var ident: String
     public var iata: String?
     public var name: String?

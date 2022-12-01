@@ -1,6 +1,7 @@
 import Foundation
 import Alamofire
 import ZippyJSON
+import CodableFirebase
 
 #if !os(macOS)
 public class AeroAPI {
@@ -48,10 +49,6 @@ public class AeroAPI {
     public var internalDecoder: ZippyJSONDecoder {
         let decoder = ZippyJSONDecoder()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        dateFormatter.locale = Locale(identifier: "en_US")
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         //        decoder.dateDecodingStrategy = .formatted(dateFormatter)
         return decoder
@@ -144,7 +141,7 @@ public class AeroAPI {
     }
 }
 
-extension Bundle {
-    public static let AeroAPIBundle = Bundle.module.bundleIdentifier!
+public extension Bundle {
+    static let AeroAPIBundle = Bundle.module.bundleIdentifier!
 }
 #endif

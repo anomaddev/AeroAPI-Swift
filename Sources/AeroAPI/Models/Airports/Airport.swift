@@ -11,7 +11,6 @@ public class Airport: Codable {
     static public func spoof(_ tampa: Bool! = true) -> Airport
     { return .init(tampa: tampa) }
     
-    public var id: Int
     public var ident: String
     public var iata: String?
     public var type: String?
@@ -22,8 +21,8 @@ public class Airport: Codable {
     public var region: String?
     public var country: String
     
-    public var lat: String
-    public var long: String
+    public var lat: Double
+    public var long: Double
     
     public var link: String?
     public var wiki: String?
@@ -36,7 +35,7 @@ public class Airport: Codable {
     public var email: String?
     
     public var coordinate: CLLocationCoordinate2D
-    { CLLocationCoordinate2D(latitude: Double(lat)!, longitude: Double(long)!) }
+    { CLLocationCoordinate2D(latitude: lat, longitude: long) }
     
     public var timezoneCode: String?
     public var timezone: TimeZone?
@@ -44,14 +43,14 @@ public class Airport: Codable {
     
     /// Only for testing
     private init(tampa: Bool! = true) {
-        id = tampa ? 1 : 2
+//        id = tampa ? 1 : 2
         ident = tampa ? "KTPA" : "KLAX"
         iata = tampa ? "TPA" : "KLAX"
         name = tampa ? "Tampa International Airport" : "Los Angeles International Airport"
         city = tampa ? "Tampa" : "Los Angeles"
         country = tampa ? "United States" : "United States"
-        lat = tampa ? "27.9772" : "33.9416"
-        long = tampa ? "82.5311" : "118.4085"
+        lat = tampa ? 27.9772 : 33.9416
+        long = tampa ? -82.5311 : 118.4085
         timezoneCode? = tampa ? "EDT" : "PDT"
         
         facebook = nil
