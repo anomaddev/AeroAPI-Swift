@@ -11,6 +11,28 @@ public class Airport: Codable {
     static public func spoof(_ tampa: Bool! = true) -> Airport
     { return .init(tampa: tampa) }
     
+    static public func search(airports a: [Airport], _ text: String, matches: Bool! = false) throws -> [Airport] {
+        let text = text.lowercased()
+        var airports = a
+        
+        let iatamatch = airports.filter { $0.iata?.lowercased() == text }
+        airports.removeAll(where: { $0.iata?.lowercased() == text })
+        
+        let icaomatch = airports.filter { $0.ident.lowercased() == text }
+        airports.removeAll(where: { $0.ident.lowercased() == text })
+        
+        let namematch = airports.filter { $0.name.lowercased().starts(with: text) }
+        airports.removeAll(where: { $0.name.lowercased().starts(with: text) })
+        
+        let citymatch = airports.filter { $0.city.lowercased().starts(with: text) }
+        airports.removeAll(where: { $0.city.lowercased().starts(with: text) })
+        
+        // TODO: Add City & Country
+        
+        let sorted = iatamatch + icaomatch + namematch + citymatch
+        return matches ? sorted : sorted + a
+    }
+    
     public var ident: String
     public var iata: String?
     public var type: String?

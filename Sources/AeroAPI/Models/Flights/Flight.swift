@@ -145,12 +145,12 @@ public struct Flight: Codable {
     public var ultiArrive: Date
     { actualIn ?? estimatedIn ?? scheduledIn }
 
-    public var duration: Int {
-        guard let actualOut = actualOut,
-              let actualIn = actualIn
-        else { return (scheduledIn.since1970 - scheduledOut.since1970) }
-        return (actualIn.since1970 - actualOut.since1970)
-    }
+//    public var duration: TimeInterval {
+//        guard let actualOut = actualOut,
+//              let actualIn = actualIn
+//        else { return (scheduledIn.since1970 - scheduledOut.since1970) }
+//        return (actualIn.since1970 - actualOut.since1970)
+//    }
 
     public var distance: Distance
     { Distance(from: origin.airport.coordinate, to: destination.airport.coordinate) }
@@ -161,8 +161,8 @@ public struct Flight: Codable {
     public var arrivalDate: Date
     { return (actualIn ?? estimatedIn ?? scheduledIn)! }
     
-    public var remaining: (Int, Int, Int)
-    { ((estimatedIn ?? scheduledIn)!.since1970 - Date().since1970).HMS() }
+//    public var remaining: (Int, Int, Int)
+//    { ((estimatedIn ?? scheduledIn)!.since1970 - Date().since1970).int.HMS() }
 }
 
 extension AeroAPI {
