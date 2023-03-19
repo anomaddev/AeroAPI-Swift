@@ -11,7 +11,8 @@ public class Airport: Codable {
     static public func spoof(_ tampa: Bool! = true) -> Airport
     { return .init(tampa: tampa) }
     
-    static public func search(airports a: [Airport], _ text: String, matches: Bool! = false) throws -> [Airport] {
+    // TODO: This is a shitty search algo
+    static public func search(airports a: [Airport], _ text: String, matches: Bool! = true) throws -> [Airport] {
         let text = text.lowercased()
         var airports = a
         
@@ -29,7 +30,8 @@ public class Airport: Codable {
         
         // TODO: Add City & Country
         
-        let sorted = iatamatch + icaomatch + namematch + citymatch
+        var sorted = iatamatch + icaomatch + namematch + citymatch
+        sorted = sorted.sorted(by: { $0.iata != nil && $1.iata == nil })
         return matches ? sorted : sorted + a
     }
     

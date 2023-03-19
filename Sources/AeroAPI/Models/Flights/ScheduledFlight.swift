@@ -4,6 +4,20 @@ import SwiftDate
 
 #if !os(macOS)
 public struct ScheduledFlightResponse: Codable {
+    
+    public static func dummy() throws -> ScheduledFlightResponse {
+        if let path = Bundle.main.path(forResource: "FlightSchedule", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let decoded = try AeroAPI.manager
+                    .decoder
+                    .decode(ScheduledFlightResponse.self, from: data)
+                
+                return decoded
+            } catch { throw error }
+        } else { throw NSError() } // THROW:
+    }
+    
     public var numPages: Int! = 1
     public var scheduled: [ScheduledFlight]? = []
     public var links: [String: String]?
@@ -163,6 +177,16 @@ extension AeroAPI {
         
         decoded.scheduled = mergeCodeshares(flights)
         return decoded
+    }
+    
+    public func dummyGetScheduled() throws -> ScheduledFlightResponse {
+        var dummy = try ScheduledFlightResponse.dummy()
+        
+        guard let flights = dummy.scheduled, !(flights.isEmpty)
+        else { throw AeroAPIError.failedDecodingScheduledFlightResponse }
+        
+        dummy.scheduled = mergeCodeshares(flights)
+        return dummy
     }
     
     // MARK: - AeroAPI Private
