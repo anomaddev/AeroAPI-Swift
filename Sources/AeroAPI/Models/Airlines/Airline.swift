@@ -32,7 +32,7 @@ public class Airline: Codable {
     
     // MARK: - Computed
     public var icon: UIImage?
-    { UIImage(named: ident, in: Bundle.module, compatibleWith: nil) }
+    { UIImage(named: ident, in: .module, compatibleWith: nil) }
     
 }
 
