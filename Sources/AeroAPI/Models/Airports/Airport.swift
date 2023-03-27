@@ -65,6 +65,15 @@ public class Airport: Codable {
     public var timezone: TimeZone?
     { TimezoneMapper.latLngToTimezone(coordinate) }
     
+    // TODO: Make this hardcoded
+    public var shortName: String {
+        return name
+            .replacingOccurrences(of: "Regional", with: "Regl.")
+            .replacingOccurrences(of: "Metropolitan", with: "Metro.")
+            .replacingOccurrences(of: "International", with: "Intl.")
+            .replacingOccurrences(of: "Airport", with: "")
+    }
+    
     /// Only for testing
     private init(tampa: Bool! = true) {
 //        id = tampa ? 1 : 2
