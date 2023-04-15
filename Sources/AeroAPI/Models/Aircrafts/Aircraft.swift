@@ -16,15 +16,15 @@ public class Aircraft: Codable {
     public var cruise: Double?
     public var range: Int?
     
+    public var png: UIImage?
+    { UIImage(named: ident ?? "blank", in: .module, compatibleWith: nil) }
+    
 }
 
 extension String {
     public var aircraft: Aircraft?
     { AeroAPI.allAircraft.first(where: { $0.ident == self || $0.iata == self }) }
 }
-    
-//    var image: UIImage?
-//    { UIImage(named: icao ?? "plane") }
     
 //    var distance: Distance? {
 //        if let range = range { return Distance(is: range, in: .kilometers) }
