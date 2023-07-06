@@ -1,7 +1,6 @@
 import Foundation
 import Alamofire
 import ZippyJSON
-import CodableFirebase
 
 #if !os(macOS)
 public class AeroAPI {
