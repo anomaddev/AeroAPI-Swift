@@ -17,6 +17,7 @@ public enum AeroAPIError: Error {
     // Date errors
     /// start date for search cannot be completed
     case startDateCreationInvalid
+    
     /// end date for search cannot be completed
     case endDateCreationInvalid
     

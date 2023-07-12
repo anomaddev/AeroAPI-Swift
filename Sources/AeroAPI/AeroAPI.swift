@@ -6,7 +6,7 @@ import ZippyJSON
 public class AeroAPI {
     
     /// Is API class in testing mode
-    public static var testing: Bool = false
+    public static var debug: Bool = true
     
     /// Base URL Components for the AeroAPI
     private static var components: URLComponents = URLComponents()
@@ -80,9 +80,12 @@ public class AeroAPI {
         else { throw AeroAPIError.fall } // TODO: Change Error Code
         
         let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
-        print("=== JSON DATA ===")
-        print(json)
-        print("=================")
+        
+        if AeroAPI.debug {
+            print("=== JSON DATA ===")
+            print(json)
+            print("=================")
+        }
         
         return data
     }
