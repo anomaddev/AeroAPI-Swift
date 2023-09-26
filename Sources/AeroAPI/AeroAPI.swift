@@ -5,8 +5,8 @@ import ZippyJSON
 #if !os(macOS)
 public class AeroAPI {
     
-    /// Is API class in testing mode
-    public static var debug: Bool = true
+    /// Is API class in debug mode
+    public static var debug: Bool = false
     
     /// Base URL Components for the AeroAPI
     private static var components: URLComponents = URLComponents()
