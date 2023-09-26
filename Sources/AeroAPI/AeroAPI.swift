@@ -75,9 +75,10 @@ public class AeroAPI {
                                         ])
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        let statusCode = (response as? HTTPURLResponse)?.statusCode
         
-        guard (response as? HTTPURLResponse)?.statusCode == 200
-        else { throw AeroAPIError.fall } // TODO: Change Error Code
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode == 200
+        else { throw AeroAPIError.HTTPResponseError(statusCode) }
         
         let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
         

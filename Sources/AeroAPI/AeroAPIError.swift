@@ -14,6 +14,9 @@ public enum AeroAPIError: Error {
     /// Could not generate URL from components of AeroAPIRequest
     case invalidURLFromComponents
     
+    /// When the HTTP response errors present the code
+    case HTTPResponseError(_ code: Int?)
+    
     // Date errors
     /// start date for search cannot be completed
     case startDateCreationInvalid
@@ -53,6 +56,9 @@ extension AeroAPIError: CustomStringConvertible {
         case .invalidURLFromComponents:
             return "Could not generate URL from components of AeroAPIRequest."
             
+        case .HTTPResponseError(let code):
+            return "HTTP Response Error Code: \(code ?? 9999)"
+            
         case .startDateCreationInvalid:
             return "Failed to create start date using calendar"
             
@@ -76,81 +82,60 @@ extension AeroAPIError: CustomStringConvertible {
         case .fall:
             return "An ignorable generic error occured."
             
-        case .unexpected(_):
-            return "An unexpected error occurred."
+        case .unexpected(let code):
+            return "An unexpected error occurred: \(code)"
         }
     }
 }
 
 extension AeroAPIError: LocalizedError {
     public var errorDescription: String? {
+        var key: String = ""
         switch self {
             
         case .apiKeyNotSet:
-            return NSLocalizedString(
-                "API Key is not set for the AeroAPI module.",
-                comment: "No AeroAPI key set"
-            )
-            
+            key = "apiKeyNotSet"
+        
         case .noFaId:
-            return NSLocalizedString(
-                "No faId is posted for this scheduled flight.",
-                comment: "No FaId"
-            )
-            
+            key = "noFaId"
+        
         case .invalidURLFromComponents:
-            return NSLocalizedString(
-                "URL Components for AeroAPIRequest are invalid",
-                comment: "URL Invalid"
-            )
+            key = "invalidURLFromComponents"
             
+        case .HTTPResponseError:
+            key = "HTTPResponseError"
+        
         case .startDateCreationInvalid:
-            return NSLocalizedString(
-                "Failed to create start date in day range extension",
-                comment: "failed date creation"
-            )
-            
+            key = "startDateCreationInvalid"
+        
         case .endDateCreationInvalid:
-            return NSLocalizedString(
-                "Failed to create end date in day range extension",
-                comment: "failed date creation"
-            )
-            
+            key = "endDateCreationInvalid"
+        
         case .failedDecodingScheduledFlightResponse:
-            return NSLocalizedString(
-                "Failed to decode ScheduledFlightResponse",
-                comment: "failed decoding"
-            )
-            
+            key = "failedDecodingScheduledFlightResponse"
+        
         case .failedDecodingFlightDataResponse:
-            return NSLocalizedString(
-                "Failed to decode FlightDataResponse",
-                comment: "failed decoding"
-            )
+            key = "failedDecodingFlightDataResponse"
             
         // MARK: - errorDesc,FlightTrack
         case .flightTrackEmpty:
-            return NSLocalizedString(
-                "FlightTrackResponse is empty with no positions",
-                comment: "no positions returned"
-            )
+            key = "flightTrackEmpty"
             
         case .failedDecodingFlightTrackResponse:
-            return NSLocalizedString(
-                "Failed to decode FlightTrackResponse",
-                comment: "failed decoding"
-            )
+            key = "failedDecodingFlightTrackResponse"
             
         // MARK: - errorDesc,Generic
         case .fall:
-            return NSLocalizedString(
-                "An ignorable generic error occured.",
-                comment: "Ignorable Errror"
-            )
+            key = "fall"
         
-        case .unexpected(_):
-            return "An unexpected error occurred."
+        case .unexpected:
+            key = "unexpected"
         }
+        
+        return NSLocalizedString(
+            key,
+            comment: self.description
+        )
     }
 }
 #endif
