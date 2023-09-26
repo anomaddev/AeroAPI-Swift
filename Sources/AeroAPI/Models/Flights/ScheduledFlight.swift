@@ -1,6 +1,8 @@
 import Foundation
 import SwiftDate
 
+import NomadUtilities
+
 #if !os(macOS)
 public struct ScheduledFlightResponse: Codable {
     
@@ -23,6 +25,10 @@ public struct ScheduledFlightResponse: Codable {
 }
 
 public struct ScheduledFlightRequest: AeroAPIRequest {
+    public func path() throws -> String {
+        return ""
+    }
+    
     public var day: Int
     public var year: Int
     public var origin: Airport
@@ -51,17 +57,6 @@ public struct ScheduledFlightRequest: AeroAPIRequest {
         self.year = year
         self.origin = origin
         self.filters = [.ident(ident)]
-    }
-    
-    public func path() throws -> String {
-        guard let zone = origin.timezone // this is based off coordinate in real class
-        else { throw NSError() } // THROW:
-        
-        let (start, end) = try Date.day(day, of: year, in: zone)
-        
-        let dateStart = start.toFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
-        let dateEnd = end.toFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
-        return "/schedules/\(dateStart)/\(dateEnd)"
     }
 }
 
@@ -112,52 +107,6 @@ public struct ScheduledFlight: Codable {
     public var destinationAirport: Airport
     { destination.airport! }
     
-    // MARK: - Scheduled Flight Functions
-    public func data() async throws -> Flight {
-        let historical = scheduledIn.since1970 < (Date() - 1.days).since1970
-        
-        guard let timezone = originAirport.timezone
-        else { throw NSError() } // THROW: invalidOriginTimezone
-        
-        let day = try scheduledOut.dayOfYear(in: timezone)
-        let year = try scheduledOut.year(in: timezone)
-        let range = try Date.day(day, of: year, in: timezone)
-        
-        let request = try FlightDataRequest(ident: ident, filters: [
-            .startDate(range.0),
-            .endDate(range.1)
-        ], historical: historical)
-        
-        let flights = try await AeroAPI.manager
-            .getFlightData(request)
-            .flights
-        
-        guard let flight = (flights?.first { $0.faFlightId == faFlightId })
-        else { throw NSError() } // THROW: noFlightDataForScheduledFlight
-        
-        return flight
-    }
-    
-    public func update() async throws -> ScheduledFlight {
-        // TODO: Account for historical
-        
-        guard let timezone = originAirport.timezone
-        else { throw NSError() } // THROW: invalidOriginTimezone
-        
-        let day = try scheduledOut.dayOfYear(in: timezone)
-        let year = try scheduledOut.year(in: timezone)
-        
-        let request = ScheduledFlightRequest(for: day, of: year, from: originAirport, ident: ident)
-        let flight = try await AeroAPI.manager
-            .getScheduled(request)
-            .scheduled?
-            .first { $0.ident == ident }
-       
-        guard let flight = flight
-        else { throw NSError() } // THROW: noFlightDataForScheduledFlight
-        
-        return flight
-    }
 }
 
 extension AeroAPI {
