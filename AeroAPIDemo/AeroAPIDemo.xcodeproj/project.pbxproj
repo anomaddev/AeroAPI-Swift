@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		518034DB2AC38B4400B19E20 /* AeroAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 518034DA2AC38B4400B19E20 /* AeroAPI */; };
 		51EE6BC82AC2B9FF00DE1324 /* AeroAPIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE6BC72AC2B9FF00DE1324 /* AeroAPIDemoApp.swift */; };
 		51EE6BCA2AC2B9FF00DE1324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE6BC92AC2B9FF00DE1324 /* ContentView.swift */; };
 		51EE6BCC2AC2BA0200DE1324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EE6BCB2AC2BA0200DE1324 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518034DB2AC38B4400B19E20 /* AeroAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +74,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		518034D92AC38B4400B19E20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		51EE6BBB2AC2B9FF00DE1324 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +89,7 @@
 				51EE6BD72AC2BA0300DE1324 /* AeroAPIDemoTests */,
 				51EE6BE12AC2BA0300DE1324 /* AeroAPIDemoUITests */,
 				51EE6BC52AC2B9FF00DE1324 /* Products */,
+				518034D92AC38B4400B19E20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +163,9 @@
 			dependencies = (
 			);
 			name = AeroAPIDemo;
+			packageProductDependencies = (
+				518034DA2AC38B4400B19E20 /* AeroAPI */,
+			);
 			productName = AeroAPIDemo;
 			productReference = 51EE6BC42AC2B9FF00DE1324 /* AeroAPIDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -593,6 +606,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		518034DA2AC38B4400B19E20 /* AeroAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AeroAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 51EE6BBC2AC2B9FF00DE1324 /* Project object */;
 }

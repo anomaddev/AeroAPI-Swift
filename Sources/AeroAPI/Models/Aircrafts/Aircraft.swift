@@ -8,17 +8,88 @@
 // Core iOS
 import UIKit
 
-public class Aircraft: Codable {
+public struct AircraftTypeInfoRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/aircraft/types/\(icao)" }
+    
+    public var icao: String
+    public var filters: [RequestFilters]
+    
+    public init(icao: String) {
+        self.icao = icao
+        self.filters = []
+    }
+}
+
+public struct Aircraft: Codable {
     
     public var name: String?
     public var iata: String?
     public var ident: String?
+    
+    public var manufacturer: String?
+    public var type: String?
+    public var description: String?
+    public var engineCount: Int?
+    public var engineType: String?
+    
     public var cruise: Double?
     public var range: Int?
     
     public var png: UIImage?
     { UIImage(named: ident ?? "blank", in: .module, compatibleWith: nil) }
     
+}
+
+extension AeroAPI {
+    
+    // MARK: - AeroAPI Public
+    
+    /// Async request function for `AircraftTypeInfoRequest`
+    /// - Parameter request: `AircraftTypeInfoRequest`
+    /// - Returns: `Aircraft`
+    public func getAircraftInfo(icao: String) async throws -> Aircraft {
+        let request = AircraftTypeInfoRequest(icao: icao)
+        let data = try await self.request(request)
+        let decoded = try decoder.decode(Aircraft.self, from: data)
+        return mergeWithCached(aircraft: decoded, icao: icao)
+    }
+    
+    /// Completion based request function for `AircraftTypeInfoRequest`
+    /// - Parameter request: `AircraftTypeInfoRequest`
+    /// - Returns: Completion of optionals `Error` and `Aircraft`
+    public func getAircraftInfo(icao: String,_ completion: @escaping (Error?, Aircraft?) -> Void) {
+        let request = AircraftTypeInfoRequest(icao: icao)
+        self.request(request)
+        { error, data in
+            do {
+                if let error = error { throw error }
+                
+                guard let data = data
+                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
+                
+                let decoded = try self.decoder.decode(Aircraft.self, from: data)
+                completion(nil, self.mergeWithCached(aircraft: decoded, icao: icao))
+            } catch { completion(error, nil) }
+        }
+    }
+    
+    /// Merges the AeroAPI info with the cached Aircraft info
+    /// - Parameter aircraft: `Aircraft` object that was returned by the AeroAPI
+    /// - Parameter icao: `String` that's the ICAO for the aircraft information that was requested
+    internal func mergeWithCached(aircraft: Aircraft, icao: String) -> Aircraft {
+        if var cached = (AeroAPI.allAircraft.first(where: { $0.ident == icao })) {
+            cached.manufacturer = aircraft.manufacturer
+            cached.type         = aircraft.type
+            cached.description  = aircraft.description
+            cached.engineCount  = aircraft.engineCount
+            cached.engineType   = aircraft.engineType
+            
+            return cached
+        }
+        
+        return aircraft
+    }
 }
 
 extension String {

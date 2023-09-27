@@ -1,55 +1,54 @@
 import Foundation
 import CoreLocation
 
-
-#if !os(macOS)
-public class Airport: Codable {
-    
-    static public var UKWN: Airport
-    { AeroAPI.allAirports.first(where: { $0.ident == "UKNN" })! }
-    
-    static public func spoof(_ tampa: Bool! = true) -> Airport
-    { return .init(tampa: tampa) }
-    
-    // TODO: This is a shitty search algo
-    static public func search(airports a: [Airport], _ text: String, matches: Bool! = true) throws -> [Airport] {
-        let text = text.lowercased()
-        var airports = a
-        
-        let iatamatch = airports.filter { $0.iata?.lowercased() == text }
-        airports.removeAll(where: { $0.iata?.lowercased() == text })
-        
-        let icaomatch = airports.filter { $0.ident.lowercased() == text }
-        airports.removeAll(where: { $0.ident.lowercased() == text })
-        
-        let namematch = airports.filter { $0.name.lowercased().starts(with: text) }
-        airports.removeAll(where: { $0.name.lowercased().starts(with: text) })
-        
-        let citymatch = airports.filter { $0.city.lowercased().starts(with: text) }
-        airports.removeAll(where: { $0.city.lowercased().starts(with: text) })
-        
-        // TODO: Add City & Country
-        
-        var sorted = iatamatch + icaomatch + namematch + citymatch
-        sorted = sorted.sorted(by: { $0.iata != nil && $1.iata == nil })
-        return matches ? sorted : sorted + a
+public struct AirportInfoRequest: AeroAPIRequest {
+    public func path() throws -> String {
+        return "/airports/\((icao ?? iata ?? code)!)"
     }
     
-    public var ident: String
+    public var icao: String?
     public var iata: String?
-    public var type: String?
+    public var code: String?
+    public var filters: [RequestFilters]
+    
+    public init(icao: String) {
+        self.icao = icao
+        self.filters = []
+    }
+    
+    public init(iata: String) {
+        self.iata = iata
+        self.filters = []
+    }
+    
+    public init(code: String) {
+        self.code = code
+        self.filters = []
+    }
+}
+
+public struct Airport: Codable {
+    
+    public var airportCode: String
+    public var codeIcao: String?
+    public var codeIata: String?
+    public var codeLid: String?
     
     public var name: String
-    public var continent: String?
+    public var type: AirportType?
+    public var elevation: Int
     public var city: String
-    public var region: String?
-    public var country: String
+    public var state: String
+    public var countryCode: String
+    public var timezone: String
     
-    public var lat: Double
-    public var long: Double
+    public var longitude: Double
+    public var latitude: Double
     
-    public var link: String?
-    public var wiki: String?
+    public var url: String?
+    public var wikiUrl: String?
+    public var airportFlightsUrl: URL?
+    public var alternatives: [Airport]?
     
     public var facebook: String?
     public var twitter: String?
@@ -59,11 +58,11 @@ public class Airport: Codable {
     public var email: String?
     
     public var coordinate: CLLocationCoordinate2D
-    { CLLocationCoordinate2D(latitude: lat, longitude: long) }
+    { CLLocationCoordinate2D(latitude: latitude, longitude: longitude) }
     
-    public var timezoneCode: String?
-    public var timezone: TimeZone?
-    { TimezoneMapper.latLngToTimezone(coordinate) }
+//    public var timezoneCode: String?
+//    public var timezone: TimeZone?
+//    { TimezoneMapper.latLngToTimezone(coordinate) }
     
     // TODO: Make this hardcoded
     public var shortName: String {
@@ -73,35 +72,148 @@ public class Airport: Codable {
             .replacingOccurrences(of: "International", with: "Intl.")
             .replacingOccurrences(of: "Airport", with: "")
     }
-    
-    /// Only for testing
-    private init(tampa: Bool! = true) {
-//        id = tampa ? 1 : 2
-        ident = tampa ? "KTPA" : "KLAX"
-        iata = tampa ? "TPA" : "KLAX"
-        name = tampa ? "Tampa International Airport" : "Los Angeles International Airport"
-        city = tampa ? "Tampa" : "Los Angeles"
-        country = tampa ? "United States" : "United States"
-        lat = tampa ? 27.9772 : 33.9416
-        long = tampa ? -82.5311 : 118.4085
-        timezoneCode? = tampa ? "EDT" : "PDT"
-        
-        facebook = nil
-        twitter = nil
-        instagram = nil
-        youtube = nil
-        phone = nil
-        email = nil
-    }
 }
 
-struct AeroAirport: Codable {
+public enum AirportType: String, Codable {
     
+    case Airport
+    case Heliport
+    case SeaplaneBase = "Seaplane Base"
+    case Balloonport
+    case Ultralight
+    case Gliderport
+    case Stolport
+
+}
+
+extension AeroAPI {
+    
+    // MARK: - AeroAPI Public
+    
+    /// Async request function for `AirportInfoRequest`
+    /// - Parameter code: The requested `Airport` code in ICAO, IATA or LID string
+    /// - Returns: `Airport`
+    public func getAirportInfo(code: String) async throws -> Airport {
+        let request = AirportInfoRequest(code: code)
+        let data = try await self.request(request)
+        let decoded = try decoder.decode(Airport.self, from: data)
+        return mergeWithCached(airport: decoded, code: code)
+    }
+    
+    /// Async request function for `AirportInfoRequest`
+    /// - Parameter icao: The requested `Airport` icao string
+    /// - Returns: `Airport`
+    public func getAirportInfo(icao: String) async throws -> Airport {
+        let request = AirportInfoRequest(icao: icao)
+        let data = try await self.request(request)
+        let decoded = try decoder.decode(Airport.self, from: data)
+        return mergeWithCached(airport: decoded, icao: icao)
+    }
+    
+    /// Async request function for `AirportInfoRequest`
+    /// - Parameter iata: The requested `Airport` iata string
+    /// - Returns: `Airport`
+    public func getAirportInfo(iata: String) async throws -> Airport {
+        let request = AirportInfoRequest(iata: iata)
+        let data = try await self.request(request)
+        let decoded = try decoder.decode(Airport.self, from: data)
+        return mergeWithCached(airport: decoded, iata: iata)
+    }
+    
+    /// Completion based request function for `AirportInfoRequest`
+    /// - Parameter code: The requested `Airport` code string
+    /// - Returns: Completion of optionals `Error` and `Airport`
+    public func getAirportInfo(code: String,_ completion: @escaping (Error?, Airport?) -> Void) {
+        let request = AirportInfoRequest(code: code)
+        self.request(request)
+        { error, data in
+            do {
+                if let error = error { throw error }
+                
+                guard let data = data
+                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
+                
+                let decoded = try self.decoder.decode(Airport.self, from: data)
+                completion(nil, self.mergeWithCached(airport: decoded, code: code))
+            } catch { completion(error, nil) }
+        }
+    }
+    
+    /// Completion based request function for `AirportInfoRequest`
+    /// - Parameter icao: The requested `Airport` icao string
+    /// - Returns: Completion of optionals `Error` and `Airport`
+    public func getAirportInfo(icao: String,_ completion: @escaping (Error?, Airport?) -> Void) {
+        let request = AirportInfoRequest(icao: icao)
+        self.request(request)
+        { error, data in
+            do {
+                if let error = error { throw error }
+                
+                guard let data = data
+                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
+                
+                let decoded = try self.decoder.decode(Airport.self, from: data)
+                completion(nil, self.mergeWithCached(airport: decoded, icao: icao))
+            } catch { completion(error, nil) }
+        }
+    }
+    
+    /// Completion based request function for `AirportInfoRequest`
+    /// - Parameter iata: The requested `Airport` iata string
+    /// - Returns: Completion of optionals `Error` and `Airport`
+    public func getAirportInfo(iata: String,_ completion: @escaping (Error?, Airport?) -> Void) {
+        let request = AirportInfoRequest(iata: iata)
+        self.request(request)
+        { error, data in
+            do {
+                if let error = error { throw error }
+                
+                guard let data = data
+                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
+                
+                let decoded = try self.decoder.decode(Airport.self, from: data)
+                completion(nil, self.mergeWithCached(airport: decoded, iata: iata))
+            } catch { completion(error, nil) }
+        }
+    }
+    
+    /// Merges the AeroAPI info with the cached Airport info
+    /// - Parameter airport: `Airport` object that was returned by the AeroAPI
+    /// - Parameter icao: `String` that's the ICAO for the aircraft information that was requested
+    /// - Parameter iata: `String` that's the IATA for the aircraft information that was requested
+    internal func mergeWithCached(
+        airport: Airport,
+        icao: String! = nil,
+        iata: String! = nil,
+        code: String! = nil
+    ) -> Airport {
+        if var cached = (AeroAPI.allAirports.first(where: {
+            ($0.codeIcao == icao || $0.codeIata == iata || $0.airportCode == code)
+        })) {
+            cached.airportCode  = airport.airportCode
+            cached.codeLid      = airport.codeLid
+            cached.name         = airport.name
+            cached.type         = airport.type
+            cached.elevation    = airport.elevation
+            cached.city         = airport.city
+            cached.state        = airport.state
+            cached.longitude    = airport.longitude
+            cached.latitude     = airport.latitude
+            cached.timezone     = airport.timezone
+            cached.countryCode  = airport.countryCode
+            cached.url          = airport.url
+            cached.wikiUrl      = airport.wikiUrl
+            cached.airportFlightsUrl = airport.airportFlightsUrl
+            cached.alternatives = airport.alternatives
+            
+            return cached
+        }
+        
+        return airport
+    }
 }
 
 extension String {
     public var airport: Airport?
-    { AeroAPI.allAirports.first(where: { $0.ident == self || $0.iata == self }) }
+    { AeroAPI.allAirports.first(where: { $0.codeIcao == self || $0.codeIata == self }) }
 }
-
-#endif

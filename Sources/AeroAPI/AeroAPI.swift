@@ -2,7 +2,6 @@ import Foundation
 import Alamofire
 import ZippyJSON
 
-#if !os(macOS)
 public class AeroAPI {
     
     /// Is API class in debug mode
@@ -36,7 +35,7 @@ public class AeroAPI {
     public var decoder: ZippyJSONDecoder {
         let decoder = ZippyJSONDecoder()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = Self.dateStringFormat
         dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         
@@ -68,11 +67,13 @@ public class AeroAPI {
         else { throw AeroAPIError.apiKeyNotSet }
         
         let url = try makeUrl(request)
-        let urlRequest = try URLRequest(url: url,
-                                        method: .get,
-                                        headers: [
-                                            .init(name: "x-apikey", value: apiKey)
-                                        ])
+        let urlRequest = try URLRequest(
+            url: url,
+            method: .get,
+            headers: [
+                .init(name: "x-apikey", value: apiKey)
+            ]
+        )
         
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         let statusCode = (response as? HTTPURLResponse)?.statusCode
@@ -81,7 +82,6 @@ public class AeroAPI {
         else { throw AeroAPIError.HTTPResponseError(statusCode) }
         
         let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
-        
         if AeroAPI.debug {
             print("=== JSON DATA ===")
             print(json)
@@ -89,6 +89,50 @@ public class AeroAPI {
         }
         
         return data
+    }
+    
+    /// Makes the given request and returns Data
+    /// - Parameter request: AeroAPIRequest
+    /// - Returns: A completion of `Error` or `Data`
+    internal func request(_ request: AeroAPIRequest,_ completion: @escaping (Error?, Data?) -> Void) {
+        do {
+            guard let apiKey = apiKey
+            else { throw AeroAPIError.apiKeyNotSet }
+            
+            let url = try makeUrl(request)
+            let urlRequest = try URLRequest(
+                url: url,
+                method: .get,
+                headers: [
+                    .init(name: "x-apikey", value: apiKey)
+                ]
+            )
+            
+            let task = URLSession.shared.dataTask(with: urlRequest)
+            { data, response, error in
+                do {
+                    if let error = error { throw error }
+                    
+                    let statusCode = (response as? HTTPURLResponse)?.statusCode
+                    guard let statusCode = statusCode, statusCode == 200
+                    else { throw AeroAPIError.HTTPResponseError(statusCode) }
+                    
+                    guard let data = data
+                    else { throw AeroAPIError.noDataReturnedForValidStatusCode }
+                    
+                    if AeroAPI.debug {
+                        let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                        print("=== JSON DATA ===")
+                        print(json)
+                        print("=================")
+                    }
+                    
+                    completion(nil, data)
+                } catch { completion(error, nil) }
+            }
+            
+            task.resume()
+        } catch { completion(error, nil) }
     }
     
     /// Makes the url of the API all for the given AeroAPIRequest
@@ -147,4 +191,3 @@ public class AeroAPI {
 public extension Bundle {
     static let AeroAPIBundle = Bundle.module.bundleIdentifier!
 }
-#endif

@@ -1,7 +1,5 @@
 import Foundation
 
-#if !os(macOS)
-
 /// Errors for the AeroAPI
 public enum AeroAPIError: Error {
     
@@ -16,6 +14,9 @@ public enum AeroAPIError: Error {
     
     /// When the HTTP response errors present the code
     case HTTPResponseError(_ code: Int?)
+    
+    /// When the HTTP response is 200, but no data was returned
+    case noDataReturnedForValidStatusCode
     
     // Date errors
     /// start date for search cannot be completed
@@ -58,6 +59,9 @@ extension AeroAPIError: CustomStringConvertible {
             
         case .HTTPResponseError(let code):
             return "HTTP Response Error Code: \(code ?? 9999)"
+            
+        case .noDataReturnedForValidStatusCode:
+            return "The HTTP Response was 200 but we did not return any data."
             
         case .startDateCreationInvalid:
             return "Failed to create start date using calendar"
@@ -104,6 +108,9 @@ extension AeroAPIError: LocalizedError {
             
         case .HTTPResponseError:
             key = "HTTPResponseError"
+            
+        case .noDataReturnedForValidStatusCode:
+            key = "noDataReturnedForValidStatusCode"
         
         case .startDateCreationInvalid:
             key = "startDateCreationInvalid"
@@ -138,4 +145,3 @@ extension AeroAPIError: LocalizedError {
         )
     }
 }
-#endif

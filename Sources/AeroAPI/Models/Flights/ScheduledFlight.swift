@@ -3,7 +3,6 @@ import SwiftDate
 
 import NomadUtilities
 
-#if !os(macOS)
 public struct ScheduledFlightResponse: Codable {
     
     public static func dummy() throws -> ScheduledFlightResponse {
@@ -25,6 +24,7 @@ public struct ScheduledFlightResponse: Codable {
 }
 
 public struct ScheduledFlightRequest: AeroAPIRequest {
+    // TODO: Implement
     public func path() throws -> String {
         return ""
     }
@@ -44,8 +44,8 @@ public struct ScheduledFlightRequest: AeroAPIRequest {
         self.year = year
         self.origin = origin
         
-        var fills: [RequestFilters] = filters + [.origin(origin.ident)]
-        if let dest = destination { fills.append(.destination(dest.ident)) }
+        var fills: [RequestFilters] = filters + [.origin(origin.codeIcao!)]
+        if let dest = destination { fills.append(.destination(dest.codeIcao!)) }
         self.filters = fills
     }
     
@@ -207,4 +207,3 @@ extension AeroAPI {
         return merged + leftovers + parents
     }
 }
-#endif
