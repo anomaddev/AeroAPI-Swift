@@ -29,9 +29,15 @@ public struct FlightDataRequest: AeroAPIRequest {
     
     /// Create a `FlightDataRequest` with a given FlightAware ID (faId).
     /// - Parameter faId: A string representation of the unique FlightAware flight ID for a given flight
-    public init(faId: String) {
+    public init(faId: String) throws {
         self.ident = faId
-        self.filters = [.identType(IdentType.faId.rawValue)]
+        self.filters = [.identType(.faId)]
+        
+        guard let flightDate = Int(faId.split(separator: "-")[1])
+        else { throw AeroAPIError.faIdDateInvalid(id: faId) }
+        
+        let current = Date().seconds
+        self.historical = current > flightDate
     }
     
     /// Create a `FlightDataRequest` with an given identifier, with or without a `Date` range
@@ -46,21 +52,16 @@ public struct FlightDataRequest: AeroAPIRequest {
                 cursor: String? = nil) {
         
         self.ident = ident
-        self.filters = [.identType(type.rawValue), .maxPages(maxPages)]
+        self.filters = [.identType(type), .maxPages(maxPages)]
         
         if let range = dateRange {
+            self.historical = range.start.seconds < Date().seconds
             self.filters.append(.startDate(range.start))
             self.filters.append(.endDate(range.end))
         }
         
         if let cursor = cursor
         { self.filters.append(.cursor(cursor)) }
-    }
-    
-    public enum IdentType: String, Codable {
-        case designator
-        case faId = "fa_flight_id"
-        case registration
     }
 }
 
@@ -143,8 +144,15 @@ extension AeroAPI {
     /// - Parameters:
     ///   - faId: The unique flight ID for the requested flight
     ///   - completion: A tuple containing an optional `Error` and `Flight` objects based on the successfulness of the request
-    public func getFlightData(faId: String,_ completion: @escaping (Error?, Flight?) -> Void)
-    { getFlightData(.init(faId: faId)) { error, response in completion(error, response?.flights?.first) }}
+    public func getFlightData(faId: String,_ completion: @escaping (Error?, Flight?) -> Void) {
+        do {
+            let request = try FlightDataRequest(faId: faId)
+            getFlightData(request)
+            { error, response in
+                completion(error, response?.flights?.first)
+            }
+        } catch { completion(error, nil) }
+    }
     
     /// Get flight information asynchronously from a `FlightDataRequest` using this function
     /// - Parameters:

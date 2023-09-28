@@ -25,17 +25,6 @@ struct ContentView: View {
                 print(track.prettyJSON)
                 print()
                 
-                AeroAPI
-                    .manager
-                    .getTrack(
-                        faId: "AAL1722-1695242173-airline-4780p"
-                    )
-                { error, track in
-                    
-                    print(track?.prettyJSON)
-                    print()
-                }
-                
             } catch { error.explain() }
         }
     }

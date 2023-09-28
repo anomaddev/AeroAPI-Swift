@@ -15,7 +15,7 @@ public extension AeroAPIRequest {
                 return URLQueryItem(name: "ident", value: ident)
                 
             case .identType(let type):
-                return URLQueryItem(name: "ident_type", value: type)
+                return URLQueryItem(name: "ident_type", value: type.rawValue)
                 
             case .airline(let airline):
                 return URLQueryItem(name: "airline", value: airline)
@@ -53,7 +53,7 @@ public extension AeroAPIRequest {
 
 public enum RequestFilters: Codable {
     case ident(String)
-    case identType(String)
+    case identType(IdentType)
     
     case airline(String)
     case origin(String)
@@ -69,3 +69,9 @@ public enum RequestFilters: Codable {
     case cursor(String)
     case maxPages(Int)
 }
+
+public enum IdentType: String, Codable {
+    case designator
+    case faId = "fa_flight_id"
+    case registration
+    }

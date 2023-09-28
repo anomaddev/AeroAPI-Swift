@@ -66,8 +66,8 @@ Since this library is still a work in progress. You can use the chart below to t
 [ ❌ ] - GET /history/aircraft/{registration}/last_flight<br>
 [ ❌ ] - GET /history/flights/{id}/map<br>
 [ ❌ ] - GET /history/flights/{id}/route<br>
-[ ❌ ] - GET /history/flights/{id}/track<br>
-[ ❌ ] - GET /history/flights/{ident}<br>
+[ ✅ ] - GET /history/flights/{id}/track<br>
+[ ✅ ] - GET /history/flights/{ident}<br>
 
 ##### Miscellaneous
 [ ❌ ] - GET /aircraft/{ident}/blocked<br>

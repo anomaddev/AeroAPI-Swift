@@ -12,19 +12,25 @@ import CoreLocation
 
 public struct FlightTrackRequest: AeroAPIRequest {
     
-    public func path() throws -> String {
-        if historical { return "/history/flights/\(faId)/track" }
-        else { return "/flights/\(faId)/track" }
-    }
+    public func path() throws -> String
+    { return "\(historical ? "/history" : "")/flights/\(faId)/track" }
     
     public var faId: String
     public var historical: Bool = false
     public var filters: [RequestFilters]
     
     public init(_ faId: String,
-                showEstimated: Bool! = true) {
+                showEstimated: Bool! = true) throws {
         self.faId = faId
-        self.filters = [.includeEstimated(showEstimated)]
+        self.filters = [
+            .includeEstimated(showEstimated)
+        ]
+        
+        guard let flightDate = Int(faId.split(separator: "-")[1])
+        else { throw AeroAPIError.faIdDateInvalid(id: faId) }
+        
+        let current = Date().seconds
+        self.historical = current > flightDate
     }
 }
 
@@ -86,17 +92,20 @@ extension AeroAPI {
     public func getTrack(faId: String,
                          includeEstimatedPositions: Bool! = false,
                          _ completion: @escaping (Error?, [FlightTrack]?) -> Void) {
-        self.request(FlightTrackRequest(faId, showEstimated: includeEstimatedPositions))
-        { error, data in
-            if let error = error
-            { completion(error, nil); return }
-            
-            guard let data = data,
-                  let parsed = try? self.decoder.decode([String: [FlightTrack]].self, from: data)
-            else { completion(AeroAPIError.noFlightTrackDataForValidRequest, nil); return }
-            
-            completion(nil, parsed["positions"])
-        }
+        do {
+            let request = try FlightTrackRequest(faId, showEstimated: includeEstimatedPositions)
+            self.request(request)
+            { error, data in
+                if let error = error
+                { completion(error, nil); return }
+                
+                guard let data = data,
+                      let parsed = try? self.decoder.decode([String: [FlightTrack]].self, from: data)
+                else { completion(AeroAPIError.noFlightTrackDataForValidRequest, nil); return }
+                
+                completion(nil, parsed["positions"])
+            }
+        } catch { completion(error, nil) }
     }
     
     // MARK: - AeroAPI Private

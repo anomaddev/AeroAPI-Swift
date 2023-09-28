@@ -34,6 +34,9 @@ public enum AeroAPIError: Error {
     /// end date for search cannot be completed
     case endDateCreationInvalid
     
+    // Flight Info Errors
+    /// the date value in the provided FAID is invalid
+    case faIdDateInvalid(id: String)
     
     // Flight Track errors
     /// flight track response is empty
@@ -85,6 +88,9 @@ extension AeroAPIError: CustomStringConvertible {
             
         case .endDateCreationInvalid:
             return "Failed to create end date using calendar"
+            
+        case .faIdDateInvalid(let id):
+            return "The FAID date string is invalid: \(id)"
             
         case .failedDecodingScheduledFlightResponse:
             return "Failed to decode the ScheduledFlightResponse"
@@ -140,6 +146,9 @@ extension AeroAPIError: LocalizedError {
         
         case .endDateCreationInvalid:
             key = "endDateCreationInvalid"
+            
+        case .faIdDateInvalid:
+            key = "faIdDateInvalid"
         
         case .failedDecodingScheduledFlightResponse:
             key = "failedDecodingScheduledFlightResponse"
