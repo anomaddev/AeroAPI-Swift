@@ -16,15 +16,21 @@ struct ContentView: View {
         }
         .task {
             do {
-                let track = try await AeroAPI
+                let request = try AirportFlightsRequest(
+                    code: "KJFK",
+                    dateRange: (
+                        start: Date(seconds: 1695587773),
+                        end: Date(seconds: 1695587773 + 86400)
+                    ),
+                    requestType: .departures
+                )
+                
+                let flights = try await AeroAPI
                     .manager
-                    .getTrack(
-                        faId: "AAL1722-1695242173-airline-4780p"
-                    )
+                    .getAirportsFlights(request: request)
                 
-                print(track.prettyJSON)
+                print(flights.prettyJSON)
                 print()
-                
             } catch { error.explain() }
         }
     }

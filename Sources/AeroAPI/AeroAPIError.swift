@@ -26,6 +26,15 @@ public enum AeroAPIError: Error {
     /// no errors were thrown but no flight track data was returned either
     case noFlightTrackDataForValidRequest
     
+    /// no errors were thrown but no flight route data was returned either
+    case noFlightRouteForValidRequest
+    
+    /// no errors were thrown but no airport status data was returned either
+    case noAirportStatusForValidRequest
+    
+    /// no errors were thrown but no airport flights were returned either
+    case noAirportFlightsForValidRequest
+    
     
     // Date errors
     /// start date for search cannot be completed
@@ -33,6 +42,13 @@ public enum AeroAPIError: Error {
     
     /// end date for search cannot be completed
     case endDateCreationInvalid
+    
+    /// date range invalid for `AirportFlightsRequest`
+    case invalidDateAirportFlightsRequest
+    
+    /// start date cannot be before end date
+    case startDateBeforeEndDate
+    
     
     // Flight Info Errors
     /// the date value in the provided FAID is invalid
@@ -83,11 +99,26 @@ extension AeroAPIError: CustomStringConvertible {
         case .noFlightTrackDataForValidRequest:
             return "No flight track data was returned for a request that returned no error."
             
+        case .noFlightRouteForValidRequest:
+            return "No flight route data was returned for a request that returned no error."
+            
+        case .noAirportStatusForValidRequest:
+            return "No airport status data was returned for a request that returned no error."
+            
+        case .noAirportFlightsForValidRequest:
+            return "No airport flights data was returned for a request taht returned no error."
+            
         case .startDateCreationInvalid:
             return "Failed to create start date using calendar"
             
         case .endDateCreationInvalid:
             return "Failed to create end date using calendar"
+            
+        case .invalidDateAirportFlightsRequest:
+            return "Start and End dates for an AirportFlightsRequest must be no further than a week in the past and two days in the future."
+            
+        case .startDateBeforeEndDate:
+            return "Start Date cannot be before the End Date."
             
         case .faIdDateInvalid(let id):
             return "The FAID date string is invalid: \(id)"
@@ -140,12 +171,27 @@ extension AeroAPIError: LocalizedError {
             
         case .noFlightTrackDataForValidRequest:
             key = "noFlightTrackDataForValidRequest"
+            
+        case .noFlightRouteForValidRequest:
+            key = "noFlightRouteForValidRequest"
+            
+        case .noAirportStatusForValidRequest:
+            key = "noAirportStatusForValidRequest"
+            
+        case .noAirportFlightsForValidRequest:
+            key = "noAirportFlightsForValidRequest"
         
         case .startDateCreationInvalid:
             key = "startDateCreationInvalid"
         
         case .endDateCreationInvalid:
             key = "endDateCreationInvalid"
+            
+        case .invalidDateAirportFlightsRequest:
+            key = "invalidDateAirportFlightsRequest"
+            
+        case .startDateBeforeEndDate:
+            key = "startDateBeforeEndDate"
             
         case .faIdDateInvalid:
             key = "faIdDateInvalid"

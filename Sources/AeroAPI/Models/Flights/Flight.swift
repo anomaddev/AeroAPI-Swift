@@ -132,7 +132,6 @@ extension AeroAPI {
     
     // MARK: - AeroAPI Public
     
-    
     /// Get flight information asynchronously using the unique FAID for a given flight
     /// - Parameter faId: The unique flight ID for the requested flight
     /// - Returns: An optional `Flight` object with the flight information

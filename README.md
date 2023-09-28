@@ -18,7 +18,7 @@ Since this library is still a work in progress. You can use the chart below to t
 ##### Flights
 [ ❌ ] - GET /flights/{id}/map<br>
 [ ❌ ] - GET /flights/{id}/position<br>
-[ ❌ ] - GET /flights/{id}/route<br>
+[ ✅ ] - GET /flights/{id}/route<br>
 [ ✅ ] - GET /flights/{id}/track<br>
 [ ✅ ] - GET /flights/{ident}<br>
 [ ❌ ] - GET /flights/{ident}/canonical<br>
@@ -37,13 +37,13 @@ Since this library is still a work in progress. You can use the chart below to t
 [ ❌ ] - GET /airports<br>
 [ ✅ ] - GET /airports/{id}<br>
 [ ❌ ] - GET /airports/{id}/canonical<br>
-[ ❌ ] - GET /airports/{id}/delays<br>
-[ ❌ ] - GET /airports/{id}/flights<br>
-[ ❌ ] - GET /airports/{id}/flights/arrivals<br>
+[ ✅ ] - GET /airports/{id}/delays<br>
+[ ✅ ] - GET /airports/{id}/flights<br>
+[ ✅ ] - GET /airports/{id}/flights/arrivals<br>
 [ ❌ ] - GET /airports/{id}/flights/counts<br>
-[ ❌ ] - GET /airports/{id}/flights/departures<br>
-[ ❌ ] - GET /airports/{id}/flights/scheduled_arrivals<br>
-[ ❌ ] - GET /airports/{id}/flights/scheduled_departures<br>
+[ ✅ ] - GET /airports/{id}/flights/departures<br>
+[ ✅ ] - GET /airports/{id}/flights/scheduled_arrivals<br>
+[ ✅ ] - GET /airports/{id}/flights/scheduled_departures<br>
 [ ❌ ] - GET /airports/{id}/flights/to/{dest_id}<br>
 [ ❌ ] - GET /airports/{id}/nearby<br>
 [ ❌ ] - GET /airports/{id}/routes/{dest_id}<br>
@@ -65,7 +65,7 @@ Since this library is still a work in progress. You can use the chart below to t
 ##### History
 [ ❌ ] - GET /history/aircraft/{registration}/last_flight<br>
 [ ❌ ] - GET /history/flights/{id}/map<br>
-[ ❌ ] - GET /history/flights/{id}/route<br>
+[ ✅ ] - GET /history/flights/{id}/route<br>
 [ ✅ ] - GET /history/flights/{id}/track<br>
 [ ✅ ] - GET /history/flights/{ident}<br>
 

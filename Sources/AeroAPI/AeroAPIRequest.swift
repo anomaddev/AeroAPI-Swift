@@ -46,6 +46,9 @@ public extension AeroAPIRequest {
                 
             case .maxPages(let pages):
                 return URLQueryItem(name: "max_pages", value: "\(pages)")
+                
+            case .airportFlightType(let type):
+                return URLQueryItem(name: "type", value: "\(type.rawValue)")
             }
         }
     }
@@ -68,10 +71,12 @@ public enum RequestFilters: Codable {
     
     case cursor(String)
     case maxPages(Int)
+    
+    case airportFlightType(AirportFlightsType)
 }
 
 public enum IdentType: String, Codable {
     case designator
     case faId = "fa_flight_id"
     case registration
-    }
+}
