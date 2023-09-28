@@ -6,14 +6,14 @@ A Swift library to integrate the FlightAware AeroAPI into you app. This library 
 Since this library is still a work in progress. You can use the chart below to track which AeroAPI functions are supported in the library at current.
 
 ##### Alerts
-[ ❌ ] - GET /alerts
-[ ❌ ] - PUT /alerts
-[ ❌ ] - GET /alerts/{id}
-[ ❌ ] - PUT /alerts/{id}
-[ ❌ ] - DELETE /alerts/{id}
-[ ❌ ] - GET /alerts/endpoint
-[ ❌ ] - PUT /alerts/endpoint
-[ ❌ ] - DELETE /alerts/endpoint
+[ ❌ ] - GET /alerts<br>
+[ ❌ ] - PUT /alerts<br>
+[ ❌ ] - GET /alerts/{id}<br>
+[ ❌ ] - PUT /alerts/{id}<br>
+[ ❌ ] - DELETE /alerts/{id}<br>
+[ ❌ ] - GET /alerts/endpoint<br>
+[ ❌ ] - PUT /alerts/endpoint<br>
+[ ❌ ] - DELETE /alerts/endpoint<br>
 
 ##### Flights
 [ ❌ ] - GET /flights/{id}/map
