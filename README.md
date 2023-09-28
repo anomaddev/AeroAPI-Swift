@@ -58,7 +58,7 @@ Since this library is still a work in progress. You can use the chart below to t
 [ ❌ ] - GET /operators/{id}/canonical<br>
 [ ❌ ] - GET /operators/{id}/flights<br>
 [ ❌ ] - GET /operators/{id}/flights/arrivals<br>
-[ ❌ ] - GET /operators/{id}/flights/counts<br>
+[ ✅ ] - GET /operators/{id}/flights/counts<br>
 [ ❌ ] - GET /operators/{id}/flights/enroute<br>
 [ ❌ ] - GET /operators/{id}/flights/scheduled<br>
 

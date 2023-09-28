@@ -8,6 +8,33 @@
 // Core iOS
 import UIKit
 
+public struct AirlineFlightCountResponse: Codable {
+    
+    public var airborne: Int
+    public var flightsLast24Hours: Int
+    
+}
+
+public struct AirlineFlightCountRequest: AeroAPIRequest {
+    
+    public func path() throws -> String
+    { return "/operators/\((icao ?? iata)!)/flights/counts" }
+    
+    public var icao: String?
+    public var iata: String?
+    public var filters: [RequestFilters]
+    
+    public init(icao: String) {
+        self.icao = icao
+        self.filters = []
+    }
+    
+    public init(iata: String) {
+        self.iata = iata
+        self.filters = []
+    }
+}
+
 public struct AirlineInfoRequest: AeroAPIRequest {
     public func path() throws -> String {
         return "/operators/\((icao ?? iata)!)"
@@ -67,6 +94,37 @@ public struct Airline: Codable {
 extension AeroAPI {
     
     // MARK: - AeroAPI Public
+    
+    
+    /// Get the count of flights for a given airline within the last 24 hours asynchronously
+    /// - Parameter icao: The ICAO code for the requested airport
+    /// - Returns: A `AirlineFlightCountResponse` with the count of flights for the airport
+    public func getAirlineFlightCount(icao: String) async throws -> AirlineFlightCountResponse {
+        let data = try await self.request(AirlineFlightCountRequest(icao: icao))
+        return try self.decoder.decode(AirlineFlightCountResponse.self, from: data)
+    }
+    
+    
+    /// Get the count of flights for a given airline within the last 24 hours, in a completion closure
+    /// - Parameters:
+    ///   - icao: The ICAO code for the requested airport
+    ///   - completion: A completion with optional `Error` and `AirlineFlightCountResponse` objects depending on the successfulness of the API call.
+    public func getAirlineFlightCount(icao: String,
+                                      _ completion: @escaping (Error?, AirlineFlightCountResponse?) -> Void) {
+        self.request(AirlineFlightCountRequest(icao: icao))
+        { error, data in
+            do {
+                if let error = error
+                { throw error }
+                
+                guard let data = data
+                else { throw AeroAPIError.noAirlineFlightCountsForRequest }
+                
+                let counts = try self.decoder.decode(AirlineFlightCountResponse.self, from: data)
+                completion(nil, counts)
+            } catch { completion(error, nil) }
+        }
+    }
     
     /// Async request function for `AirlineInfoRequest`
     /// - Parameter icao: The requested `Airline` icao string
