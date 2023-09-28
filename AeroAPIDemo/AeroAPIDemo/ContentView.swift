@@ -16,20 +16,11 @@ struct ContentView: View {
         }
         .task {
             do {
-                let request = try AirportFlightsRequest(
-                    code: "KJFK",
-                    dateRange: (
-                        start: Date(seconds: 1695587773),
-                        end: Date(seconds: 1695587773 + 86400)
-                    ),
-                    requestType: .departures
-                )
-                
-                let flights = try await AeroAPI
+                let counts = try await AeroAPI
                     .manager
-                    .getAirportsFlights(request: request)
+                    .getAirportFlightCounts(code: "KTPA")
                 
-                print(flights.prettyJSON)
+                print(counts.prettyJSON)
                 print()
             } catch { error.explain() }
         }

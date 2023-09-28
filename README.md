@@ -40,7 +40,7 @@ Since this library is still a work in progress. You can use the chart below to t
 [ ✅ ] - GET /airports/{id}/delays<br>
 [ ✅ ] - GET /airports/{id}/flights<br>
 [ ✅ ] - GET /airports/{id}/flights/arrivals<br>
-[ ❌ ] - GET /airports/{id}/flights/counts<br>
+[ ✅ ] - GET /airports/{id}/flights/counts<br>
 [ ✅ ] - GET /airports/{id}/flights/departures<br>
 [ ✅ ] - GET /airports/{id}/flights/scheduled_arrivals<br>
 [ ✅ ] - GET /airports/{id}/flights/scheduled_departures<br>

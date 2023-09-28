@@ -7,6 +7,29 @@
 
 import Foundation
 
+public struct AirportFlightCounts: Codable {
+    
+    public var departed: Int
+    public var enroute: Int
+    public var scheduledArrivals: Int
+    public var scheduledDepartures: Int
+    
+}
+
+public struct AirportCountRequest: AeroAPIRequest {
+    
+    public func path() throws -> String
+    { return "/airports/\(ident)/flights/counts" }
+    
+    public var ident: String
+    public var filters: [RequestFilters]
+    
+    public init(code: String) {
+        self.ident = code
+        self.filters = []
+    }
+}
+
 public struct AirportFlightsResponse: Codable {
     
     var scheduledArrivals:      [Flight]?
@@ -122,6 +145,36 @@ extension AeroAPI {
                 
                 let flights = try self.decoder.decode(AirportFlightsResponse.self, from: data)
                 completion(nil, flights)
+            } catch { completion(error, nil) }
+        }
+    }
+    
+    
+    /// Get the count of flights at a given airport asynchronously
+    /// - Parameter code: The ICAO, IATA or LID airport code
+    /// - Returns: An `AirportFlightCounts` object containing the departed, enroute and scheduled arrivals & departures.
+    public func getAirportFlightCounts(code: String) async throws -> AirportFlightCounts {
+        let data = try await self.request(AirportCountRequest(code: code))
+        return try self.decoder.decode(AirportFlightCounts.self, from: data)
+    }
+    
+    
+    /// Get the count of flights at a give airport with a completion closure
+    /// - Parameter code: The ICAO, IATA or LID airport code
+    /// - Returns: A completion with optional `Error` and `AirportFlightCounts` objects depending on the successfulnes of the API call.
+    public func getAirportFlightCounts(code: String,
+                                       _ completion: @escaping (Error?, AirportFlightCounts?) -> Void) {
+        self.request(AirportCountRequest(code: code))
+        { error, data in
+            do {
+                if let error = error
+                { throw error }
+                
+                guard let data = data
+                else { throw AeroAPIError.noAirportFlightCountStats }
+                
+                let counts = try self.decoder.decode(AirportFlightCounts.self, from: data)
+                completion(nil, counts)
             } catch { completion(error, nil) }
         }
     }

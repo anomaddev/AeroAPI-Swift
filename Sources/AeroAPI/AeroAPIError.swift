@@ -35,6 +35,9 @@ public enum AeroAPIError: Error {
     /// no errors were thrown but no airport flights were returned either
     case noAirportFlightsForValidRequest
     
+    /// no errors were thrown but no airport count stats were returned either
+    case noAirportFlightCountStats
+    
     
     // Date errors
     /// start date for search cannot be completed
@@ -106,7 +109,10 @@ extension AeroAPIError: CustomStringConvertible {
             return "No airport status data was returned for a request that returned no error."
             
         case .noAirportFlightsForValidRequest:
-            return "No airport flights data was returned for a request taht returned no error."
+            return "No airport flights data was returned for a request that returned no error."
+            
+        case .noAirportFlightCountStats:
+            return "No airport flight count stats data was returned for a request that returned no error."
             
         case .startDateCreationInvalid:
             return "Failed to create start date using calendar"
@@ -180,6 +186,9 @@ extension AeroAPIError: LocalizedError {
             
         case .noAirportFlightsForValidRequest:
             key = "noAirportFlightsForValidRequest"
+            
+        case .noAirportFlightCountStats:
+            key = "noAirportFlightCountStats"
         
         case .startDateCreationInvalid:
             key = "startDateCreationInvalid"
