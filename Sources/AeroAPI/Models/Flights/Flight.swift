@@ -6,7 +6,7 @@
 //
 
 // Core iOS
-import UIKit
+import Foundation
 
 // Utilities
 import SwiftDate
@@ -20,22 +20,42 @@ public struct FlightDataResponse: Codable {
 
 public struct FlightDataRequest: AeroAPIRequest {
     
+    public func path() throws -> String
+    { return "\(historical ? "/history" : "")/flights/\(ident)" }
+    
     public var ident: String
     public var historical: Bool! = false
     public var filters: [RequestFilters]
     
-    public init(ident: String,
-                type: IdentType! = .designator,
-                filters: [RequestFilters]! = [],
-                historical: Bool! = false) throws {
-        
-        self.historical = historical
-        self.ident = ident
-        self.filters = filters + [.identType(type.rawValue)]
+    /// Create a `FlightDataRequest` with a given FlightAware ID (faId).
+    /// - Parameter faId: A string representation of the unique FlightAware flight ID for a given flight
+    public init(faId: String) {
+        self.ident = faId
+        self.filters = [.identType(IdentType.faId.rawValue)]
     }
     
-    public func path() throws -> String
-    { return "\(historical ? "/history" : "")/flights/\(ident)" }
+    /// Create a `FlightDataRequest` with an given identifier, with or without a `Date` range
+    /// - Parameters:
+    ///   - ident: The ICAO or IATA flight code, registration for General Aviation or FlightAware Flight ID
+    ///   - type: The type of identifier given. Designator, FAID or Registration.
+    ///   - dateRange: The optional start and end dates you would like to perform the search under
+    public init(ident: String,
+                type: IdentType! = .designator,
+                dateRange: (start: Date, end: Date)? = nil,
+                maxPages: Int! = 1,
+                cursor: String? = nil) {
+        
+        self.ident = ident
+        self.filters = [.identType(type.rawValue), .maxPages(maxPages)]
+        
+        if let range = dateRange {
+            self.filters.append(.startDate(range.start))
+            self.filters.append(.endDate(range.end))
+        }
+        
+        if let cursor = cursor
+        { self.filters.append(.cursor(cursor)) }
+    }
     
     public enum IdentType: String, Codable {
         case designator
@@ -46,6 +66,7 @@ public struct FlightDataRequest: AeroAPIRequest {
 
 public struct Flight: Codable {
     
+    /// Either the ICAO flight number or the Registration for General Aviation
     public var ident: String
     public var identIcao: String?
     public var identIata: String?
@@ -68,11 +89,11 @@ public struct Flight: Codable {
     public var arrivalDelay: Int?
     public var filedEte: Int?
     
-    public var scheduledOut: Date!
+    public var scheduledOut: Date?
     public var estimatedOut: Date?
     public var actualOut: Date?
     
-    public var scheduledOff: Date!
+    public var scheduledOff: Date?
     public var estimatedOff: Date?
     public var actualOff: Date?
     
@@ -100,92 +121,59 @@ public struct Flight: Codable {
     public var terminalOrigin: String?
     public var terminalDestination: String?
     public var type: String?
-    
-    public var archived: Bool? = false
-    public var updated: Date? = Date()
-//    var changes: [FlightChange]? = []
-    
-    // MARK: - Computed
-    public var airline: Airline
-    { (operatorIcao ?? operatorIata)!.airline! }
 
-    public var delayed: Bool
-    { departureDelay ?? 0 > 0 || arrivalDelay ?? 0 > 0 }
-
-    public var ultiDepart: Date
-    { actualOut ?? estimatedOut ?? scheduledOut }
-
-    public var ultiArrive: Date
-    { actualIn ?? estimatedIn ?? scheduledIn }
-
-//    public var duration: TimeInterval {
-//        guard let actualOut = actualOut,
-//              let actualIn = actualIn
-//        else { return (scheduledIn.since1970 - scheduledOut.since1970) }
-//        return (actualIn.since1970 - actualOut.since1970)
-//    }
-
+    /// Calculated haversine distance between airports
     public var distance: Distance
     { Distance(from: origin.airport.coordinate, to: destination.airport.coordinate) }
-
-    public var departureDate: Date
-    { return (actualOut ?? estimatedOut ?? scheduledOut)! }
-
-    public var arrivalDate: Date
-    { return (actualIn ?? estimatedIn ?? scheduledIn)! }
-    
-//    public var remaining: (Int, Int, Int)
-//    { ((estimatedIn ?? scheduledIn)!.since1970 - Date().since1970).int.HMS() }
 }
 
 extension AeroAPI {
     
     // MARK: - AeroAPI Public
     
-    /// Request function for FlightDataRequest
-    /// - Parameter request: FlightDataRequest
-    /// - Returns: FliightDataResponse
+    
+    /// Get flight information asynchronously using the unique FAID for a given flight
+    /// - Parameter faId: The unique flight ID for the requested flight
+    /// - Returns: An optional `Flight` object with the flight information
+    public func getFlightData(faId: String) async throws -> Flight?
+    { return try await getFlightData(.init(faId: faId)).flights?.first }
+    
+    
+    /// Get flight information from a unique FAID using a completion based callback
+    /// - Parameters:
+    ///   - faId: The unique flight ID for the requested flight
+    ///   - completion: A tuple containing an optional `Error` and `Flight` objects based on the successfulness of the request
+    public func getFlightData(faId: String,_ completion: @escaping (Error?, Flight?) -> Void)
+    { getFlightData(.init(faId: faId)) { error, response in completion(error, response?.flights?.first) }}
+    
+    /// Get flight information asynchronously from a `FlightDataRequest` using this function
+    /// - Parameters:
+    ///   - request: Use a `FlightDataRequest` to specify the parameters of the flight search
+    /// - Returns: A `FlightDataResponse` containing the flights found using the search request
     public func getFlightData(_ request: FlightDataRequest) async throws -> FlightDataResponse {
         let data = try await self.request(request)
-        let decoded = try decoder.decode(FlightDataResponse.self, from: data)
-        
-        guard let flights = decoded.flights, !(flights.isEmpty)
-        else { throw AeroAPIError.failedDecodingScheduledFlightResponse }
-        
-        // TODO: More Processing Here?
-        // TODO: Codeshare something maybe?
-        
-        return decoded
+        return try decoder.decode(FlightDataResponse.self, from: data)
+    }
+    
+    
+    /// Get flight information from a `FlightDataRequest` using a completion based callback
+    /// - Parameters:
+    ///   - request: Use a `FlightDataRequest` to specify the parameters of the flight search
+    ///   - completion: A tuple containing an optional `Error` and `Data` objects based on the successfulness of the request
+    public func getFlightData(_ request: FlightDataRequest,
+                              _ completion: @escaping (Error?, FlightDataResponse?) -> Void) {
+        self.request(request) { error, data in
+            if let error = error
+            { completion(error, nil); return }
+            
+            guard let data = data,
+                  let parsed = try? self.decoder.decode(FlightDataResponse.self, from: data)
+            else { completion(AeroAPIError.noFlightDataForValidRequest, nil); return }
+            
+            completion(nil, parsed)
+        }
     }
     
     // MARK: - AeroAPI Private
     
 }
-
-// MARK: Move out to Atlas
-// TODO: Add error checks and throws
-//    public init(atlasId: String, filters: [RequestFilters]! = []) throws {
-//        let split = atlasId.split(separator: "_")
-//        let flightno = split.first!.string
-//        print(flightno)
-//
-//        let rsplit = split[1].split(separator: "-").compactMap { $0.string.airport }
-//        let origin = rsplit.first!
-//        let destination = rsplit.last!
-//
-//        let date = split[2].split(separator: "-")
-//        let year = Int(date.first!)!
-//        let day = Int(date.last!)!
-//
-//        let range = try Date.day(day, of: year, in: origin.timezone)
-//
-//        self.ident = flightno
-//        self.historical = range.1.since1970 < (Date() - 1.days).since1970
-//        self.filters = (filters + [
-//            .identType(IdentType.designator.rawValue),
-//            .origin(origin.ident),
-//            .destination(destination.ident),
-//            .startDate(range.0),
-//            .endDate(range.1)
-//        ])
-//    }

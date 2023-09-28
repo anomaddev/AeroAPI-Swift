@@ -16,24 +16,26 @@ struct ContentView: View {
         }
         .task {
             do {
-                let airportAwait = try await AeroAPI
+                let track = try await AeroAPI
                     .manager
-                    .getAirportInfo(code: "92B")
+                    .getTrack(
+                        faId: "AAL1722-1695242173-airline-4780p"
+                    )
                 
-                print(airportAwait.prettyJSON)
+                print(track.prettyJSON)
                 print()
                 
-                AeroAPI.manager.getAirportInfo(iata: "LHR")
-                { error, airport in
-                    if let error = error
-                    { error.explain(); return }
+                AeroAPI
+                    .manager
+                    .getTrack(
+                        faId: "AAL1722-1695242173-airline-4780p"
+                    )
+                { error, track in
                     
-                    guard let airport = airport
-                    else { return }
-                    
-                    print(airport.prettyJSON)
+                    print(track?.prettyJSON)
                     print()
                 }
+                
             } catch { error.explain() }
         }
     }
@@ -49,16 +51,5 @@ struct ContentView_Previews: PreviewProvider {
             .onViewDidLoad {
                 
             }
-    }
-}
-
-extension Encodable {
-    var prettyJSON: String {
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        guard let data = try? encoder.encode(self),
-              let output = String(data: data, encoding: .utf8)
-        else { return "Error converting \(self) to JSON string" }
-        return output
     }
 }

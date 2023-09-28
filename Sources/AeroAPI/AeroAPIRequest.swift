@@ -1,6 +1,5 @@
 import Foundation
 
-#if !os(macOS)
 public protocol AeroAPIRequest: Codable {
     var filters: [RequestFilters] { get set }
     
@@ -70,4 +69,3 @@ public enum RequestFilters: Codable {
     case cursor(String)
     case maxPages(Int)
 }
-#endif

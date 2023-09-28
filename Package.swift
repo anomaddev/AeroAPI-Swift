@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "AeroAPI",
-    platforms: [.iOS(.v15),],
+    platforms: [.iOS(.v15), .macOS(.v10_15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -34,7 +34,9 @@ let package = Package(
             resources: [
                 .copy("Databases/airports.json"),
                 .copy("Databases/airlines.json"),
-                .copy("Databases/aircraft.json")
+                .copy("Databases/aircraft.json"),
+                .copy("Models/Aircrafts/Aircraft.xcassets"),
+                .copy("Models/Airlines/Airlines.xcassets")
             ]
         ),
         .testTarget(

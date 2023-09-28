@@ -1,6 +1,7 @@
 import Foundation
 import CoreLocation
 
+/// Use this request for getting more Airport info from the AeroAPI
 public struct AirportInfoRequest: AeroAPIRequest {
     public func path() throws -> String {
         return "/airports/\((icao ?? iata ?? code)!)"
@@ -11,38 +12,72 @@ public struct AirportInfoRequest: AeroAPIRequest {
     public var code: String?
     public var filters: [RequestFilters]
     
+    
+    /// Init a request for more Airport info using the ICAO code
+    /// - Parameter icao: The ICAO code of the airport
     public init(icao: String) {
         self.icao = icao
         self.filters = []
     }
     
+    
+    /// Init a request for more Airport info using the IATA code
+    /// - Parameter iata: The IATA code of the airport
     public init(iata: String) {
         self.iata = iata
         self.filters = []
     }
     
+    
+    /// Init a request for more Airport info using any code for the Airport
+    /// - Parameter code: The ICAO, IATA or LID code of the airport
     public init(code: String) {
         self.code = code
         self.filters = []
     }
 }
 
+
+/// An `Airport` Object contains all the airport's details
 public struct Airport: Codable {
     
+    /// Active code used for airport. Could be ICAO, IATA or LID code.
     public var airportCode: String
+    
+    /// ICAO Airport code
     public var codeIcao: String?
+    
+    /// IATA Airport code
     public var codeIata: String?
+    
+    /// Airport LID code
     public var codeLid: String?
     
+    /// Name of the Airport
     public var name: String
+
+    /// Type of Airport
     public var type: AirportType?
+    
+    /// Elevation in Meters
     public var elevation: Int
+    
+    /// City of the Airport
     public var city: String
+    
+    /// State or Country of the Airport
     public var state: String
+    
+    /// Country Code of the Airport
     public var countryCode: String
+    
+    /// Timezone of the Airport
     public var timezone: String
     
+    /// Longitude represented as a `Double`
     public var longitude: Double
+    
+    /// Latitude represented as a `Double`
     public var latitude: Double
     
     public var url: String?
@@ -181,6 +216,7 @@ extension AeroAPI {
     /// - Parameter airport: `Airport` object that was returned by the AeroAPI
     /// - Parameter icao: `String` that's the ICAO for the aircraft information that was requested
     /// - Parameter iata: `String` that's the IATA for the aircraft information that was requested
+    /// - Returns: An `Airport` object with merged data if cached data found
     internal func mergeWithCached(
         airport: Airport,
         icao: String! = nil,

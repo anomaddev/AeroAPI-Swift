@@ -18,6 +18,15 @@ public enum AeroAPIError: Error {
     /// When the HTTP response is 200, but no data was returned
     case noDataReturnedForValidStatusCode
     
+    
+    // Data errors
+    /// no errors were thrown but no flight data was returned either
+    case noFlightDataForValidRequest
+    
+    /// no errors were thrown but no flight track data was returned either
+    case noFlightTrackDataForValidRequest
+    
+    
     // Date errors
     /// start date for search cannot be completed
     case startDateCreationInvalid
@@ -25,9 +34,11 @@ public enum AeroAPIError: Error {
     /// end date for search cannot be completed
     case endDateCreationInvalid
     
+    
     // Flight Track errors
     /// flight track response is empty
     case flightTrackEmpty
+    
     
     // Decoder errors
     /// failed to decode ScheduledFlightResponse
@@ -62,6 +73,12 @@ extension AeroAPIError: CustomStringConvertible {
             
         case .noDataReturnedForValidStatusCode:
             return "The HTTP Response was 200 but we did not return any data."
+            
+        case .noFlightDataForValidRequest:
+            return "No flight data was returned for a request that returned no error."
+            
+        case .noFlightTrackDataForValidRequest:
+            return "No flight track data was returned for a request that returned no error."
             
         case .startDateCreationInvalid:
             return "Failed to create start date using calendar"
@@ -111,6 +128,12 @@ extension AeroAPIError: LocalizedError {
             
         case .noDataReturnedForValidStatusCode:
             key = "noDataReturnedForValidStatusCode"
+            
+        case .noFlightDataForValidRequest:
+            key = "noFlightDataForValidRequest"
+            
+        case .noFlightTrackDataForValidRequest:
+            key = "noFlightTrackDataForValidRequest"
         
         case .startDateCreationInvalid:
             key = "startDateCreationInvalid"
