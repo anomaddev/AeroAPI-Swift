@@ -16,63 +16,63 @@ Since this library is still a work in progress. You can use the chart below to t
 [ ❌ ] - DELETE /alerts/endpoint<br>
 
 ##### Flights
-[ ❌ ] - GET /flights/{id}/map
-[ ❌ ] - GET /flights/{id}/position
-[ ❌ ] - GET /flights/{id}/route
-[ ✅ ] - GET /flights/{id}/track
-[ ✅ ] - GET /flights/{ident}
-[ ❌ ] - GET /flights/{ident}/canonical
-[ ❌ ] - POST /flights/{ident}/intents
-[ ❌ ] - GET /flights/search/
-[ ❌ ] - GET /flights/search/advanced
-[ ❌ ] - GET /flights/search/count
-[ ❌ ] - GET /flights/search/positions
+[ ❌ ] - GET /flights/{id}/map<br>
+[ ❌ ] - GET /flights/{id}/position<br>
+[ ❌ ] - GET /flights/{id}/route<br>
+[ ✅ ] - GET /flights/{id}/track<br>
+[ ✅ ] - GET /flights/{ident}<br>
+[ ❌ ] - GET /flights/{ident}/canonical<br>
+[ ❌ ] - POST /flights/{ident}/intents<br>
+[ ❌ ] - GET /flights/search/<br>
+[ ❌ ] - GET /flights/search/advanced<br>
+[ ❌ ] - GET /flights/search/count<br>
+[ ❌ ] - GET /flights/search/positions<br>
 
 ##### Foresight
-[ ❌ ] - GET /foresight/flights/{id}/position
-[ ❌ ] - GET /foresight/flights/{ident}/
-[ ❌ ] - GET /foresight/flights/search/advanced
+[ ❌ ] - GET /foresight/flights/{id}/position<br>
+[ ❌ ] - GET /foresight/flights/{ident}/<br>
+[ ❌ ] - GET /foresight/flights/search/advanced<br>
 
 ##### Airports
-[ ❌ ] - GET /airports
-[ ✅ ] - GET /airports/{id}
-[ ❌ ] - GET /airports/{id}/canonical
-[ ❌ ] - GET /airports/{id}/delays
-[ ❌ ] - GET /airports/{id}/flights
-[ ❌ ] - GET /airports/{id}/flights/arrivals
-[ ❌ ] - GET /airports/{id}/flights/counts
-[ ❌ ] - GET /airports/{id}/flights/departures
-[ ❌ ] - GET /airports/{id}/flights/scheduled_arrivals
-[ ❌ ] - GET /airports/{id}/flights/scheduled_departures
-[ ❌ ] - GET /airports/{id}/flights/to/{dest_id}
-[ ❌ ] - GET /airports/{id}/nearby
-[ ❌ ] - GET /airports/{id}/routes/{dest_id}
-[ ❌ ] - GET /airports/{id}/weather/forecast
-[ ❌ ] - GET /airports/{id}/observation
-[ ❌ ] - GET /airports/delays
-[ ❌ ] - GET /airports/nearby
+[ ❌ ] - GET /airports<br>
+[ ✅ ] - GET /airports/{id}<br>
+[ ❌ ] - GET /airports/{id}/canonical<br>
+[ ❌ ] - GET /airports/{id}/delays<br>
+[ ❌ ] - GET /airports/{id}/flights<br>
+[ ❌ ] - GET /airports/{id}/flights/arrivals<br>
+[ ❌ ] - GET /airports/{id}/flights/counts<br>
+[ ❌ ] - GET /airports/{id}/flights/departures<br>
+[ ❌ ] - GET /airports/{id}/flights/scheduled_arrivals<br>
+[ ❌ ] - GET /airports/{id}/flights/scheduled_departures<br>
+[ ❌ ] - GET /airports/{id}/flights/to/{dest_id}<br>
+[ ❌ ] - GET /airports/{id}/nearby<br>
+[ ❌ ] - GET /airports/{id}/routes/{dest_id}<br>
+[ ❌ ] - GET /airports/{id}/weather/forecast<br>
+[ ❌ ] - GET /airports/{id}/observation<br>
+[ ❌ ] - GET /airports/delays<br>
+[ ❌ ] - GET /airports/nearby<br>
 
 ##### Operators
-[ ❌ ] - GET /operators
-[ ✅ ] - GET /operators/{id}
-[ ❌ ] - GET /operators/{id}/canonical
-[ ❌ ] - GET /operators/{id}/flights
-[ ❌ ] - GET /operators/{id}/flights/arrivals
-[ ❌ ] - GET /operators/{id}/flights/counts
-[ ❌ ] - GET /operators/{id}/flights/enroute
-[ ❌ ] - GET /operators/{id}/flights/scheduled
+[ ❌ ] - GET /operators<br>
+[ ✅ ] - GET /operators/{id}<br>
+[ ❌ ] - GET /operators/{id}/canonical<br>
+[ ❌ ] - GET /operators/{id}/flights<br>
+[ ❌ ] - GET /operators/{id}/flights/arrivals<br>
+[ ❌ ] - GET /operators/{id}/flights/counts<br>
+[ ❌ ] - GET /operators/{id}/flights/enroute<br>
+[ ❌ ] - GET /operators/{id}/flights/scheduled<br>
 
 ##### History
-[ ❌ ] - GET /history/aircraft/{registration}/last_flight
-[ ❌ ] - GET /history/flights/{id}/map
-[ ❌ ] - GET /history/flights/{id}/route
-[ ❌ ] - GET /history/flights/{id}/track
-[ ❌ ] - GET /history/flights/{ident}
+[ ❌ ] - GET /history/aircraft/{registration}/last_flight<br>
+[ ❌ ] - GET /history/flights/{id}/map<br>
+[ ❌ ] - GET /history/flights/{id}/route<br>
+[ ❌ ] - GET /history/flights/{id}/track<br>
+[ ❌ ] - GET /history/flights/{ident}<br>
 
 ##### Miscellaneous
-[ ❌ ] - GET /aircraft/{ident}/blocked
-[ ❌ ] - GET /aircraft/{ident}/owner
-[ ✅ ] - GET /aircraft/types/{type}
-[ ❌ ] - GET /disruption_counts/{entity_type}
-[ ❌ ] - GET /disruption_counts/{entity_type}/{id}
-[ ❌ ] - GET /schedules/{date_start}/{date_end}
+[ ❌ ] - GET /aircraft/{ident}/blocked<br>
+[ ❌ ] - GET /aircraft/{ident}/owner<br>
+[ ✅ ] - GET /aircraft/types/{type}<br>
+[ ❌ ] - GET /disruption_counts/{entity_type}<br>
+[ ❌ ] - GET /disruption_counts/{entity_type}/{id}<br>
+[ ❌ ] - GET /schedules/{date_start}/{date_end}<br>
