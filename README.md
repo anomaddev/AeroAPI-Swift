@@ -26,7 +26,7 @@ let package = Package(
 To install the AeroAPI package via Xcode
 - Go to File -> Swift Packages -> Add Package Dependency...
 - Then search for https://github.com/anomaddev/AeroAPI-Swift.git
-- And choose the version you want
+- And choose the branch/version you want
 
 #### Setting the API key
 You will need to set your API key before you can use the library in your application. You can do this in your AppDelegate or in the initialization of your SwiftUI app.
@@ -92,11 +92,11 @@ Examples coming soon...
 [ ❌ ] - GET /operators<br>
 [ ✅ ] - GET /operators/{id}<br>
 [ ❌ ] - GET /operators/{id}/canonical<br>
-[ ❌ ] - GET /operators/{id}/flights<br>
-[ ❌ ] - GET /operators/{id}/flights/arrivals<br>
+[ ✅ ] - GET /operators/{id}/flights<br>
+[ ✅ ] - GET /operators/{id}/flights/arrivals<br>
 [ ✅ ] - GET /operators/{id}/flights/counts<br>
-[ ❌ ] - GET /operators/{id}/flights/enroute<br>
-[ ❌ ] - GET /operators/{id}/flights/scheduled<br>
+[ ✅ ] - GET /operators/{id}/flights/enroute<br>
+[ ✅ ] - GET /operators/{id}/flights/scheduled<br>
 
 ##### History
 [ ❌ ] - GET /history/aircraft/{registration}/last_flight<br>

@@ -18,6 +18,7 @@ struct AeroAPIDemoApp: App {
     
     init() {
         AeroAPI.manager.set(apiKey: "DKRlkQdGkuUtTYvf9sNbX7MO4X5leRKN")
+        AeroAPI.debug = true
     }
 }
 

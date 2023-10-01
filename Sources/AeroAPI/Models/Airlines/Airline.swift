@@ -99,7 +99,7 @@ extension AeroAPI {
     /// Get the count of flights for a given airline within the last 24 hours asynchronously
     /// - Parameter icao: The ICAO code for the requested airport
     /// - Returns: A `AirlineFlightCountResponse` with the count of flights for the airport
-    public func getAirlineFlightCount(icao: String) async throws -> AirlineFlightCountResponse
+    public func getAirlineCountsOnRecord(icao: String) async throws -> AirlineFlightCountResponse
     { return try await self.request(AirlineFlightCountRequest.init(icao: icao)) }
     
     
@@ -107,8 +107,8 @@ extension AeroAPI {
     /// - Parameters:
     ///   - icao: The ICAO code for the requested airport
     ///   - completion: A completion with optional `Error` and `AirlineFlightCountResponse` objects depending on the successfulness of the API call.
-    public func getAirlineFlightCount(icao: String,
-                                      _ completion: @escaping (Result<AirlineFlightCountResponse, Error>) -> Void) {
+    public func getAirlineCountsOnRecord(icao: String,
+                                         _ completion: @escaping (Result<AirlineFlightCountResponse, Error>) -> Void) {
         self.request(AirlineFlightCountRequest(icao: icao))
         { completion($0) }
     }

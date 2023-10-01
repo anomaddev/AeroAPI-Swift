@@ -18,7 +18,9 @@ struct ContentView: View {
             do {
                 let counts = try await AeroAPI
                     .manager
-                    .getAirlineFlightCount(icao: "AAL")
+                    .getAirlineFlights(request:
+                        AirlineFlightsRequest(airline: "AAL", requestType: .enroute)
+                    )
                 
                 print(counts.prettyJSON)
                 print()
