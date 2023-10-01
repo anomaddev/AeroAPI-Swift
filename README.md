@@ -32,7 +32,7 @@ To install the AeroAPI package via Xcode
 You will need to set your API key before you can use the library in your application. You can do this in your AppDelegate or in the initialization of your SwiftUI app.
 
 ``` swift
-AeroAPI.manager.set(apiKey: "DKRlkQdGkuUtTYvf9sNbX7MO4X5leRKN")
+AeroAPI.manager.set(apiKey: "api-key-goes-here")
 ```
 
 
