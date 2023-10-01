@@ -21,6 +21,11 @@ let package = Package(
 )
 ```
 
+To install the AeroAPI package via Xcode
+- Go to File -> Swift Packages -> Add Package Dependency...
+- Then search for https://github.com/anomaddev/AeroAPI-Swift.git
+- And choose the version you want
+
 ##### Alerts
 [ ❌ ] - GET /alerts<br>
 [ ❌ ] - PUT /alerts<br>
