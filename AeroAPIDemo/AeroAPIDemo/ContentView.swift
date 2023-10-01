@@ -25,10 +25,6 @@ struct ContentView: View {
             } catch { error.explain() }
         }
     }
-    
-    init() {
-        AeroAPI.manager.set(apiKey: "DKRlkQdGkuUtTYvf9sNbX7MO4X5leRKN")
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AeroAPI
 
 @main
 struct AeroAPIDemoApp: App {
@@ -13,6 +14,10 @@ struct AeroAPIDemoApp: App {
         WindowGroup {
             ContentView()
         }
+    }
+    
+    init() {
+        AeroAPI.manager.set(apiKey: "DKRlkQdGkuUtTYvf9sNbX7MO4X5leRKN")
     }
 }
 
