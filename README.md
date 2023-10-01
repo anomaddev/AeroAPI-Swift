@@ -35,6 +35,9 @@ You will need to set your API key before you can use the library in your applica
 AeroAPI.manager.set(apiKey: "api-key-goes-here")
 ```
 
+### Using the Library
+
+Examples coming soon...
 
 ### Supported Endpoints - [FlightAware Docs](https://www.flightaware.com/aeroapi/portal/documentation)
 
