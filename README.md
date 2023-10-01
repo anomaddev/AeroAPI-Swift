@@ -26,6 +26,8 @@ To install the AeroAPI package via Xcode
 - Then search for https://github.com/anomaddev/AeroAPI-Swift.git
 - And choose the version you want
 
+### Supported Endpoints - [FlightAware Docs](https://www.flightaware.com/aeroapi/portal/documentation)
+
 ##### Alerts
 [ ❌ ] - GET /alerts<br>
 [ ❌ ] - PUT /alerts<br>
