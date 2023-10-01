@@ -5,8 +5,21 @@ A Swift library to integrate the FlightAware AeroAPI into you app. This library 
 ### In Progress
 Since this library is still a work in progress. You can use the chart below to track which AeroAPI functions are supported in the library at current.
 
-### Getting Started
-Use **SwiftPackageManager** to add the AeroAPI library to your Swift project in Xcode
+#### Getting Started
+[Swift Package Manager](https://swift.org/package-manager/) is Apple's dependency manager tool. It can be used alongside other tools like CocoaPods and Carthage as well.
+
+To install the AeroAPI package into your packages, add a reference to AeroAPI and a targeting branch (versioning will coming in future releases) in the dependencies section in Package.swift file:
+``` swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PROJECT_NAME",
+    products: [],
+    dependencies: [
+        .package(url: "https://github.com/anomaddev/AeroAPI-Swift.git", branch: "main")
+    ]
+)
+```
 
 ##### Alerts
 [ ❌ ] - GET /alerts<br>
