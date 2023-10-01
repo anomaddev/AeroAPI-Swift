@@ -3,6 +3,8 @@ import SwiftDate
 
 import NomadUtilities
 
+// TODO: Refactor this whole section
+
 public struct ScheduledFlightResponse: Codable {
     
     public static func dummy() throws -> ScheduledFlightResponse {
@@ -116,15 +118,16 @@ extension AeroAPI {
     /// Request function for ScheduledFlightsRequest
     /// - Parameter request: ScheduledFlightsRequest
     /// - Returns: ScheduledFlightResponse
-    public func getScheduled(_ request: ScheduledFlightRequest) async throws -> ScheduledFlightResponse {
-        let data = try await self.request(request)
-        var decoded = try decoder.decode(ScheduledFlightResponse.self, from: data)
+    public func getScheduled(_ request: ScheduledFlightRequest) async throws -> [ScheduledFlight] {
+        let response: ScheduledFlightResponse = try await self.request(request)
         
-        guard let flights = decoded.scheduled, !(flights.isEmpty)
+        guard let flights = response.scheduled
         else { throw AeroAPIError.failedDecodingScheduledFlightResponse }
         
-        decoded.scheduled = mergeCodeshares(flights)
-        return decoded
+        // THROW: Is Empty check
+        // TODO: Refactor search
+        
+        return mergeCodeshares(flights)
     }
     
     public func dummyGetScheduled() throws -> ScheduledFlightResponse {

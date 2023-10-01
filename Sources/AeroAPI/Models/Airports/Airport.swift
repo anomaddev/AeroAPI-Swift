@@ -130,9 +130,8 @@ extension AeroAPI {
     /// - Returns: `Airport`
     public func getAirportInfo(code: String) async throws -> Airport {
         let request = AirportInfoRequest(code: code)
-        let data = try await self.request(request)
-        let decoded = try decoder.decode(Airport.self, from: data)
-        return mergeWithCached(airport: decoded, code: code)
+        let airport: Airport = try await self.request(request)
+        return mergeWithCached(airport: airport, code: code)
     }
     
     /// Async request function for `AirportInfoRequest`
@@ -140,9 +139,8 @@ extension AeroAPI {
     /// - Returns: `Airport`
     public func getAirportInfo(icao: String) async throws -> Airport {
         let request = AirportInfoRequest(icao: icao)
-        let data = try await self.request(request)
-        let decoded = try decoder.decode(Airport.self, from: data)
-        return mergeWithCached(airport: decoded, icao: icao)
+        let airport: Airport = try await self.request(request)
+        return mergeWithCached(airport: airport, icao: icao)
     }
     
     /// Async request function for `AirportInfoRequest`
@@ -150,65 +148,58 @@ extension AeroAPI {
     /// - Returns: `Airport`
     public func getAirportInfo(iata: String) async throws -> Airport {
         let request = AirportInfoRequest(iata: iata)
-        let data = try await self.request(request)
-        let decoded = try decoder.decode(Airport.self, from: data)
-        return mergeWithCached(airport: decoded, iata: iata)
+        let airport: Airport = try await self.request(request)
+        return mergeWithCached(airport: airport, iata: iata)
     }
     
     /// Completion based request function for `AirportInfoRequest`
     /// - Parameter code: The requested `Airport` code string
     /// - Returns: Completion of optionals `Error` and `Airport`
-    public func getAirportInfo(code: String,_ completion: @escaping (Error?, Airport?) -> Void) {
+    public func getAirportInfo(code: String,_ completion: @escaping (Result<Airport, Error>) -> Void) {
         let request = AirportInfoRequest(code: code)
         self.request(request)
-        { error, data in
-            do {
-                if let error = error { throw error }
+        { (result: Result<Airport, Error>) in
+            switch result {
+            case .success(let airport):
+                completion(.success(self.mergeWithCached(airport: airport, code: code)))
                 
-                guard let data = data
-                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
-                
-                let decoded = try self.decoder.decode(Airport.self, from: data)
-                completion(nil, self.mergeWithCached(airport: decoded, code: code))
-            } catch { completion(error, nil) }
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     
     /// Completion based request function for `AirportInfoRequest`
     /// - Parameter icao: The requested `Airport` icao string
     /// - Returns: Completion of optionals `Error` and `Airport`
-    public func getAirportInfo(icao: String,_ completion: @escaping (Error?, Airport?) -> Void) {
+    public func getAirportInfo(icao: String,_ completion: @escaping (Result<Airport, Error>) -> Void) {
         let request = AirportInfoRequest(icao: icao)
         self.request(request)
-        { error, data in
-            do {
-                if let error = error { throw error }
+        { (result: Result<Airport, Error>) in
+            switch result {
+            case .success(let airport):
+                completion(.success(self.mergeWithCached(airport: airport, code: icao)))
                 
-                guard let data = data
-                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
-                
-                let decoded = try self.decoder.decode(Airport.self, from: data)
-                completion(nil, self.mergeWithCached(airport: decoded, icao: icao))
-            } catch { completion(error, nil) }
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     
     /// Completion based request function for `AirportInfoRequest`
     /// - Parameter iata: The requested `Airport` iata string
     /// - Returns: Completion of optionals `Error` and `Airport`
-    public func getAirportInfo(iata: String,_ completion: @escaping (Error?, Airport?) -> Void) {
+    public func getAirportInfo(iata: String,_ completion: @escaping (Result<Airport, Error>) -> Void) {
         let request = AirportInfoRequest(iata: iata)
         self.request(request)
-        { error, data in
-            do {
-                if let error = error { throw error }
+        { (result: Result<Airport, Error>) in
+            switch result {
+            case .success(let airport):
+                completion(.success(self.mergeWithCached(airport: airport, code: iata)))
                 
-                guard let data = data
-                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
-                
-                let decoded = try self.decoder.decode(Airport.self, from: data)
-                completion(nil, self.mergeWithCached(airport: decoded, iata: iata))
-            } catch { completion(error, nil) }
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     

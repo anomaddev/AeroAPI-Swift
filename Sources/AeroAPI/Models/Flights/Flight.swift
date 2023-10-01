@@ -143,24 +143,31 @@ extension AeroAPI {
     /// - Parameters:
     ///   - faId: The unique flight ID for the requested flight
     ///   - completion: A tuple containing an optional `Error` and `Flight` objects based on the successfulness of the request
-    public func getFlightData(faId: String,_ completion: @escaping (Error?, Flight?) -> Void) {
+    public func getFlightData(faId: String,_ completion: @escaping (Result<Flight, Error>) -> Void) {
         do {
             let request = try FlightDataRequest(faId: faId)
             getFlightData(request)
-            { error, response in
-                completion(error, response?.flights?.first)
+            { (result: Result<FlightDataResponse, Error>) in
+                switch result {
+                case .success(let response):
+                    guard let flight = response.flights?.first
+                    else { return } // THROW:
+                    
+                    completion(.success(flight))
+                    
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-        } catch { completion(error, nil) }
+        } catch { completion(.failure(error)) }
     }
     
     /// Get flight information asynchronously from a `FlightDataRequest` using this function
     /// - Parameters:
     ///   - request: Use a `FlightDataRequest` to specify the parameters of the flight search
     /// - Returns: A `FlightDataResponse` containing the flights found using the search request
-    public func getFlightData(_ request: FlightDataRequest) async throws -> FlightDataResponse {
-        let data = try await self.request(request)
-        return try decoder.decode(FlightDataResponse.self, from: data)
-    }
+    public func getFlightData(_ request: FlightDataRequest) async throws -> FlightDataResponse
+    { return try await self.request(request) }
     
     
     /// Get flight information from a `FlightDataRequest` using a completion based callback
@@ -168,17 +175,8 @@ extension AeroAPI {
     ///   - request: Use a `FlightDataRequest` to specify the parameters of the flight search
     ///   - completion: A tuple containing an optional `Error` and `Data` objects based on the successfulness of the request
     public func getFlightData(_ request: FlightDataRequest,
-                              _ completion: @escaping (Error?, FlightDataResponse?) -> Void) {
-        self.request(request) { error, data in
-            if let error = error
-            { completion(error, nil); return }
-            
-            guard let data = data,
-                  let parsed = try? self.decoder.decode(FlightDataResponse.self, from: data)
-            else { completion(AeroAPIError.noFlightDataForValidRequest, nil); return }
-            
-            completion(nil, parsed)
-        }
+                              _ completion: @escaping (Result<FlightDataResponse, Error>) -> Void) {
+        self.request(request) { completion($0) }
     }
     
     // MARK: - AeroAPI Private

@@ -50,27 +50,24 @@ extension AeroAPI {
     /// - Returns: `Aircraft`
     public func getAircraftInfo(icao: String) async throws -> Aircraft {
         let request = AircraftTypeInfoRequest(icao: icao)
-        let data = try await self.request(request)
-        let decoded = try decoder.decode(Aircraft.self, from: data)
-        return mergeWithCached(aircraft: decoded, icao: icao)
+        let aicraft: Aircraft = try await self.request(request)
+        return mergeWithCached(aircraft: aicraft, icao: icao)
     }
     
     /// Completion based request function for `AircraftTypeInfoRequest`
     /// - Parameter request: `AircraftTypeInfoRequest`
     /// - Returns: Completion of optionals `Error` and `Aircraft`
-    public func getAircraftInfo(icao: String,_ completion: @escaping (Error?, Aircraft?) -> Void) {
+    public func getAircraftInfo(icao: String,_ completion: @escaping (Result<Aircraft, Error>) -> Void) {
         let request = AircraftTypeInfoRequest(icao: icao)
         self.request(request)
-        { error, data in
-            do {
-                if let error = error { throw error }
+        { (result: Result<Aircraft, Error>) in
+            switch result {
+            case .success(let aircraft):
+                completion(.success(self.mergeWithCached(aircraft: aircraft, icao: icao)))
                 
-                guard let data = data
-                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
-                
-                let decoded = try self.decoder.decode(Aircraft.self, from: data)
-                completion(nil, self.mergeWithCached(aircraft: decoded, icao: icao))
-            } catch { completion(error, nil) }
+            case .failure(let error):
+                completion(.failure(error))
+            }
         }
     }
     

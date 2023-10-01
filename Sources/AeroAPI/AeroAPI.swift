@@ -59,10 +59,10 @@ public class AeroAPI {
     public func set(apiKey key: String)
     { apiKey = key }
     
-    /// Makes the given request and returns Data
-    /// - Parameter request: AeroAPIRequest
-    /// - Returns: Data of the API Request
-    internal func request(_ request: AeroAPIRequest) async throws -> Data {
+    /// Makes the given request and returns the specified `Decodable`
+    /// - Parameter request: `AeroAPIRequest`
+    /// - Returns: The give `Decodable` object requested from the API Request
+    internal func request<T: Decodable>(_ request: AeroAPIRequest) async throws -> T {
         guard let apiKey = apiKey
         else { throw AeroAPIError.apiKeyNotSet }
         
@@ -81,20 +81,22 @@ public class AeroAPI {
         guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode == 200
         else { throw AeroAPIError.HTTPResponseError(statusCode) }
         
-        let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
         if AeroAPI.debug {
+            let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
             print("=== JSON DATA ===")
-            print(json)
+            print(json ?? [:])
             print("=================")
         }
         
-        return data
+        let decoded = try decoder.decode(T.self, from: data)
+        return decoded
     }
     
-    /// Makes the given request and returns Data
-    /// - Parameter request: AeroAPIRequest
+    /// Makes the given request and returns the give `Decodable`
+    /// - Parameter request: `AeroAPIRequest`
     /// - Returns: A completion of `Error` or `Data`
-    internal func request(_ request: AeroAPIRequest,_ completion: @escaping (Error?, Data?) -> Void) {
+    internal func request<T: Decodable>(_ request: AeroAPIRequest,
+                                        _ completion: @escaping (Result<T, Error>) -> Void) {
         do {
             guard let apiKey = apiKey
             else { throw AeroAPIError.apiKeyNotSet }
@@ -108,7 +110,7 @@ public class AeroAPI {
                 ]
             )
             
-            let task = URLSession.shared.dataTask(with: urlRequest)
+            URLSession.shared.dataTask(with: urlRequest)
             { data, response, error in
                 do {
                     if let error = error { throw error }
@@ -123,16 +125,15 @@ public class AeroAPI {
                     if AeroAPI.debug {
                         let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
                         print("=== JSON DATA ===")
-                        print(json)
+                        print(json ?? [:])
                         print("=================")
                     }
                     
-                    completion(nil, data)
-                } catch { completion(error, nil) }
-            }
-            
-            task.resume()
-        } catch { completion(error, nil) }
+                    let decoded = try self.decoder.decode(T.self, from: data)
+                    completion(.success(decoded))
+                } catch { completion(.failure(error)) }
+            }.resume()
+        } catch { completion(.failure(error)) }
     }
     
     /// Makes the url of the API all for the given AeroAPIRequest

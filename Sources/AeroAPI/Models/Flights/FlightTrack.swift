@@ -71,10 +71,11 @@ extension AeroAPI {
     /// - Returns: An array of `FlightTrack` objects
     public func getTrack(faId: String,
                          includeEstimatedPositions: Bool! = false) async throws -> [FlightTrack] {
-        let data = try await self.request(FlightTrackRequest(faId, showEstimated: includeEstimatedPositions))
-        let decoded = try decoder.decode([String: [FlightTrack]].self, from: data)
+        let data: [String: [FlightTrack]] = try await self.request(
+            FlightTrackRequest(faId, showEstimated: includeEstimatedPositions)
+        )
         
-        guard let positions = decoded["positions"]
+        guard let positions = data["positions"]
         else { throw AeroAPIError.failedDecodingFlightTrackResponse }
         
         guard !(positions.isEmpty)
@@ -91,21 +92,22 @@ extension AeroAPI {
     ///   - completion: A tuple containing an optional `Error` or an array of `FlightTrack` objects, based on the successfulness of the request
     public func getTrack(faId: String,
                          includeEstimatedPositions: Bool! = false,
-                         _ completion: @escaping (Error?, [FlightTrack]?) -> Void) {
+                         _ completion: @escaping (Result<[FlightTrack], Error>) -> Void) {
         do {
             let request = try FlightTrackRequest(faId, showEstimated: includeEstimatedPositions)
             self.request(request)
-            { error, data in
-                if let error = error
-                { completion(error, nil); return }
-                
-                guard let data = data,
-                      let parsed = try? self.decoder.decode([String: [FlightTrack]].self, from: data)
-                else { completion(AeroAPIError.noFlightTrackDataForValidRequest, nil); return }
-                
-                completion(nil, parsed["positions"])
+            { (result: Result<[String: [FlightTrack]], Error>) in
+                switch result {
+                case .success(let parsed):
+                    guard let positions = parsed["positions"]
+                    else { return } // TODO: Throw
+                    completion(.success(positions))
+                    
+                case .failure(let failure):
+                    completion(.failure(failure))
+                }
             }
-        } catch { completion(error, nil) }
+        } catch { completion(.failure(error)) }
     }
     
     // MARK: - AeroAPI Private

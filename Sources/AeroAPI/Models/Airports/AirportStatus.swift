@@ -51,28 +51,16 @@ extension AeroAPI {
     /// This method will get the `AirportStatus` and any delay reasons asynchronously
     /// - Parameter code: The ICAO, IATA or LID code for the airport. ICAO is preferred.
     /// - Returns: An `AirportStatus` object containing the length of the delay and an array of `DelayReason` objects.
-    public func getAirportStatus(code: String) async throws -> AirportStatus {
-        let data = try await self.request(AirportStatusRequest(code: code))
-        return try decoder.decode(AirportStatus.self, from: data)
-    }
+    public func getAirportStatus(code: String) async throws -> AirportStatus
+    { return try await self.request(AirportStatusRequest(code: code)) }
     
     /// This method will get the `AirportStatus` and any delay reasons with a completion closure
     /// - Parameters:
     ///   - code: The ICAO, IATA or LID code for the airport. ICAO is preferred.
     ///   - completion: A completion with optional `Error` and `AirportStatus` objects depending on the successfulness of the API call.
-    public func getAirportStatus(code: String,_ completion: @escaping (Error?, AirportStatus?) -> Void) {
+    public func getAirportStatus(code: String,
+                                 _ completion: @escaping (Result<AirportStatus, Error>) -> Void) {
         self.request(AirportStatusRequest(code: code))
-        { error, data in
-            do {
-                if let error = error
-                { throw error }
-                
-                guard let data = data
-                else { return }
-                
-                let status = try self.decoder.decode(AirportStatus.self, from: data)
-                completion(nil, status)
-            } catch { completion(error, nil) }
-        }
+        { completion($0) }
     }
 }

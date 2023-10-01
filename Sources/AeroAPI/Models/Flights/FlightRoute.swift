@@ -57,10 +57,8 @@ extension AeroAPI {
     /// Get the flight route asynchronously using a FAID
     /// - Parameter faId: The unique FlightAware flight ID
     /// - Returns: A `FlightRoute` object containing the flight's route information
-    public func getRoute(faId: String) async throws -> FlightRoute {
-        let data = try await self.request(FlightRouteRequest(faId: faId))
-        return try decoder.decode(FlightRoute.self, from: data)
-    }
+    public func getRoute(faId: String) async throws -> FlightRoute
+    { return try await self.request(FlightRouteRequest(faId: faId)) }
     
     
     /// Get the flight route using a FAID with a completion closure
@@ -68,22 +66,10 @@ extension AeroAPI {
     ///   - faId: The unique FlightAware flight ID
     ///   - completion: A completion containing optional `Error` and `FlightRoute` objects depending on the successfulness of the API call
     public func getRoute(faId: String,
-                         _ completion: @escaping (Error?, FlightRoute?) -> Void) {
+                         _ completion: @escaping (Result<FlightRoute, Error>) -> Void) {
         do {
             let request = try FlightRouteRequest(faId: faId)
-            self.request(request)
-            { error, data in
-                do {
-                    if let error = error
-                    { throw error }
-                    
-                    guard let data = data
-                    else { throw AeroAPIError.noFlightRouteForValidRequest }
-                    
-                    let route = try self.decoder.decode(FlightRoute.self, from: data)
-                    completion(nil, route)
-                } catch { completion(error, nil) }
-            }
-        } catch { completion(error, nil) }
+            self.request(request) { completion($0) }
+        } catch { completion(.failure(error)) }
     }
 }

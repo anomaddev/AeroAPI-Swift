@@ -99,10 +99,8 @@ extension AeroAPI {
     /// Get the count of flights for a given airline within the last 24 hours asynchronously
     /// - Parameter icao: The ICAO code for the requested airport
     /// - Returns: A `AirlineFlightCountResponse` with the count of flights for the airport
-    public func getAirlineFlightCount(icao: String) async throws -> AirlineFlightCountResponse {
-        let data = try await self.request(AirlineFlightCountRequest(icao: icao))
-        return try self.decoder.decode(AirlineFlightCountResponse.self, from: data)
-    }
+    public func getAirlineFlightCount(icao: String) async throws -> AirlineFlightCountResponse
+    { return try await self.request(AirlineFlightCountRequest.init(icao: icao)) }
     
     
     /// Get the count of flights for a given airline within the last 24 hours, in a completion closure
@@ -110,20 +108,9 @@ extension AeroAPI {
     ///   - icao: The ICAO code for the requested airport
     ///   - completion: A completion with optional `Error` and `AirlineFlightCountResponse` objects depending on the successfulness of the API call.
     public func getAirlineFlightCount(icao: String,
-                                      _ completion: @escaping (Error?, AirlineFlightCountResponse?) -> Void) {
+                                      _ completion: @escaping (Result<AirlineFlightCountResponse, Error>) -> Void) {
         self.request(AirlineFlightCountRequest(icao: icao))
-        { error, data in
-            do {
-                if let error = error
-                { throw error }
-                
-                guard let data = data
-                else { throw AeroAPIError.noAirlineFlightCountsForRequest }
-                
-                let counts = try self.decoder.decode(AirlineFlightCountResponse.self, from: data)
-                completion(nil, counts)
-            } catch { completion(error, nil) }
-        }
+        { completion($0) }
     }
     
     /// Async request function for `AirlineInfoRequest`
@@ -131,9 +118,8 @@ extension AeroAPI {
     /// - Returns: `Airline`
     public func getAirlineInfo(icao: String) async throws -> Airline {
         let request = AirlineInfoRequest(icao: icao)
-        let data = try await self.request(request)
-        let decoded = try decoder.decode(Airline.self, from: data)
-        return mergeWithCached(airline: decoded, icao: icao)
+        let airline: Airline = try await self.request(request)
+        return mergeWithCached(airline: airline, icao: icao)
     }
     
     /// Async request function for `AirlineInfoRequest`
@@ -141,47 +127,24 @@ extension AeroAPI {
     /// - Returns: `Airline`
     public func getAirlineInfo(iata: String) async throws -> Airline {
         let request = AirlineInfoRequest(iata: iata)
-        let data = try await self.request(request)
-        let decoded = try decoder.decode(Airline.self, from: data)
-        return mergeWithCached(airline: decoded, iata: iata)
+        let airline: Airline = try await self.request(request)
+        return mergeWithCached(airline: airline, iata: iata)
     }
     
     /// Completion based request function for `AirlineInfoRequest`
     /// - Parameter icao: The requested `Airline` icao string
     /// - Returns: Completion of optionals `Error` and `Airline`
-    public func getAirlineInfo(icao: String,_ completion: @escaping (Error?, Airline?) -> Void) {
+    public func getAirlineInfo(icao: String,_ completion: @escaping (Result<Airline, Error>) -> Void) {
         let request = AirlineInfoRequest(icao: icao)
-        self.request(request)
-        { error, data in
-            do {
-                if let error = error { throw error }
-                
-                guard let data = data
-                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
-                
-                let decoded = try self.decoder.decode(Airline.self, from: data)
-                completion(nil, self.mergeWithCached(airline: decoded, icao: icao))
-            } catch { completion(error, nil) }
-        }
+        self.request(request) { completion ($0) }
     }
     
     /// Completion based request function for `AirlineInfoRequest`
     /// - Parameter iata: The requested `Airline` iata string
     /// - Returns: Completion of optionals `Error` and `Airline`
-    public func getAirlineInfo(iata: String,_ completion: @escaping (Error?, Airline?) -> Void) {
+    public func getAirlineInfo(iata: String,_ completion: @escaping (Result<Airline, Error>) -> Void) {
         let request = AirlineInfoRequest(iata: iata)
-        self.request(request)
-        { error, data in
-            do {
-                if let error = error { throw error }
-                
-                guard let data = data
-                else { throw AeroAPIError.noDataReturnedForValidStatusCode }
-                
-                let decoded = try self.decoder.decode(Airline.self, from: data)
-                completion(nil, self.mergeWithCached(airline: decoded, iata: iata))
-            } catch { completion(error, nil) }
-        }
+        self.request(request) { completion($0) }
     }
     
     /// Merges the AeroAPI info with the cached Airline info

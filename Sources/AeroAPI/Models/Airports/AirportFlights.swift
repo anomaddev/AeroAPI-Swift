@@ -122,10 +122,8 @@ extension AeroAPI {
     /// Get the specified flights using an `AirportFlightsRequest` asynchronously using this method.
     /// - Parameter request: A `AirportFlightsRequest` to specify the search terms of the API call.
     /// - Returns: An `AirportFlightsResponse` containing the flights the request asked for.
-    public func getAirportsFlights(request: AirportFlightsRequest) async throws -> AirportFlightsResponse {
-        let data = try await self.request(request)
-        return try decoder.decode(AirportFlightsResponse.self, from: data)
-    }
+    public func getAirportsFlights(request: AirportFlightsRequest) async throws -> AirportFlightsResponse
+    { return try await self.request(request) }
     
     
     /// Get the specified flights using a `AirportFlightsRequest` and handing with a completion closure
@@ -133,49 +131,23 @@ extension AeroAPI {
     ///   - request: A `AirportFlightsRequest` to specify the search terms of the API call.
     ///   - completion: Optional `Error` and `AirportFlightsResponse` objects depending on the successfulness of the API call.
     public func getAirportFlights(request: AirportFlightsRequest,
-                                  _ completion: @escaping (Error?, AirportFlightsResponse?) -> Void) {
-        self.request(request)
-        { error, data in
-            do {
-                if let error = error
-                { throw error }
-                
-                guard let data = data
-                else { throw AeroAPIError.noAirportFlightsForValidRequest }
-                
-                let flights = try self.decoder.decode(AirportFlightsResponse.self, from: data)
-                completion(nil, flights)
-            } catch { completion(error, nil) }
-        }
-    }
+                                  _ completion: @escaping (Result<AirportFlightsResponse, Error>) -> Void)
+    { self.request(request) { completion($0) }}
     
     
     /// Get the count of flights at a given airport asynchronously
     /// - Parameter code: The ICAO, IATA or LID airport code
     /// - Returns: An `AirportFlightCounts` object containing the departed, enroute and scheduled arrivals & departures.
-    public func getAirportFlightCounts(code: String) async throws -> AirportFlightCounts {
-        let data = try await self.request(AirportCountRequest(code: code))
-        return try self.decoder.decode(AirportFlightCounts.self, from: data)
-    }
+    public func getAirportFlightCounts(code: String) async throws -> AirportFlightCounts
+    { return try await self.request(AirportCountRequest(code: code)) }
     
     
     /// Get the count of flights at a give airport with a completion closure
     /// - Parameter code: The ICAO, IATA or LID airport code
     /// - Returns: A completion with optional `Error` and `AirportFlightCounts` objects depending on the successfulnes of the API call.
     public func getAirportFlightCounts(code: String,
-                                       _ completion: @escaping (Error?, AirportFlightCounts?) -> Void) {
+                                       _ completion: @escaping (Result<AirportFlightCounts, Error>) -> Void) {
         self.request(AirportCountRequest(code: code))
-        { error, data in
-            do {
-                if let error = error
-                { throw error }
-                
-                guard let data = data
-                else { throw AeroAPIError.noAirportFlightCountStats }
-                
-                let counts = try self.decoder.decode(AirportFlightCounts.self, from: data)
-                completion(nil, counts)
-            } catch { completion(error, nil) }
-        }
+        { completion($0) }
     }
 }
