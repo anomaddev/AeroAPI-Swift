@@ -80,13 +80,13 @@ Examples coming soon...
 [ ✅ ] - GET /airports/{id}/flights/departures<br>
 [ ✅ ] - GET /airports/{id}/flights/scheduled_arrivals<br>
 [ ✅ ] - GET /airports/{id}/flights/scheduled_departures<br>
-[ ❌ ] - GET /airports/{id}/flights/to/{dest_id}<br>
-[ ❌ ] - GET /airports/{id}/nearby<br>
-[ ❌ ] - GET /airports/{id}/routes/{dest_id}<br>
-[ ❌ ] - GET /airports/{id}/weather/forecast<br>
-[ ❌ ] - GET /airports/{id}/observation<br>
-[ ❌ ] - GET /airports/delays<br>
-[ ❌ ] - GET /airports/nearby<br>
+[ ✅ ] - GET /airports/{id}/flights/to/{dest_id}<br>
+[ ✅ ] - GET /airports/{id}/nearby<br>
+[ ✅ ] - GET /airports/{id}/routes/{dest_id}<br>
+[ ✅ ] - GET /airports/{id}/weather/forecast<br>
+[ ✅ ] - GET /airports/{id}/observation<br>
+[ ✅ ] - GET /airports/delays<br>
+[ ✅ ] - GET /airports/nearby<br>
 
 ##### Operators
 [ ❌ ] - GET /operators<br>

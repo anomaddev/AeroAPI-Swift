@@ -16,13 +16,11 @@ struct ContentView: View {
         }
         .task {
             do {
-                let counts = try await AeroAPI
+                let forecast = try await AeroAPI
                     .manager
-                    .getAirlineFlights(request:
-                        AirlineFlightsRequest(airline: "AAL", requestType: .enroute)
-                    )
-                
-                print(counts.prettyJSON)
+                    .getAirportObservations(code: "KTPA")
+
+                print(forecast.prettyJSON)
                 print()
             } catch { error.explain() }
         }

@@ -37,9 +37,8 @@ public struct AirportInfoRequest: AeroAPIRequest {
     }
 }
 
-
 /// An `Airport` Object contains all the airport's details
-public struct Airport: Codable {
+public class Airport: Codable {
     
     /// Active code used for airport. Could be ICAO, IATA or LID code.
     public var airportCode: String
@@ -60,7 +59,7 @@ public struct Airport: Codable {
     public var type: AirportType?
     
     /// Elevation in Meters
-    public var elevation: Int
+    public var elevation: Double
     
     /// City of the Airport
     public var city: String
@@ -203,6 +202,22 @@ extension AeroAPI {
         }
     }
     
+    /// Gets all the airports that are nearby a give airport asynchronously
+    /// - Parameter request: The request object containing the parameters for which Airport you will search around.
+    /// - Returns: A response with the nearby airports.
+    public func getAirportsNear(request: AirportsNearbyRequest) async throws -> AirportsNearbyResponse
+    { return try await self.request(request) }
+    
+    
+    /// Gets all the airports that are nearby a give airport with a result closure response
+    /// - Parameters:
+    ///   - request: The request object containing parameters for which Airport you will search around.
+    ///   - completion: A result with the state of the API request
+    public func getAirportsNear(request: AirportsNearbyRequest,
+                                _ completion: @escaping (Result<AirportsNearbyResponse, Error>) -> Void) {
+        self.request(request) { completion($0) }
+    }
+    
     /// Merges the AeroAPI info with the cached Airport info
     /// - Parameter airport: `Airport` object that was returned by the AeroAPI
     /// - Parameter icao: `String` that's the ICAO for the aircraft information that was requested
@@ -214,7 +229,7 @@ extension AeroAPI {
         iata: String! = nil,
         code: String! = nil
     ) -> Airport {
-        if var cached = (AeroAPI.allAirports.first(where: {
+        if let cached = (AeroAPI.allAirports.first(where: {
             ($0.codeIcao == icao || $0.codeIata == iata || $0.airportCode == code)
         })) {
             cached.airportCode  = airport.airportCode

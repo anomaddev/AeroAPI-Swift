@@ -7,6 +7,19 @@ public protocol AeroAPIRequest: Codable {
     func request() throws -> [URLQueryItem]
 }
 
+public struct CursorRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return cursor }
+    
+    public var cursor: String
+    public var filters: [RequestFilters]
+    
+    init(cursor: String) {
+        self.cursor = cursor
+        self.filters = []
+    }
+}
+
 public extension AeroAPIRequest {
     func request() throws -> [URLQueryItem] {
         return self.filters.compactMap { filter -> URLQueryItem in
@@ -25,6 +38,15 @@ public extension AeroAPIRequest {
                 
             case .destination(let dest):
                 return URLQueryItem(name: "destination", value: dest)
+                
+            case .latitude(let lat):
+                return URLQueryItem(name: "latitude", value: "\(lat)")
+                
+            case .longitude(let lng):
+                return URLQueryItem(name: "longitude", value: "\(lng)")
+                
+            case .timestamp(let stamp):
+                return URLQueryItem(name: "timestamp", value: stamp.toFormat(AeroAPI.dateStringFormat))
                 
             case .startDate(let start):
                 return URLQueryItem(name: "start", value: start.toFormat(AeroAPI.dateStringFormat))
@@ -49,6 +71,27 @@ public extension AeroAPIRequest {
                 
             case .airportFlightType(let type):
                 return URLQueryItem(name: "type", value: "\(type.rawValue)")
+                
+            case .connectionType(let type):
+                return URLQueryItem(name: "connection", value: "\(type.rawValue)")
+                
+            case .radius(let radius):
+                return URLQueryItem(name: "radius", value: "\(radius)")
+                
+            case .onlyInstuments(let onlyIAP):
+                return URLQueryItem(name: "only_iap", value: "\(onlyIAP)")
+                
+            case .returnNearbyWeather(let bool):
+                return URLQueryItem(name: "return_nearby_weather", value: "\(bool)")
+                
+            case .routeSortBy(let sort):
+                return URLQueryItem(name: "sort_by", value: sort.rawValue)
+                
+            case .maxFileAge(let max):
+                return URLQueryItem(name: "max_file_age", value: max)
+                
+            case .temperatureUnits(let units):
+                return URLQueryItem(name: "temperature_units", value: units.rawValue)
             }
         }
     }
@@ -61,7 +104,10 @@ public enum RequestFilters: Codable {
     case airline(String)
     case origin(String)
     case destination(String)
+    case latitude(Double)
+    case longitude(Double)
     
+    case timestamp(Date)
     case startDate(Date)
     case endDate(Date)
     
@@ -72,7 +118,15 @@ public enum RequestFilters: Codable {
     case cursor(String)
     case maxPages(Int)
     
-    case airportFlightType(AirportFlightsType)
+    case airportFlightType(FlightType)
+    case connectionType(FlightConnectionType)
+    case radius(Int)
+    case onlyInstuments(Bool)
+    
+    case returnNearbyWeather(Bool)
+    case routeSortBy(RouteRequestSort)
+    case maxFileAge(String)
+    case temperatureUnits(TemperatureUnits)
 }
 
 public enum IdentType: String, Codable {

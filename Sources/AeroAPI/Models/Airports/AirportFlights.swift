@@ -43,6 +43,61 @@ public struct AirportFlightsResponse: Codable {
     
 }
 
+public struct FlightsBetweenAirportsRequest: AeroAPIRequest {
+    
+    public func path() throws -> String
+    { return "/airports/\(origin)/flights/to/\(destination)" }
+    
+    public var origin: String
+    public var destination: String
+    public var filters: [RequestFilters]
+    
+    public init(
+        airports: (origin: String, destination: String),
+        type: FlightType! = .Airline,
+        connectionType: FlightConnectionType! = .nonstop,
+        dateRange: (start: Date, end: Date)? = nil,
+        maxPages: Int! = 1,
+        cursor: String? = nil
+    ) throws {
+        origin = airports.origin
+        destination = airports.destination
+        filters = [
+            .maxPages(maxPages),
+            .airportFlightType(type),
+            .connectionType(connectionType)
+        ]
+        
+        if let range = dateRange {
+            let aweek = 84600 * 7
+            let future = 84600 * 2
+            let current = Date().seconds
+            
+            guard range.0.seconds < range.1.seconds
+            else { throw AeroAPIError.startDateBeforeEndDate }
+            
+            guard (range.0.seconds > (current - aweek)) && (range.1.seconds < current + future)
+            else { throw AeroAPIError.invalidDateAirportFlightsRequest }
+            
+            self.filters.append(.startDate(range.0))
+            self.filters.append(.endDate(range.1))
+        }
+        
+        if let cursor = cursor
+        { self.filters.append(.cursor(cursor)) }
+    }
+}
+
+public struct FlightsBetweenAirportsResponse: Codable {
+    var flights: [FlightSegment]
+    var numPages: Int?
+    var links: [String: String]?
+}
+        
+public struct FlightSegment: Codable {
+    var segments: [Flight]
+}
+
 public struct AirportFlightsRequest: AeroAPIRequest {
     
     public func path() throws -> String {
@@ -66,7 +121,7 @@ public struct AirportFlightsRequest: AeroAPIRequest {
     public init(
         code: String,
         airline: String? = nil,
-        type: AirportFlightsType! = .Airline,
+        type: FlightType! = .Airline,
         dateRange: (start: Date, end: Date)? = nil,
         maxPages: Int! = 1,
         cursor: String? = nil,
@@ -110,9 +165,14 @@ public enum AirportFlightsRequestType: String, Codable {
     case departures
 }
 
-public enum AirportFlightsType: String, Codable {
+public enum FlightType: String, Codable {
     case Airline
     case GeneralAviation = "General_Aviation"
+}
+
+public enum FlightConnectionType: String, Codable {
+    case nonstop
+    case onestop
 }
 
 extension AeroAPI {
@@ -149,5 +209,22 @@ extension AeroAPI {
                                        _ completion: @escaping (Result<AirportFlightCounts, Error>) -> Void) {
         self.request(AirportCountRequest(code: code))
         { completion($0) }
+    }
+    
+    
+    /// Get the flights between two different airports asynchronously
+    /// - Parameter request: The request parameters for the type of search of flights between airports.
+    /// - Returns: A response with the flights and segments
+    public func getFlightsBetweenAirports(request: FlightsBetweenAirportsRequest) async throws -> FlightsBetweenAirportsResponse
+    { return try await self.request(request) }
+    
+    
+    /// Get the flights between two different airports calling a result closure upon completion
+    /// - Parameters:
+    ///   - request: The request parameters for the type of search of flights between airports.
+    ///   - completion: Contains a result containing the response of the request.
+    public func getFlightsBetweenAirports(request: FlightsBetweenAirportsRequest,
+                                          _ completion: @escaping (Result<FlightsBetweenAirportsResponse, Error>) -> Void) {
+        self.request(request) { completion($0) }
     }
 }

@@ -9,18 +9,36 @@ import Foundation
 
 public struct AirportStatusRequest: AeroAPIRequest {
     
-    public func path() throws -> String
-    { return "/airports/\(ident)/delays" }
+    public func path() throws -> String {
+        if let ident = ident { return "/airports/\(ident)/delays" }
+        else { return "/airports/delays" }
+    }
     
-    public var ident: String
+    public var ident: String!
     public var filters: [RequestFilters]
     
     /// A request to get the Airport Delay Status
     /// - Parameter code: The ICAO, IATA, or LID code for the airport
-    init(code: String) {
+    internal init(code: String) {
         self.ident = code
         self.filters = []
     }
+    
+    internal init(
+        maxPages: Int! = 5,
+        cursor: String? = nil
+    ) {
+        self.filters = [.maxPages(5)]
+        
+        if let cursor = cursor
+        { self.filters.append(.cursor(cursor)) }
+    }
+}
+
+public struct AirportsDelayedResponse: Codable {
+    var delays: [AirportStatus]
+    var numPages: Int?
+    var links: [String: String]?
 }
 
 public struct AirportStatus: Codable {
@@ -63,4 +81,9 @@ extension AeroAPI {
         self.request(AirportStatusRequest(code: code))
         { completion($0) }
     }
+    
+    /// This method will get all airports worldwide reporting delays
+    /// - Returns: A response containing all the airports currently experiencing delays worldwide.
+    public func getAirportsDelayed() async throws -> AirportsDelayedResponse
+    { return try await self.request(AirportStatusRequest()) }
 }

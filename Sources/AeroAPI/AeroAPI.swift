@@ -154,6 +154,9 @@ public class AeroAPI {
         return url
     }
     
+    internal func paginate<T: Decodable>(_ request: CursorRequest) async throws -> T
+    { return try await self.request(request) }
+    
     // MARK: - Caching Functions
     public func loadCache() throws {
         AeroAPI.allAirports = try loadAirports()
