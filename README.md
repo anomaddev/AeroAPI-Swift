@@ -106,9 +106,9 @@ Examples coming soon...
 [ ✅ ] - GET /history/flights/{ident}<br>
 
 ##### Miscellaneous
-[ ❌ ] - GET /aircraft/{ident}/blocked<br>
-[ ❌ ] - GET /aircraft/{ident}/owner<br>
+[ ✅ ] - GET /aircraft/{ident}/blocked<br>
+[ ✅ ] - GET /aircraft/{ident}/owner<br>
 [ ✅ ] - GET /aircraft/types/{type}<br>
-[ ❌ ] - GET /disruption_counts/{entity_type}<br>
-[ ❌ ] - GET /disruption_counts/{entity_type}/{id}<br>
+[ ✅ ] - GET /disruption_counts/{entity_type}<br>
+[ ✅ ] - GET /disruption_counts/{entity_type}/{id}<br>
 [ ❌ ] - GET /schedules/{date_start}/{date_end}<br>

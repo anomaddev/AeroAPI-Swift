@@ -21,6 +21,23 @@ public struct AircraftTypeInfoRequest: AeroAPIRequest {
     }
 }
 
+public struct BlockedCheck: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/aircraft/\(ident)/blocked" }
+    
+    public var ident: String
+    public var filters: [RequestFilters]
+    
+    public init(ident: String) {
+        self.ident = ident
+        self.filters = []
+    }
+}
+
+public struct BlockedReponse: Codable {
+    public var blocked: Bool
+}
+
 public struct Aircraft: Codable {
     
     public var name: String?
@@ -44,6 +61,29 @@ public struct Aircraft: Codable {
 extension AeroAPI {
     
     // MARK: - AeroAPI Public
+    
+    /// Async request to check if an aircraft registration is block
+    /// - Parameter registration: Aircraft registration
+    /// - Returns: A `Bool` indicating if the registration is block or not
+    public func checkBlocked(for registration: String) async throws -> Bool {
+        let response: BlockedReponse = try await self.request(BlockedCheck(ident: registration))
+        return response.blocked
+    }
+    
+    /// Async request to check if an aircraft registration is block
+    /// - Parameters:
+    ///   - registration: Aircraft registration
+    ///   - completion: A result of `Bool` indicating if the registration is block or not
+    public func checkBlocked(for registration: String,
+                             _ completion: @escaping (Result<Bool, Error>) -> Void) {
+        self.request(BlockedCheck(ident: registration))
+        { (result: Result<BlockedReponse, Error>) in
+            switch result {
+            case .success(let response): completion(.success(response.blocked))
+            case .failure(let error): completion(.failure(error))
+            }
+        }
+    }
     
     /// Async request function for `AircraftTypeInfoRequest`
     /// - Parameter request: `AircraftTypeInfoRequest`

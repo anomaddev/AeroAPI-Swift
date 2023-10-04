@@ -16,11 +16,14 @@ struct ContentView: View {
         }
         .task {
             do {
-                let forecast = try await AeroAPI
+                let blocked = try await AeroAPI
                     .manager
-                    .getAirportObservations(code: "KTPA")
+                    .disruptionsAt(
+                        entity: "KORD",
+                        type: .origin
+                    )
 
-                print(forecast.prettyJSON)
+                print(blocked)
                 print()
             } catch { error.explain() }
         }

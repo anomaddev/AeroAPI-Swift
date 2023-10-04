@@ -148,9 +148,12 @@ public class AeroAPI {
         
         guard let url = components.url
         else { throw AeroAPIError.invalidURLFromComponents }
-        print("REQUESTING: ")
-        print(url.absoluteString)
-        print()
+        
+        if AeroAPI.debug {
+            print("REQUESTING: ")
+            print(url.absoluteString)
+            print()
+        }
         return url
     }
     
