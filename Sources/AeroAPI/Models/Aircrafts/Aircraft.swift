@@ -38,6 +38,23 @@ public struct BlockedReponse: Codable {
     public var blocked: Bool
 }
 
+public struct LastFlightRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/history/aircraft/\(registration)/last_flight" }
+    
+    public var registration: String
+    public var filters: [RequestFilters]
+    
+    public init(tailno: String) {
+        self.registration = tailno
+        self.filters = []
+    }
+}
+
+public struct LastFlightResponse: Codable {
+    public var flights: [Flight]
+}
+
 public struct Aircraft: Codable {
     
     public var name: String?
@@ -61,6 +78,32 @@ public struct Aircraft: Codable {
 extension AeroAPI {
     
     // MARK: - AeroAPI Public
+    
+    
+    /// Gets the last flight of a given tail number
+    /// - Parameter tailno: The tail number of the aircraft you would like to search
+    public func lastFlightFor(tailno: String) async throws -> Flight? {
+        let last: LastFlightResponse = try await self.request(LastFlightRequest(tailno: tailno))
+        return last.flights.first
+    }
+    
+    /// Gets the last flight of a given tail number
+    /// - Parameters:
+    ///   - tailno: The tail number of the aircraft you would like to search
+    ///   - completion: A result closure containing the flight or the error that occured
+    public func lastFlightFor(tailno: String,
+                              _ completion: @escaping (Result<Flight?, Error>) -> Void) {
+        self.request(LastFlightRequest(tailno: tailno))
+        { (result: Result<LastFlightResponse, Error>) in
+            switch result {
+            case .success(let returned):
+                completion(.success(returned.flights.first))
+            
+            case .failure(let failure):
+                completion(.failure(failure))
+            }
+        }
+    }
     
     /// Async request to check if an aircraft registration is block
     /// - Parameter registration: Aircraft registration

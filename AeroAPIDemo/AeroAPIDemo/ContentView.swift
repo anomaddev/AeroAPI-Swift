@@ -18,7 +18,7 @@ struct ContentView: View {
             do {
                 let blocked = try await AeroAPI
                     .manager
-                    .flightIDCanonical(code: "UA231")
+                    .lastFlightFor(tailno: "N29961")
 
                 print(blocked)
                 print()

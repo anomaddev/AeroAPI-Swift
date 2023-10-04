@@ -53,7 +53,7 @@ Examples coming soon...
 
 ##### Flights
 [ ❌ ] - GET /flights/{id}/map<br>
-[ ❌ ] - GET /flights/{id}/position<br>
+[ ✅ ] - GET /flights/{id}/position<br>
 [ ✅ ] - GET /flights/{id}/route<br>
 [ ✅ ] - GET /flights/{id}/track<br>
 [ ✅ ] - GET /flights/{ident}<br>
@@ -99,7 +99,7 @@ Examples coming soon...
 [ ✅ ] - GET /operators/{id}/flights/scheduled<br>
 
 ##### History
-[ ❌ ] - GET /history/aircraft/{registration}/last_flight<br>
+[ ✅ ] - GET /history/aircraft/{registration}/last_flight<br>
 [ ❌ ] - GET /history/flights/{id}/map<br>
 [ ✅ ] - GET /history/flights/{id}/route<br>
 [ ✅ ] - GET /history/flights/{id}/track<br>
