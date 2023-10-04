@@ -18,10 +18,7 @@ struct ContentView: View {
             do {
                 let blocked = try await AeroAPI
                     .manager
-                    .disruptionsAt(
-                        entity: "KORD",
-                        type: .origin
-                    )
+                    .flightIDCanonical(code: "UA231")
 
                 print(blocked)
                 print()

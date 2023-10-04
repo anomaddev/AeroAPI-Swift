@@ -8,6 +8,57 @@
 // Core iOS
 import UIKit
 
+public struct AirlinesRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/operators" }
+    
+    public var filters: [RequestFilters]
+    
+    public init(maxPages: Int! = 1)
+    { self.filters = [.maxPages(maxPages)] }
+}
+
+public struct AirlinesResponse: Codable {
+    public var operators: [Operators]
+    public var numPages: Int?
+    public var links: [String: String]?
+    
+    public struct Operators: Codable {
+        var code: String
+        var operatorInfoUrl: String
+    }
+}
+
+public struct CanonicalAirlineRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/operators/\(code)/canonical" }
+    
+    public var code: String
+    public var filters: [RequestFilters]
+    
+    init(code: String, countryCode: String? = nil) {
+        self.code = code
+        self.filters = []
+        
+        if let countryCode = countryCode
+        { self.filters.append(.countryCode(countryCode)) }
+    }
+}
+
+public struct CanonicalAirlineResponse: Codable {
+    var operators: [AirlineID]
+    
+    public struct AirlineID: Codable {
+        var id: String
+        var idType: AirlineIDType
+    }
+}
+
+public enum AirlineIDType: String, Codable {
+    case icao
+    case iata
+}
+
 public struct AirlineFlightCountResponse: Codable {
     
     public var airborne: Int
@@ -95,6 +146,38 @@ extension AeroAPI {
     
     // MARK: - AeroAPI Public
     
+    /// Lookup the code that the AeroAPI uses for a given airport
+    /// - Parameters:
+    ///   - code: Your version of the code for the airport you would like to search
+    ///   - type: The Airport ID Type of code you are providing
+    /// - Returns: A response containing all matching airports and their AeroAPI code & type
+    public func airlineCanonical(code: String, countryCode: String? = nil) async throws -> CanonicalAirlineResponse
+    { return try await self.request(CanonicalAirlineRequest(code: code, countryCode: countryCode)) }
+    
+    /// Lookup the code that the AeroAPI uses for a given airport
+    /// - Parameters:
+    ///   - code: Your version of the code for the airport you would like to search
+    ///   - type: The Airport ID Type of code you are providing
+    ///   - completion: A result containing all matching airports and their AeroAPI code & type or an error if one occured
+    public func airlineCanonical(code: String,
+                                 countryCode: String? = nil,
+                                 _ completion: @escaping (Result<CanonicalAirlineResponse, Error>) -> Void)
+    { self.request(CanonicalAirlineRequest(code: code, countryCode: countryCode)) { completion($0) }}
+    
+    /// Get a list of Airline codes
+    /// - Parameter maxPages: The number of pages to return
+    /// - Returns: A response containing the list of airline codes
+    public func getAirlines(maxPages: Int! = 1) async throws -> AirlinesResponse
+    { return try await self.request(AirlinesRequest(maxPages: maxPages)) }
+    
+    
+    /// Get a list of Airline codes
+    /// - Parameters:
+    ///   - maxPages: The number of pages to return
+    ///   - completion: A result containing the airline list or the error that occured
+    public func getAirlines(maxPages: Int! = 1,
+                            _ completion: @escaping (Result<AirlinesResponse, Error>) -> Void)
+    { self.request(AirlinesRequest(maxPages: maxPages)) { completion($0) }}
     
     /// Get the count of flights for a given airline within the last 24 hours asynchronously
     /// - Parameter icao: The ICAO code for the requested airport

@@ -57,7 +57,7 @@ Examples coming soon...
 [ ✅ ] - GET /flights/{id}/route<br>
 [ ✅ ] - GET /flights/{id}/track<br>
 [ ✅ ] - GET /flights/{ident}<br>
-[ ❌ ] - GET /flights/{ident}/canonical<br>
+[ ✅ ] - GET /flights/{ident}/canonical<br>
 [ ❌ ] - POST /flights/{ident}/intents<br>
 [ ❌ ] - GET /flights/search/<br>
 [ ❌ ] - GET /flights/search/advanced<br>
@@ -70,9 +70,9 @@ Examples coming soon...
 [ ❌ ] - GET /foresight/flights/search/advanced<br>
 
 ##### Airports
-[ ❌ ] - GET /airports<br>
+[ ✅ ] - GET /airports<br>
 [ ✅ ] - GET /airports/{id}<br>
-[ ❌ ] - GET /airports/{id}/canonical<br>
+[ ✅ ] - GET /airports/{id}/canonical<br>
 [ ✅ ] - GET /airports/{id}/delays<br>
 [ ✅ ] - GET /airports/{id}/flights<br>
 [ ✅ ] - GET /airports/{id}/flights/arrivals<br>
@@ -89,9 +89,9 @@ Examples coming soon...
 [ ✅ ] - GET /airports/nearby<br>
 
 ##### Operators
-[ ❌ ] - GET /operators<br>
+[ ✅ ] - GET /operators<br>
 [ ✅ ] - GET /operators/{id}<br>
-[ ❌ ] - GET /operators/{id}/canonical<br>
+[ ✅ ] - GET /operators/{id}/canonical<br>
 [ ✅ ] - GET /operators/{id}/flights<br>
 [ ✅ ] - GET /operators/{id}/flights/arrivals<br>
 [ ✅ ] - GET /operators/{id}/flights/counts<br>

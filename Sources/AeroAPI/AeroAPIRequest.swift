@@ -30,6 +30,9 @@ public extension AeroAPIRequest {
             case .identType(let type):
                 return URLQueryItem(name: "ident_type", value: type.rawValue)
                 
+            case .airportIDType(let type):
+                return URLQueryItem(name: "id_type", value: type.rawValue)
+                
             case .airline(let airline):
                 return URLQueryItem(name: "airline", value: airline)
                 
@@ -44,6 +47,9 @@ public extension AeroAPIRequest {
                 
             case .longitude(let lng):
                 return URLQueryItem(name: "longitude", value: "\(lng)")
+                
+            case .countryCode(let code):
+                return URLQueryItem(name: "country_code", value: code)
                 
             case .timestamp(let stamp):
                 return URLQueryItem(name: "timestamp", value: stamp.toFormat(AeroAPI.dateStringFormat))
@@ -103,12 +109,14 @@ public extension AeroAPIRequest {
 public enum RequestFilters: Codable {
     case ident(String)
     case identType(IdentType)
+    case airportIDType(AirportIDType)
     
     case airline(String)
     case origin(String)
     case destination(String)
     case latitude(Double)
     case longitude(Double)
+    case countryCode(String)
     
     case timestamp(Date)
     case startDate(Date)

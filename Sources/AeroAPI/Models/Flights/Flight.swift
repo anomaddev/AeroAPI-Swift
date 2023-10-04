@@ -65,6 +65,36 @@ public struct FlightDataRequest: AeroAPIRequest {
     }
 }
 
+public struct CanonicalFlightIDRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/flights/\(code)/canonical" }
+    
+    public var code: String
+    public var filters: [RequestFilters]
+    
+    init(code: String,
+         identType: IdentType? = nil,
+         countryCode: String? = nil) {
+        self.code = code
+        self.filters = []
+        
+        if let identType = identType, identType != .faId
+        { self.filters.append(.identType(identType)) }
+        
+        if let countryCode = countryCode
+        { self.filters.append(.countryCode(countryCode)) }
+    }
+}
+
+public struct CanonicalFlightIDResponse: Codable {
+    var idents: [FlightID]
+    
+    public struct FlightID: Codable {
+        var ident: String
+        var identType: IdentType
+    }
+}
+
 public struct Flight: Codable {
     
     /// Either the ICAO flight number or the Registration for General Aviation
@@ -131,6 +161,27 @@ public struct Flight: Codable {
 extension AeroAPI {
     
     // MARK: - AeroAPI Public
+    
+    /// Lookup the code that the AeroAPI uses for a given flight
+    /// - Parameters:
+    ///   - code: Your version of the code for the flight you would like to search
+    ///   - type: The flight Ident Type of code you are providing
+    /// - Returns: A response containing all matching flight idents and their AeroAPI code & type
+    public func flightIDCanonical(code: String,
+                                  type: IdentType? = nil,
+                                  countryCode: String? = nil) async throws -> CanonicalFlightIDResponse
+    { return try await self.request(CanonicalFlightIDRequest(code: code, identType: type, countryCode: countryCode)) }
+    
+    /// Lookup the code that the AeroAPI uses for a given flight
+    /// - Parameters:
+    ///   - code: Your version of the code for the flight you would like to search
+    ///   - type: The Flight Ident Type of code you are providing
+    ///   - completion: A result containing all matching flight idents and their AeroAPI code & type or an error if one occured
+    public func flightIDCanonical(code: String,
+                                 type: IdentType? = nil,
+                                  countryCode: String? = nil,
+                                 _ completion: @escaping (Result<CanonicalFlightIDResponse, Error>) -> Void)
+    { self.request(CanonicalFlightIDRequest(code: code, identType: type, countryCode: countryCode)) { completion($0) }}
     
     /// Get flight information asynchronously using the unique FAID for a given flight
     /// - Parameter faId: The unique flight ID for the requested flight

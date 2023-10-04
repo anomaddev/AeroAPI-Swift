@@ -1,6 +1,55 @@
 import Foundation
 import CoreLocation
 
+public struct AirportsRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/airports" }
+    
+    public var filters: [RequestFilters]
+    
+    public init(maxPages: Int! = 1)
+    { self.filters = [.maxPages(maxPages)] }
+}
+
+public struct AirportsResponse: Codable {
+    public var airports: [AirportInfo]
+    public var numPages: Int?
+    public var links: [String: String]?
+    
+    public struct AirportInfo: Codable {
+        public var code: String
+        public var airportInfoUrl: String
+    }
+}
+
+public struct CanonicalAirportRequest: AeroAPIRequest {
+    public func path() throws -> String
+    { return "/airports/\(code)/canonical" }
+    
+    public var code: String
+    public var filters: [RequestFilters]
+    
+    init(code: String, idType: AirportIDType) {
+        self.code = code
+        self.filters = [.airportIDType(idType)]
+    }
+}
+
+public struct CanonicalAirportResponse: Codable {
+    var airports: [AirportID]
+    
+    public struct AirportID: Codable {
+        var id: String
+        var idType: AirportIDType
+    }
+}
+
+public enum AirportIDType: String, Codable {
+    case icao
+    case iata
+    case lid
+}
+
 /// Use this request for getting more Airport info from the AeroAPI
 public struct AirportInfoRequest: AeroAPIRequest {
     public func path() throws -> String {
@@ -123,6 +172,40 @@ public enum AirportType: String, Codable {
 extension AeroAPI {
     
     // MARK: - AeroAPI Public
+    
+    
+    /// Lookup the code that the AeroAPI uses for a given airport
+    /// - Parameters:
+    ///   - code: Your version of the code for the airport you would like to search
+    ///   - type: The Airport ID Type of code you are providing
+    /// - Returns: A response containing all matching airports and their AeroAPI code & type
+    public func airportCanonical(code: String, type: AirportIDType! = .icao) async throws -> CanonicalAirportResponse
+    { return try await self.request(CanonicalAirportRequest(code: code, idType: type)) }
+    
+    /// Lookup the code that the AeroAPI uses for a given airport
+    /// - Parameters:
+    ///   - code: Your version of the code for the airport you would like to search
+    ///   - type: The Airport ID Type of code you are providing
+    ///   - completion: A result containing all matching airports and their AeroAPI code & type or an error if one occured
+    public func airportCanonical(code: String,
+                                 type: AirportIDType! = .icao,
+                                 _ completion: @escaping (Result<CanonicalAirportResponse, Error>) -> Void)
+    { self.request(CanonicalAirportRequest(code: code, idType: type)) { completion($0) }}
+    
+    /// Get a list of Airport codes
+    /// - Parameter maxPages: The number of pages to return
+    /// - Returns: A response containing the list of airport codes
+    public func getAirports(maxPages: Int! = 1) async throws -> AirportsResponse
+    { return try await self.request(AirportsRequest(maxPages: maxPages)) }
+    
+    
+    /// Get a list of Airport codes
+    /// - Parameters:
+    ///   - maxPages: The number of pages to return
+    ///   - completion: A result containing the airport list or the error that occured
+    public func getAirports(maxPages: Int! = 1,
+                            _ completion: @escaping (Result<AirportsResponse, Error>) -> Void)
+    { self.request(AirportsRequest(maxPages: maxPages)) { completion($0) }}
     
     /// Async request function for `AirportInfoRequest`
     /// - Parameter code: The requested `Airport` code in ICAO, IATA or LID string
