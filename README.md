@@ -52,8 +52,7 @@ Examples coming soon...
 [ ❌ ] - DELETE /alerts/endpoint<br>
 
 ##### Flights
-[ ✅ ] - GET /flights/{id}/map<br>
-        -- Bounding Box parameter is not currently active
+[ ✅ ] - GET /flights/{id}/map - Bounding Box parameter is not currently active<br>
 [ ✅ ] - GET /flights/{id}/position<br>
 [ ✅ ] - GET /flights/{id}/route<br>
 [ ✅ ] - GET /flights/{id}/track<br>
@@ -101,8 +100,7 @@ Examples coming soon...
 
 ##### History
 [ ✅ ] - GET /history/aircraft/{registration}/last_flight<br>
-[ ✅ ] - GET /history/flights/{id}/map<br>
-        -- Bounding Box parameter is not currently active
+[ ✅ ] - GET /history/flights/{id}/map - Bounding Box parameter is not currently active<br>
 [ ✅ ] - GET /history/flights/{id}/route<br>
 [ ✅ ] - GET /history/flights/{id}/track<br>
 [ ✅ ] - GET /history/flights/{ident}<br>
