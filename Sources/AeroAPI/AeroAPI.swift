@@ -136,6 +136,62 @@ public class AeroAPI {
         } catch { completion(.failure(error)) }
     }
     
+    internal func getData(_ request: MapDataRequest) async throws -> Data {
+        guard let apiKey = apiKey
+        else { throw AeroAPIError.apiKeyNotSet }
+        
+        let url = try makeUrl(request)
+        let urlRequest = try URLRequest(
+            url: url,
+            method: .get,
+            headers: [
+                .init(name: "x-apikey", value: apiKey)
+            ]
+        )
+        
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        let statusCode = (response as? HTTPURLResponse)?.statusCode
+        
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode == 200
+        else { throw AeroAPIError.HTTPResponseError(statusCode) }
+        
+        return try transformMapData(data)
+    }
+    
+    internal func getData(_ request: MapDataRequest,
+                          _ completion: @escaping (Result<Data, Error>) -> Void) {
+        do {
+            guard let apiKey = apiKey
+            else { throw AeroAPIError.apiKeyNotSet }
+            
+            let url = try makeUrl(request)
+            let urlRequest = try URLRequest(
+                url: url,
+                method: .get,
+                headers: [
+                    .init(name: "x-apikey", value: apiKey)
+                ]
+            )
+            
+            URLSession.shared.dataTask(with: urlRequest)
+            { data, response, error in
+                do {
+                    if let error = error { throw error }
+                    
+                    let statusCode = (response as? HTTPURLResponse)?.statusCode
+                    guard let statusCode = statusCode, statusCode == 200
+                    else { throw AeroAPIError.HTTPResponseError(statusCode) }
+                    
+                    guard let data = data
+                    else { throw AeroAPIError.noDataReturnedForValidStatusCode }
+                    
+                    let imageData = try self.transformMapData(data)
+                    completion(.success(imageData))
+                } catch { completion(.failure(error)) }
+            }.resume()
+        } catch { completion(.failure(error)) }
+    }
+    
     /// Makes the url of the API all for the given AeroAPIRequest
     /// - Parameter query: AeroAPIRequest of call
     /// - Returns: URL rendererd with components
@@ -155,6 +211,23 @@ public class AeroAPI {
             print()
         }
         return url
+    }
+    
+    internal func transformMapData(_ data: Data) throws -> Data {
+        let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+        if AeroAPI.debug {
+            print("=== JSON DATA ===")
+            print(json ?? [:])
+            print("=================")
+        }
+        
+        guard let byteString = json?["map"] as? String
+        else { throw AeroAPIError.failedDecodingMapData }
+        
+        guard let imageData = Data(base64Encoded: byteString, options: .ignoreUnknownCharacters)
+        else { throw AeroAPIError.failedDecodingMapData }
+        
+        return imageData
     }
     
     internal func paginate<T: Decodable>(_ request: CursorRequest) async throws -> T

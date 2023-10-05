@@ -42,6 +42,14 @@ public enum AeroAPIError: Error {
     case noAirlineFlightCountsForRequest
     
     
+    // Map errors
+    /// invalid height was given to a map data request
+    case invalidMapHeight(Int)
+    
+    /// invalid width was given to a map data request
+    case invalidMapWidth(Int)
+    
+    
     // Date errors
     /// start date for search cannot be completed
     case startDateCreationInvalid
@@ -68,10 +76,18 @@ public enum AeroAPIError: Error {
     // Decoder errors
     /// failed to decode ScheduledFlightResponse
     case failedDecodingScheduledFlightResponse
+    
     /// failed to decode FlightDataResponse
     case failedDecodingFlightDataResponse
+    
     /// failed to decode FlightTrackResponse
     case failedDecodingFlightTrackResponse
+    
+    /// failed to decode JSON map byte array
+    case failedDecodingMapData
+    
+    /// failed to decode Base64 Data to UIImage
+    case invalidUIImageFromData
     
     /// Generic error
     case fall
@@ -120,6 +136,12 @@ extension AeroAPIError: CustomStringConvertible {
         case .noAirlineFlightCountsForRequest:
             return "No airline flight count stats data was returned for a request that returned no error."
             
+        case .invalidMapHeight(let height):
+            return "The height (\(height)) given to the request for map data is invalid. It must be between 1 and 1500!"
+            
+        case .invalidMapWidth(let width):
+            return "The width (\(width)) given to the request for map data is invalid. It must be between 1 and 1500!"
+            
         case .startDateCreationInvalid:
             return "Failed to create start date using calendar"
             
@@ -140,6 +162,12 @@ extension AeroAPIError: CustomStringConvertible {
             
         case .failedDecodingFlightDataResponse:
             return "Failed to decode the FlightDataResponse"
+            
+        case .failedDecodingMapData:
+            return "Failed to decode 'map' from JSON data response"
+            
+        case .invalidUIImageFromData:
+            return "Failed to decode UIImage from Base64 String"
             
         // MARK: - desc,FlightTrack
         case .flightTrackEmpty:
@@ -198,6 +226,12 @@ extension AeroAPIError: LocalizedError {
             
         case .noAirlineFlightCountsForRequest:
             key = "noAirlineFlightCountsForRequest"
+            
+        case .invalidMapHeight:
+            key = "invalidMapHeight"
+            
+        case .invalidMapWidth:
+            key = "invalidMapWidth"
         
         case .startDateCreationInvalid:
             key = "startDateCreationInvalid"
@@ -219,6 +253,12 @@ extension AeroAPIError: LocalizedError {
         
         case .failedDecodingFlightDataResponse:
             key = "failedDecodingFlightDataResponse"
+            
+        case .failedDecodingMapData:
+            key = "failedDecodingMapData"
+            
+        case .invalidUIImageFromData:
+            key = "invalidUIImageFromData"
             
         // MARK: - errorDesc,FlightTrack
         case .flightTrackEmpty:
