@@ -90,7 +90,7 @@ public struct AirportInfoRequest: AeroAPIRequest {
 public class Airport: Codable {
     
     /// Active code used for airport. Could be ICAO, IATA or LID code.
-    public var airportCode: String
+    public var airportCode: String?
     
     /// ICAO Airport code
     public var codeIcao: String?
@@ -108,19 +108,19 @@ public class Airport: Codable {
     public var type: AirportType?
     
     /// Elevation in Meters
-    public var elevation: Double
+    public var elevation: Double?
     
     /// City of the Airport
     public var city: String
     
     /// State or Country of the Airport
-    public var state: String
+    public var state: String?
     
     /// Country Code of the Airport
     public var countryCode: String
     
     /// Timezone of the Airport
-    public var timezone: String
+    public var timezone: String?
     
     /// Longitude represented as a `Double`
     public var longitude: Double
