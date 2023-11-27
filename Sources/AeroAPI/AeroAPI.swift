@@ -269,5 +269,5 @@ public class AeroAPI {
 }
 
 public extension Bundle {
-    static let AeroAPIBundle = Bundle.module.bundleIdentifier!
+    static let AeroAPI = Bundle.module
 }

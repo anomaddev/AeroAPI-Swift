@@ -11,6 +11,34 @@ import UIKit
 
 public enum FlightStatus: String, Codable, CaseIterable {
     
+    static var base: UIColor = UIColor(
+        _colorLiteralRed: 47/255,
+        green: 47/255,
+        blue: 47/255,
+        alpha: 1
+    )
+    
+    static var success: UIColor = UIColor(
+        _colorLiteralRed: 13/255,
+        green: 165/255,
+        blue: 28/255,
+        alpha: 1
+    )
+    
+    static var error: UIColor = UIColor(
+        _colorLiteralRed: 196/255,
+        green: 25/255,
+        blue: 48/255,
+        alpha: 1
+    )
+    
+    static var warning: UIColor = UIColor(
+        _colorLiteralRed: 196/255,
+        green: 25/255,
+        blue: 48/255,
+        alpha: 1
+    )
+    
     // Diverted
     case Diverted
     case ReturnedToGate = "Returned to Gate"
@@ -88,6 +116,38 @@ public enum FlightStatus: String, Codable, CaseIterable {
             .ReturnedToGate: return true
         default: return false
         }
+    }
+    
+    public var color: UIColor {
+        switch self {
+        case .Scheduled, 
+             .Unknown,
+             .ResultUnknown:
+            return Self.base
+            
+        case .OnTime,
+                .EnrouteOnTime,
+                .EnRoute,
+                .Taxiing,
+                .LandedTaxiing,
+                .LeftGate,
+                .Arrived,
+                .GateArrival:
+            return Self.success
+            
+        case .Delayed,
+                .EnrouteDelayed,
+                .DelayedArrival,
+                .TaxxingDelayed,
+                .ScheduledDelay: 
+            return Self.warning
+            
+        case .Cancelled,
+                .Diverted,
+                .ReturnedToGate: 
+            return Self.error
+        }
+        
     }
     
     public var label: String {
