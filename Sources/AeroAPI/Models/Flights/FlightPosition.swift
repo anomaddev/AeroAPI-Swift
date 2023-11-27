@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 public struct FlightPositionRequest: AeroAPIRequest {
     
@@ -76,6 +77,9 @@ public struct LastPosition: Codable {
     public var longitude: Double
     public var timestamp: Date
     public var updateType: UpdateType?
+    
+    public var coordinate: CLLocationCoordinate2D
+    { return .init(latitude: latitude, longitude: longitude) }
 }
 
 public enum PredictionType: String, Codable {

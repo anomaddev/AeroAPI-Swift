@@ -108,12 +108,12 @@ public struct Flight: Codable {
     public var registration: String?
     public var atcIdent: String?
     public var inboundFaFlightId: String?
-    public var codeshares: [String]
-    public var codesharesIata: [String]
-    public var blocked: Bool
-    public var diverted: Bool
-    public var cancelled: Bool
-    public var positionOnly: Bool
+    public var codeshares: [String]?
+    public var codesharesIata: [String]?
+    public var blocked: Bool?
+    public var diverted: Bool?
+    public var cancelled: Bool?
+    public var positionOnly: Bool?
     public var origin: FlightAirport
     public var destination: FlightAirport
     public var departureDelay: Int?
@@ -152,6 +152,8 @@ public struct Flight: Codable {
     public var terminalOrigin: String?
     public var terminalDestination: String?
     public var type: String?
+    
+    public var lastPosition: LastPosition?
 
     /// Calculated haversine distance between airports
     public var distance: Distance

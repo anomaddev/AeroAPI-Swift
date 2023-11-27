@@ -5,7 +5,7 @@ import ZippyJSON
 public class AeroAPI {
     
     /// Is API class in debug mode
-    public static var debug: Bool = false
+    public static var debug: Bool = true
     
     /// Base URL Components for the AeroAPI
     private static var components: URLComponents = URLComponents()
@@ -89,6 +89,39 @@ public class AeroAPI {
         }
         
         let decoded = try decoder.decode(T.self, from: data)
+        return decoded
+    }
+    
+    /// Makes the given request and returns the specified `Flight`s
+    /// - Parameter request: `AdvancedSearhParameter`
+    /// - Returns: The `Flight`s object requested from the API Request
+    internal func request(_ param: AdvancedSearchParameter) async throws -> FlightDataResponse {
+        guard let apiKey = apiKey
+        else { throw AeroAPIError.apiKeyNotSet }
+        
+        let url = try makeUrl(param)
+        let urlRequest = try URLRequest(
+            url: url,
+            method: .get,
+            headers: [
+                .init(name: "x-apikey", value: apiKey)
+            ]
+        )
+        
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        let statusCode = (response as? HTTPURLResponse)?.statusCode
+        
+        guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode == 200
+        else { throw AeroAPIError.HTTPResponseError(statusCode) }
+        
+        if AeroAPI.debug {
+            let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+            print("=== JSON DATA ===")
+            print(json ?? [:])
+            print("=================")
+        }
+        
+        let decoded = try decoder.decode(FlightDataResponse.self, from: data)
         return decoded
     }
     
@@ -201,6 +234,27 @@ public class AeroAPI {
         var components = AeroAPI.components
         components.path = "/aeroapi" + path
         components.queryItems = try query.request()
+        
+        guard let url = components.url
+        else { throw AeroAPIError.invalidURLFromComponents }
+        
+        if AeroAPI.debug {
+            print("REQUESTING: ")
+            print(url.absoluteString)
+            print()
+        }
+        return url
+    }
+    
+    /// Makes the url of the API all for the given `AdvancedSearchRequest`
+    /// - Parameter param: `AdvancedSearchRequest` of call
+    /// - Returns: URL rendererd with components
+    internal func makeUrl(_ param: AdvancedSearchParameter) throws -> URL {
+        let path = "/flights/search/advanced"
+        
+        var components = AeroAPI.components
+        components.path = "/aeroapi" + path
+        components.queryItems = param.query
         
         guard let url = components.url
         else { throw AeroAPIError.invalidURLFromComponents }
