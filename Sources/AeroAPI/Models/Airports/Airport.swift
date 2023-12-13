@@ -89,6 +89,19 @@ public struct AirportInfoRequest: AeroAPIRequest {
 /// An `Airport` Object contains all the airport's details
 public class Airport: Codable {
     
+    // TODO: Document
+    public static func search(using text: String) -> [Airport] {
+        let icao = AeroAPI.allAirports.filter { $0.codeIcao == text }
+        let iata = AeroAPI.allAirports.filter { $0.codeIata == text }
+        let name = AeroAPI.allAirports.filter { $0.name.contains(text) }
+        
+        return [
+            icao,
+            iata,
+            name
+        ].reduce([], +)
+    }
+    
     /// Active code used for airport. Could be ICAO, IATA or LID code.
     public var airportCode: String?
     
