@@ -115,7 +115,7 @@ public struct Flight: Codable {
     public var cancelled: Bool?
     public var positionOnly: Bool?
     public var origin: FlightAirport
-    public var destination: FlightAirport
+    public var destination: FlightAirport?
     public var departureDelay: Int?
     public var arrivalDelay: Int?
     public var filedEte: Int?
@@ -137,7 +137,7 @@ public struct Flight: Codable {
     public var actualIn: Date?
     
     public var progressPercent: Int?
-    public var status: FlightStatus!
+    public var status: FlightStatus?
     public var aircraftType: String?
     public var routeDistance: Int?
     public var filedAirspeed: Int?
@@ -156,8 +156,9 @@ public struct Flight: Codable {
     public var lastPosition: LastPosition?
 
     /// Calculated haversine distance between airports
+    /// TODO: Fix Optional on destination
     public var distance: Distance
-    { Distance(from: origin.airport.coordinate, to: destination.airport.coordinate) }
+    { Distance(from: origin.airport.coordinate, to: destination!.airport.coordinate) }
 }
 
 extension AeroAPI {
