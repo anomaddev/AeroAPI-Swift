@@ -63,6 +63,19 @@ public struct FlightDataRequest: AeroAPIRequest {
         if let cursor = cursor
         { self.filters.append(.cursor(cursor)) }
     }
+    
+    public init(
+        ident: String,
+        type: IdentType! = .designator,
+        historical: Bool! = true,
+        filters: [RequestFilters]! = [],
+        maxPages: Int! = 1,
+        cursor: String? = nil
+    ) {
+        self.ident = ident
+        self.historical = historical
+        self.filters = filters + [.identType(type), .maxPages(maxPages)]
+    }
 }
 
 public struct CanonicalFlightIDRequest: AeroAPIRequest {

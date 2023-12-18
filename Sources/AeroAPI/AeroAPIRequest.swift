@@ -61,6 +61,12 @@ public extension AeroAPIRequest {
             case .endDate(let end):
                 return [URLQueryItem(name: "end", value: end.toFormat(AeroAPI.dateStringFormat))]
                 
+            case .startTimestamp(let start):
+                return [URLQueryItem(name: "start", value: start)]
+                
+            case .endTimestamp(let end):
+                return [URLQueryItem(name: "end", value: end)]
+                
             case .disruptionTimePeriod(let time):
                 return [URLQueryItem(name: "time_period", value: time.rawValue)]
                 
@@ -151,7 +157,9 @@ public enum RequestFilters: Codable {
     
     case timestamp(Date)
     case startDate(Date)
+    case startTimestamp(String)
     case endDate(Date)
+    case endTimestamp(String)
     case disruptionTimePeriod(DisruptionCountTimePeriod)
     
     case flightNumber(Int)
