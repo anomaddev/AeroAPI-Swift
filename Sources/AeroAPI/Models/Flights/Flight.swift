@@ -167,11 +167,39 @@ public struct Flight: Codable {
     public var type: String?
     
     public var lastPosition: LastPosition?
-
+    
+    /// the operating airline for the flight
+    public var operating: Airline?
+    { return self.operatorIcao?.airline ?? self.operatorIata?.airline }
+    
     /// Calculated haversine distance between airports
     /// TODO: Fix Optional on destination
     public var distance: Distance
     { Distance(from: origin.airport.coordinate, to: destination!.airport.coordinate) }
+    
+    /// duration of the flight
+    public var duration: TimeInterval? {
+        let current = Date().since1970
+        if scheduledIn.since1970 < current {
+            guard let timein = actualIn?.since1970,
+                  let timeout = actualOut?.since1970
+            else {
+                let timein = scheduledIn.since1970
+                guard let timeout = scheduledOut?.since1970
+                else { return nil }
+                
+                return timein - timeout
+            }
+            
+            return timein - timeout
+        } else {
+            let timein = scheduledIn.since1970
+            guard let timeout = scheduledOut?.since1970
+            else { return nil }
+            
+            return timein - timeout
+        }
+    }
 }
 
 extension AeroAPI {
