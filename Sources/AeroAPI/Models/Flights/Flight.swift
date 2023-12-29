@@ -11,8 +11,9 @@ import Foundation
 // Utilities
 import SwiftDate
 import NomadUtilities
+import Defaults
 
-public struct FlightDataResponse: Codable {
+public struct FlightDataResponse: Codable, _DefaultsSerializable {
     public var numPages: Int! = 1
     public var flights: [Flight]? = []
     public var links: [String: String]?

@@ -17,6 +17,7 @@ let package = Package(
          .package(url: "https://github.com/michaeleisel/ZippyJSON.git", from: "1.2.6"),
          .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
          .package(url: "https://github.com/malcommac/SwiftDate.git", .upToNextMajor(from: "7.0.0")),
+         .package(url: "https://github.com/sindresorhus/Defaults.git", .upToNextMajor(from: "8.0.0")),
          .package(path: "../NomadUtilities")
 //         .package(url: "https://github.com/drtimcooper/LatLongToTimezone.git", .upToNextMajor(from: "1.0.0")),
     ],
@@ -29,6 +30,7 @@ let package = Package(
                 "Alamofire",
                 "ZippyJSON",
                 "SwiftDate",
+                "Defaults",
                 "NomadUtilities"
             ],
             resources: [
