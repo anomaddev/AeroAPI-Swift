@@ -230,7 +230,7 @@
    "radar": ""
  },
  {
-   "name": "Airbus A330-800neo",
+   "name": "Airbus A330-800",
    "iata": "338",
    "ident": "A338",
    "cruise": 0.86,
@@ -240,7 +240,7 @@
    "radar": ""
  },
  {
-   "name": "Airbus A330-900neo",
+   "name": "Airbus A330-900",
    "iata": "339",
    "ident": "A339",
    "cruise": 0.86,
