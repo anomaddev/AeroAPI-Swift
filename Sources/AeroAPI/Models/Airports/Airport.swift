@@ -135,6 +135,9 @@ public class Airport: Codable {
     /// Timezone of the Airport
     public var timezone: String?
     
+    public var TZ: TimeZone?
+    { TimezoneMapper.latLngToTimezone(coordinate) }
+    
     /// Longitude represented as a `Double`
     public var longitude: Double
     
@@ -155,10 +158,6 @@ public class Airport: Codable {
     
     public var coordinate: CLLocationCoordinate2D
     { CLLocationCoordinate2D(latitude: latitude, longitude: longitude) }
-    
-//    public var timezoneCode: String?
-//    public var timezone: TimeZone?
-//    { TimezoneMapper.latLngToTimezone(coordinate) }
     
     // TODO: Make this hardcoded
     public var shortName: String {

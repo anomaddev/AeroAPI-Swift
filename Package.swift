@@ -19,7 +19,6 @@ let package = Package(
          .package(url: "https://github.com/malcommac/SwiftDate.git", .upToNextMajor(from: "7.0.0")),
          .package(url: "https://github.com/sindresorhus/Defaults.git", .upToNextMajor(from: "8.0.0")),
          .package(path: "../NomadUtilities")
-//         .package(url: "https://github.com/drtimcooper/LatLongToTimezone.git", .upToNextMajor(from: "1.0.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
