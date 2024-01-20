@@ -169,6 +169,9 @@ public struct Flight: Codable {
     
     public var lastPosition: LastPosition?
     
+    /// This is a utility value that is not used by the FlightAware API. Use this value for when syncing with a database.
+    public var updated: Date?
+    
     /// the operating airline for the flight
     public var operating: Airline?
     { return self.operatorIcao?.airline ?? self.operatorIata?.airline }
@@ -200,6 +203,24 @@ public struct Flight: Codable {
             
             return timein - timeout
         }
+    }
+    
+    /// scheduled out, estimated out & actual out
+    public func departure() -> (Date, Date?, Date?) {
+        return (
+            self.scheduledOut!,
+            self.estimatedOut,
+            self.actualOut
+        )
+    }
+    
+    /// scheduled in, estimated in & actual in
+    public func arrival() -> (Date, Date?, Date?) {
+        return (
+            self.scheduledIn,
+            self.estimatedIn,
+            self.actualIn
+        )
     }
 }
 
