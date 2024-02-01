@@ -5,7 +5,10 @@ import ZippyJSON
 public class AeroAPI {
     
     /// Is API class in debug mode
-    public static var debug: Bool = true
+    public static var debug: Bool = false
+    
+    /// Force API to show HTTP request URLs in the console, while debugging is disabled
+    public static var showHTTPRequestURLs: Bool = false
     
     /// Base URL Components for the AeroAPI
     internal static var components: URLComponents = URLComponents()
@@ -205,7 +208,7 @@ public class AeroAPI {
         guard let url = components.url
         else { throw AeroAPIError.invalidURLFromComponents }
         
-        if AeroAPI.debug {
+        if AeroAPI.debug || AeroAPI.showHTTPRequestURLs  {
             print("REQUESTING: ")
             print(url.absoluteString)
             print()
