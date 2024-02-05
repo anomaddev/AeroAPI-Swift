@@ -143,6 +143,7 @@ public extension AeroAPIRequest {
     }
 }
 
+/// AeroAPI Request Filters
 public enum RequestFilters: Codable {
     case ident(String)
     case identType(IdentType)
@@ -194,8 +195,14 @@ public enum RequestFilters: Codable {
 //    )
 }
 
+/// The flight's identifier type
 public enum IdentType: String, Codable {
+    /// The IATA or ICAO flight no
     case designator
+    
+    /// The FlightAware flight ID
     case faId = "fa_flight_id"
+    
+    /// The tail number of the aircraft
     case registration
 }

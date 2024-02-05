@@ -51,9 +51,17 @@ public struct FlightTrack: Codable {
     { .init(latitude: latitude, longitude: longitude) }
 }
 
+/// If a current position is currently changing altitude, this field will indicate the direction of the change.
 public enum AltChange: String, Codable {
+    
+    /// No Change in Alt
     case Null = "-"
-    case C, D
+    
+    /// Climbing
+    case C
+    
+    /// Descending
+    case D
 }
 
 public enum UpdateType: String, Codable {
@@ -62,7 +70,7 @@ public enum UpdateType: String, Codable {
 
 extension AeroAPI {
     
-    // MARK: - AeroAPI Public
+    // MARK: - Flight Track Requests
     
     /// Get the flight track of a given FAID asynchronously
     /// - Parameters:
@@ -109,7 +117,5 @@ extension AeroAPI {
             }
         } catch { completion(.failure(error)) }
     }
-    
-    // MARK: - AeroAPI Private
 }
 

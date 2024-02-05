@@ -75,6 +75,29 @@ public class AirportNearby: Airport {
     
 }
 
+/// Specifies the direction to search on the map
 public enum MapDirection: String, Codable {
-    case N, E, S, W, NE, SE, SW, NW
+    /// North
+    case N
+    
+    /// East
+    case E
+    
+    /// South
+    case S
+    
+    /// West
+    case W
+    
+    /// North East
+    case NE
+    
+    /// South East
+    case SE
+    
+    /// South West
+    case SW
+    
+    /// North West
+    case NW
 }

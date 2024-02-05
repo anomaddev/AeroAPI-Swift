@@ -24,12 +24,18 @@ public struct FlightDataRequest: AeroAPIRequest {
     public func path() throws -> String
     { return "\(historical ? "/history" : "")/flights/\(ident)" }
     
+    /// the ident of the flight
     public var ident: String
+    
+    /// whether the request is for historical data
     public var historical: Bool! = false
+    
+    /// the filters to apply to the request
     public var filters: [RequestFilters]
     
-    /// Create a `FlightDataRequest` with a given FlightAware ID (faId).
+    /// Create a `FlightDataRequest` with a given FlightAware ID.
     /// - Parameter faId: A string representation of the unique FlightAware flight ID for a given flight
+    /// - Parameter historical: A boolean value to determine if the request should be for historical data
     public init(faId: String, historical: Bool! = false) throws {
         self.ident = faId
         self.filters = [.identType(.faId)]
@@ -225,13 +231,13 @@ public struct Flight: Codable {
 
 extension AeroAPI {
     
-    // MARK: - AeroAPI Public
+    // MARK: - Flight Data Requests
     
     /// Lookup the code that the AeroAPI uses for a given flight
     /// - Parameters:
     ///   - code: Your version of the code for the flight you would like to search
-    ///   - type: The flight Ident Type of code you are providing
-    /// - Returns: A response containing all matching flight idents and their AeroAPI code & type
+    ///   - type: The flight `IdentType` of code you are providing
+    /// - Returns: A `CanonicalFlightIDResponse` containing all matching flight idents and their AeroAPI code & type
     public func flightIDCanonical(code: String,
                                   type: IdentType? = nil,
                                   countryCode: String? = nil) async throws -> CanonicalFlightIDResponse
@@ -240,8 +246,8 @@ extension AeroAPI {
     /// Lookup the code that the AeroAPI uses for a given flight
     /// - Parameters:
     ///   - code: Your version of the code for the flight you would like to search
-    ///   - type: The Flight Ident Type of code you are providing
-    ///   - completion: A result containing all matching flight idents and their AeroAPI code & type or an error if one occured
+    ///   - type: The Flight `IdentType` of code you are providing
+    ///   - completion: A result containing a `CanonicalFlightIDResponse` or an error if one occured
     public func flightIDCanonical(code: String,
                                  type: IdentType? = nil,
                                   countryCode: String? = nil,
@@ -294,7 +300,5 @@ extension AeroAPI {
                               _ completion: @escaping (Result<FlightDataResponse, Error>) -> Void) {
         self.request(request) { completion($0) }
     }
-    
-    // MARK: - AeroAPI Private
     
 }

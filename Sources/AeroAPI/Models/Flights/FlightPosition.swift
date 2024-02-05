@@ -89,19 +89,18 @@ public enum PredictionType: String, Codable {
 
 extension AeroAPI {
     
-    // MARK: - AeroAPI Public
-    
+    // MARK: - Flight Position Requests
     
     /// Gets a flights current position with additional details
     /// - Parameter faId: The FightAware ID for the flight you would like to search for
-    /// - Returns: The flight position response containing all the relavent info
+    /// - Returns: A `FlightSearchResponse` containing all the relavent info
     public func getPosition(faId: String) async throws -> FlightSearchResponse
     { return try await self.request(FlightPositionRequest(faId: faId)) }
     
     /// Gets a flights current position with additional details
     /// - Parameters:
     ///   - faId: The FightAware ID for the flight you would like to search for
-    ///   - completion: The result containing the flight position response containing all the relavent info or the error if one occurs
+    ///   - completion: The result containing A `FlightSearchResponse` containing all the relavent info or the error if one occurs
     public func getPosition(faId: String,
                             _ completion: @escaping (Result<FlightSearchResponse, Error>) -> Void)
     { self.request(FlightPositionRequest(faId: faId)) { completion($0) }}

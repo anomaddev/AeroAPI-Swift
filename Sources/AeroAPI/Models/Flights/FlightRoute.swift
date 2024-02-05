@@ -52,7 +52,7 @@ public struct FlightFix: Codable {
 
 extension AeroAPI {
     
-    // MARK: - AeroAPI Public
+    // MARK: - Flight Route Requests
     
     /// Get the flight route asynchronously using a FAID
     /// - Parameter faId: The unique FlightAware flight ID

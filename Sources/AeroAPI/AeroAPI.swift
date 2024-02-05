@@ -47,14 +47,16 @@ public class AeroAPI {
         return decoder
     }
     
-    public var internalDecoder: ZippyJSONDecoder {
+    /// JSON decoder used for loading the internal AeroAPI data
+    private var internalDecoder: ZippyJSONDecoder {
         let decoder = ZippyJSONDecoder()
-        let dateFormatter = DateFormatter()
+        let _ = DateFormatter()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         //        decoder.dateDecodingStrategy = .formatted(dateFormatter)
         return decoder
     }
     
+    /// Singleton init
     private init() {}
     
     /// Set the API key for the AeroAPI manager
@@ -237,12 +239,15 @@ public class AeroAPI {
     { return try await self.request(request) }
     
     // MARK: - Caching Functions
+    
+    /// Loads all the cache data from the bundled JSON.
     public func loadCache() throws {
         AeroAPI.allAirports = try loadAirports()
         AeroAPI.allAirlines = try loadAirlines()
         AeroAPI.allAircraft = try loadAircraft()
     }
     
+    /// Loads all the airports from the bundled JSON
     private func loadAirports() throws -> [Airport] {
         guard let path = Bundle.module.url(forResource: "airports", withExtension: "json")
         else { throw NSError() } // THROW:
@@ -252,6 +257,7 @@ public class AeroAPI {
         return airports
     }
     
+    /// Loads all the airlines from the bundled JSON
     private func loadAirlines() throws -> [Airline] {
         guard let path = Bundle.module.url(forResource: "airlines", withExtension: "json")
         else { throw NSError() } // THROW:
@@ -261,6 +267,7 @@ public class AeroAPI {
         return airlines
     }
     
+    /// Loads all the aircraft from the bundled JSON
     private func loadAircraft() throws -> [Aircraft] {
         guard let path = Bundle.module.url(forResource: "aircraft", withExtension: "json")
         else { throw NSError() } // THROW:

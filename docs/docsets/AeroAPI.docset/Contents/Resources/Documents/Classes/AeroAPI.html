@@ -17,7 +17,7 @@
     <a title="AeroAPI Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AeroAPI Docs</a> (16% documented)</p>
+        <p><a href="../index.html">AeroAPI Docs</a> (21% documented)</p>
         <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -619,33 +619,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:7AeroAPIAAC15internalDecoder9ZippyJSON0E11JSONDecoderCvp"></a>
-                    <a name="//apple_ref/swift/Property/internalDecoder" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7AeroAPIAAC15internalDecoder9ZippyJSON0E11JSONDecoderCvp">internalDecoder</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">internalDecoder</span><span class="p">:</span> <span class="kt">ZippyJSONDecoder</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:7AeroAPIAAC3set6apiKeyySS_tF"></a>
                     <a name="//apple_ref/swift/Method/set(apiKey:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:7AeroAPIAAC3set6apiKeyySS_tF">set(apiKey:<wbr>)</a>
@@ -715,7 +688,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Loads all the cache data from the bundled JSON.</p>
 
                       </div>
                       <div class="declaration">
@@ -4216,6 +4189,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Flight%20Data%20Requests"></a>
+                <a name="//apple_ref/swift/Section/Flight Data Requests" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Flight%20Data%20Requests"></a>
+                  <h3 class="section-name"><span>Flight Data Requests</span>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -4269,7 +4255,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The flight Ident Type of code you are providing</p>
+                                  <p>The flight <code><a href="../Enums/IdentType.html">IdentType</a></code> of code you are providing</p>
                                 </div>
                               </td>
                             </tr>
@@ -4278,7 +4264,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A response containing all matching flight idents and their AeroAPI code &amp; type</p>
+                        <p>A <code><a href="../Structs/CanonicalFlightIDResponse.html">CanonicalFlightIDResponse</a></code> containing all matching flight idents and their AeroAPI code &amp; type</p>
                       </div>
                     </section>
                   </div>
@@ -4334,7 +4320,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The Flight Ident Type of code you are providing</p>
+                                  <p>The Flight <code><a href="../Enums/IdentType.html">IdentType</a></code> of code you are providing</p>
                                 </div>
                               </td>
                             </tr>
@@ -4346,7 +4332,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A result containing all matching flight idents and their AeroAPI code &amp; type or an error if one occured</p>
+                                  <p>A result containing a <code><a href="../Structs/CanonicalFlightIDResponse.html">CanonicalFlightIDResponse</a></code> or an error if one occured</p>
                                 </div>
                               </td>
                             </tr>
@@ -4579,6 +4565,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Flight%20Position%20Requests"></a>
+                <a name="//apple_ref/swift/Section/Flight Position Requests" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Flight%20Position%20Requests"></a>
+                  <h3 class="section-name"><span>Flight Position Requests</span>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -4627,7 +4626,7 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The flight position response containing all the relavent info</p>
+                        <p>A <code><a href="../Structs/FlightSearchResponse.html">FlightSearchResponse</a></code> containing all the relavent info</p>
                       </div>
                     </section>
                   </div>
@@ -4681,7 +4680,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The result containing the flight position response containing all the relavent info or the error if one occurs</p>
+                                  <p>The result containing A <code><a href="../Structs/FlightSearchResponse.html">FlightSearchResponse</a></code> containing all the relavent info or the error if one occurs</p>
                                 </div>
                               </td>
                             </tr>
@@ -4691,6 +4690,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Flight%20Route%20Requests"></a>
+                <a name="//apple_ref/swift/Section/Flight Route Requests" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Flight%20Route%20Requests"></a>
+                  <h3 class="section-name"><span>Flight Route Requests</span>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -4803,6 +4815,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Flight%20Track%20Requests"></a>
+                <a name="//apple_ref/swift/Section/Flight Track Requests" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Flight%20Track%20Requests"></a>
+                  <h3 class="section-name"><span>Flight Track Requests</span>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -4941,6 +4966,19 @@
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/AeroAPI%20Public2"></a>
+                <a name="//apple_ref/swift/Section/AeroAPI Public" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/AeroAPI%20Public2"></a>
+                  <h3 class="section-name"><span>AeroAPI Public</span>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -5084,7 +5122,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-02-04)</p>
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-02-05)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

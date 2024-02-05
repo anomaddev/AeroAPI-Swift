@@ -13,6 +13,7 @@ import UIKit
 
 // TODO: More detailed status handling
 
+/// The Status of a Flight
 public enum FlightStatus: String, Codable, CaseIterable {
     
     #if os(iOS)
@@ -36,14 +37,15 @@ public enum FlightStatus: String, Codable, CaseIterable {
         blue: 48/255,
         alpha: 1
     )
-    
+
     static var warning: UIColor = UIColor(
-        _colorLiteralRed: 196/255,
-        green: 25/255,
-        blue: 48/255,
+        _colorLiteralRed: 225/255,
+        green: 145/255,
+        blue: 17/255,
         alpha: 1
     )
     
+    /// The `FlightStatus` Color
     public var color: UIColor {
         switch self {
         case .Scheduled,
@@ -77,36 +79,64 @@ public enum FlightStatus: String, Codable, CaseIterable {
     }
     #endif
     
-    // Diverted
+    /// Diverted
     case Diverted
+    
+    /// Returned to Gate
     case ReturnedToGate = "Returned to Gate"
     
-    // Arrived
+    /// Arrived
     case Arrived
+    
+    /// Arrived at Gate
     case GateArrival = "Arrived / Gate Arrival"
+    
+    /// Delayed Arrival
     case DelayedArrival = "Arrived / Delayed"
     
-    // Taxi
+    /// Left the gate
     case LeftGate = "Left Gate"
+    
+    /// Taxiing
     case Taxiing = "Taxiing / Left Gate"
+    
+    /// Taxiing Delayed
     case TaxxingDelayed = "Taxiing / Delayed"
+    
+    /// Landed and Taxiing
     case LandedTaxiing = "Landed / Taxiing"
     
-    // Inflight
+    /// Inflight and On Time
     case OnTime
+    
+    /// Inflight and Delayed
     case Delayed
+    
+    /// Inflight and enroute
     case EnRoute
+    
+    /// Inflight and enroute on time
     case EnrouteOnTime = "En Route / On Time"
+    
+    /// Inflight and enroute delayed
     case EnrouteDelayed = "En Route / Delayed"
     
-    // Base
+    /// Flight is Scheduled
     case Scheduled
+    
+    /// Flight status is Unknown
     case Unknown
+    
+    /// Result is Unknown
     case ResultUnknown = "result unknown"
+    
+    /// Flight is Cancelled
     case Cancelled
     
+    /// Flight has a Scheduled Delay
     case ScheduledDelay = "Scheduled / Delayed"
     
+    /// Has the flight arrived
     public var hasArrived: Bool {
         switch self {
         case .GateArrival,
@@ -116,6 +146,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
+    /// Is the flight taxiing
     public var isTaxiing: Bool {
         switch self {
         case .Taxiing,
@@ -126,6 +157,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
+    /// Is the flight inflight
     public var isInflight: Bool {
         switch self {
         case .OnTime,
@@ -137,6 +169,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
+    /// Is the flight delayed
     public var isDelayed: Bool {
         switch self {
         case .Delayed,
@@ -148,6 +181,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
+    /// Has the flight been diverted
     public var hasDiverted: Bool {
         switch self {
         case .Diverted,
@@ -156,6 +190,7 @@ public enum FlightStatus: String, Codable, CaseIterable {
         }
     }
     
+    /// A human readable label for the status
     public var label: String {
         switch self {
         case .Scheduled: return "Scheduled"
