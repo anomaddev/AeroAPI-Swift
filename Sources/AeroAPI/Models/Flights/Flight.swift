@@ -30,15 +30,14 @@ public struct FlightDataRequest: AeroAPIRequest {
     
     /// Create a `FlightDataRequest` with a given FlightAware ID (faId).
     /// - Parameter faId: A string representation of the unique FlightAware flight ID for a given flight
-    public init(faId: String) throws {
+    public init(faId: String, historical: Bool! = false) throws {
         self.ident = faId
         self.filters = [.identType(.faId)]
         
         guard let flightDate = Int(faId.split(separator: "-")[1])
         else { throw AeroAPIError.faIdDateInvalid(id: faId) }
         
-        let current = Date().seconds
-        self.historical = current > flightDate
+        self.historical = historical
     }
     
     /// Create a `FlightDataRequest` with an given identifier, with or without a `Date` range
