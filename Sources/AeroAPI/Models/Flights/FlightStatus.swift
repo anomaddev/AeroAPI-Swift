@@ -5,12 +5,17 @@
 //  Created by Justin Ackermann on 11/23/22.
 //
 
+import Foundation
+
+#if os(iOS)
 import UIKit
+#endif
 
 // TODO: More detailed status handling
 
 public enum FlightStatus: String, Codable, CaseIterable {
     
+    #if os(iOS)
     static var base: UIColor = UIColor(
         _colorLiteralRed: 47/255,
         green: 47/255,
@@ -38,6 +43,39 @@ public enum FlightStatus: String, Codable, CaseIterable {
         blue: 48/255,
         alpha: 1
     )
+    
+    public var color: UIColor {
+        switch self {
+        case .Scheduled,
+                .Unknown,
+                .ResultUnknown:
+            return Self.base
+            
+        case .OnTime,
+                .EnrouteOnTime,
+                .EnRoute,
+                .Taxiing,
+                .LandedTaxiing,
+                .LeftGate,
+                .Arrived,
+                .GateArrival:
+            return Self.success
+            
+        case .Delayed,
+                .EnrouteDelayed,
+                .DelayedArrival,
+                .TaxxingDelayed,
+                .ScheduledDelay:
+            return Self.warning
+            
+        case .Cancelled,
+                .Diverted,
+                .ReturnedToGate:
+            return Self.error
+        }
+        
+    }
+    #endif
     
     // Diverted
     case Diverted
@@ -116,38 +154,6 @@ public enum FlightStatus: String, Codable, CaseIterable {
             .ReturnedToGate: return true
         default: return false
         }
-    }
-    
-    public var color: UIColor {
-        switch self {
-        case .Scheduled, 
-             .Unknown,
-             .ResultUnknown:
-            return Self.base
-            
-        case .OnTime,
-                .EnrouteOnTime,
-                .EnRoute,
-                .Taxiing,
-                .LandedTaxiing,
-                .LeftGate,
-                .Arrived,
-                .GateArrival:
-            return Self.success
-            
-        case .Delayed,
-                .EnrouteDelayed,
-                .DelayedArrival,
-                .TaxxingDelayed,
-                .ScheduledDelay: 
-            return Self.warning
-            
-        case .Cancelled,
-                .Diverted,
-                .ReturnedToGate: 
-            return Self.error
-        }
-        
     }
     
     public var label: String {

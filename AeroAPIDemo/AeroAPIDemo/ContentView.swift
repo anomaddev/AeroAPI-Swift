@@ -15,9 +15,11 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            #if os(iOS)
             ImageView(request: try! MapDataRequest(
                 faId: "UAL231-1696166227-fa-837p"
             )).frame(width: 350, height: 350 * (480/640))
+            #endif
         }
         .task {
 //            do {

@@ -6,7 +6,11 @@
 //
 
 // Core iOS
+import Foundation
+
+#if os(iOS)
 import UIKit
+#endif
 
 class Alliance: Codable {
     
@@ -14,8 +18,10 @@ class Alliance: Codable {
     var code: String?
     var members: String?
     
+    #if os(iOS)
     var icon: UIImage?
     { UIImage(named: code?.lowercased() ?? "plane") }
+    #endif
     
 //    convenience init(_ row: [String]) {
 //        self.init()

@@ -135,8 +135,10 @@ public class Airport: Codable {
     /// Timezone of the Airport
     public var timezone: String?
     
+    #if !os(macOS)
     public var TZ: TimeZone?
     { TimezoneMapper.latLngToTimezone(coordinate) }
+    #endif
     
     /// Longitude represented as a `Double`
     public var longitude: Double

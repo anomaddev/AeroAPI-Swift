@@ -1,0 +1,5094 @@
+{
+  "warnings": [
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 5,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 10,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 31,
+      "symbol": "AeroAPI.allAirlines",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 32,
+      "symbol": "AeroAPI.allAircraft",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 34,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 50,
+      "symbol": "AeroAPI.internalDecoder",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 53,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 61,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 63,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 65,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 77,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 80,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 84,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 84,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 90,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 114,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 150,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 178,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 186,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 187,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 226,
+      "symbol": "AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 240,
+      "symbol": "AeroAPI.loadCache()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPI.swift",
+      "line": 275,
+      "symbol": "Bundle.AeroAPI",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 4,
+      "symbol": "AeroAPIRequest",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 5,
+      "symbol": "AeroAPIRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 7,
+      "symbol": "AeroAPIRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 8,
+      "symbol": "AeroAPIRequest.request()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 11,
+      "symbol": "CursorRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 12,
+      "symbol": "CursorRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 15,
+      "symbol": "CursorRequest.cursor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 16,
+      "symbol": "CursorRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 24,
+      "symbol": "AeroAPIRequest",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 25,
+      "symbol": "AeroAPIRequest.request()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 146,
+      "symbol": "RequestFilters",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 147,
+      "symbol": "RequestFilters.ident(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 148,
+      "symbol": "RequestFilters.identType(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 149,
+      "symbol": "RequestFilters.airportIDType(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 151,
+      "symbol": "RequestFilters.airline(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 152,
+      "symbol": "RequestFilters.origin(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 153,
+      "symbol": "RequestFilters.destination(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 154,
+      "symbol": "RequestFilters.latitude(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 155,
+      "symbol": "RequestFilters.longitude(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 156,
+      "symbol": "RequestFilters.countryCode(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 158,
+      "symbol": "RequestFilters.timestamp(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 159,
+      "symbol": "RequestFilters.startDate(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 160,
+      "symbol": "RequestFilters.startTimestamp(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 161,
+      "symbol": "RequestFilters.endDate(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 162,
+      "symbol": "RequestFilters.endTimestamp(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 163,
+      "symbol": "RequestFilters.disruptionTimePeriod(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 165,
+      "symbol": "RequestFilters.flightNumber(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 166,
+      "symbol": "RequestFilters.includeCodeshares(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 167,
+      "symbol": "RequestFilters.includeEstimated(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 169,
+      "symbol": "RequestFilters.cursor(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 170,
+      "symbol": "RequestFilters.maxPages(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 172,
+      "symbol": "RequestFilters.airportFlightType(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 173,
+      "symbol": "RequestFilters.connectionType(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 174,
+      "symbol": "RequestFilters.radius(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 175,
+      "symbol": "RequestFilters.onlyInstuments(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 177,
+      "symbol": "RequestFilters.returnNearbyWeather(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 178,
+      "symbol": "RequestFilters.routeSortBy(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 179,
+      "symbol": "RequestFilters.maxFileAge(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 180,
+      "symbol": "RequestFilters.temperatureUnits(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 182,
+      "symbol": "RequestFilters.height(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 183,
+      "symbol": "RequestFilters.width(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 184,
+      "symbol": "RequestFilters.layersOn(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 185,
+      "symbol": "RequestFilters.layersOff(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 186,
+      "symbol": "RequestFilters.showDataBlock(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 187,
+      "symbol": "RequestFilters.airportsExpandView(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 188,
+      "symbol": "RequestFilters.showAirports(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 197,
+      "symbol": "IdentType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 198,
+      "symbol": "IdentType.designator",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 199,
+      "symbol": "IdentType.faId",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/AeroAPIRequest.swift",
+      "line": 200,
+      "symbol": "IdentType.registration",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Extensions/AeroAPI+MKMapView.swift",
+      "line": 13,
+      "symbol": "MKMapView.coordBounds()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Extensions/AeroAPI+MKMapView.swift",
+      "line": 29,
+      "symbol": "MapBounds",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Extensions/AeroAPI+MKMapView.swift",
+      "line": 31,
+      "symbol": "MapBounds.NWCoord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Extensions/AeroAPI+MKMapView.swift",
+      "line": 32,
+      "symbol": "MapBounds.NECoord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Extensions/AeroAPI+MKMapView.swift",
+      "line": 33,
+      "symbol": "MapBounds.SECoord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Extensions/AeroAPI+MKMapView.swift",
+      "line": 34,
+      "symbol": "MapBounds.SWCoord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 15,
+      "symbol": "AircraftTypeInfoRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 16,
+      "symbol": "AircraftTypeInfoRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 19,
+      "symbol": "AircraftTypeInfoRequest.icao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 20,
+      "symbol": "AircraftTypeInfoRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 22,
+      "symbol": "AircraftTypeInfoRequest.init(icao:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 28,
+      "symbol": "BlockedCheck",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 29,
+      "symbol": "BlockedCheck.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 32,
+      "symbol": "BlockedCheck.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 33,
+      "symbol": "BlockedCheck.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 35,
+      "symbol": "BlockedCheck.init(ident:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 41,
+      "symbol": "BlockedReponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 42,
+      "symbol": "BlockedReponse.blocked",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 45,
+      "symbol": "LastFlightRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 46,
+      "symbol": "LastFlightRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 49,
+      "symbol": "LastFlightRequest.registration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 50,
+      "symbol": "LastFlightRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 52,
+      "symbol": "LastFlightRequest.init(tailno:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 58,
+      "symbol": "LastFlightResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 59,
+      "symbol": "LastFlightResponse.flights",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 62,
+      "symbol": "Aircraft",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 64,
+      "symbol": "Aircraft.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 65,
+      "symbol": "Aircraft.iata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 66,
+      "symbol": "Aircraft.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 68,
+      "symbol": "Aircraft.manufacturer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 69,
+      "symbol": "Aircraft.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 70,
+      "symbol": "Aircraft.description",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 71,
+      "symbol": "Aircraft.engineCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 72,
+      "symbol": "Aircraft.engineType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 74,
+      "symbol": "Aircraft.cruise",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 75,
+      "symbol": "Aircraft.range",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/Aircraft.swift",
+      "line": 182,
+      "symbol": "String.aircraft",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 10,
+      "symbol": "AircraftOwnerRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 11,
+      "symbol": "AircraftOwnerRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 14,
+      "symbol": "AircraftOwnerRequest.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 15,
+      "symbol": "AircraftOwnerRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 17,
+      "symbol": "AircraftOwnerRequest.init(ident:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 23,
+      "symbol": "AircraftOwnerResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 24,
+      "symbol": "AircraftOwnerResponse.owner",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Aircrafts/AircraftOwner.swift",
+      "line": 26,
+      "symbol": "AircraftOwnerResponse.Owner",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 15,
+      "symbol": "AirlinesRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 16,
+      "symbol": "AirlinesRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 19,
+      "symbol": "AirlinesRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 21,
+      "symbol": "AirlinesRequest.init(maxPages:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 25,
+      "symbol": "AirlinesResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 26,
+      "symbol": "AirlinesResponse.operators",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 27,
+      "symbol": "AirlinesResponse.numPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 28,
+      "symbol": "AirlinesResponse.links",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 30,
+      "symbol": "AirlinesResponse.Operators",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 36,
+      "symbol": "CanonicalAirlineRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 37,
+      "symbol": "CanonicalAirlineRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 40,
+      "symbol": "CanonicalAirlineRequest.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 41,
+      "symbol": "CanonicalAirlineRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 52,
+      "symbol": "CanonicalAirlineResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 55,
+      "symbol": "CanonicalAirlineResponse.AirlineID",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 61,
+      "symbol": "AirlineIDType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 62,
+      "symbol": "AirlineIDType.icao",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 63,
+      "symbol": "AirlineIDType.iata",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 66,
+      "symbol": "AirlineFlightCountResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 68,
+      "symbol": "AirlineFlightCountResponse.airborne",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 69,
+      "symbol": "AirlineFlightCountResponse.flightsLast24Hours",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 73,
+      "symbol": "AirlineFlightCountRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 75,
+      "symbol": "AirlineFlightCountRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 78,
+      "symbol": "AirlineFlightCountRequest.icao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 79,
+      "symbol": "AirlineFlightCountRequest.iata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 80,
+      "symbol": "AirlineFlightCountRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 82,
+      "symbol": "AirlineFlightCountRequest.init(icao:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 87,
+      "symbol": "AirlineFlightCountRequest.init(iata:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 93,
+      "symbol": "AirlineInfoRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 94,
+      "symbol": "AirlineInfoRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 98,
+      "symbol": "AirlineInfoRequest.icao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 99,
+      "symbol": "AirlineInfoRequest.iata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 100,
+      "symbol": "AirlineInfoRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 102,
+      "symbol": "AirlineInfoRequest.init(icao:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 107,
+      "symbol": "AirlineInfoRequest.init(iata:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 113,
+      "symbol": "Airline",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 116,
+      "symbol": "Airline.icao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 117,
+      "symbol": "Airline.iata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 118,
+      "symbol": "Airline.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 119,
+      "symbol": "Airline.callsign",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 120,
+      "symbol": "Airline.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 121,
+      "symbol": "Airline.location",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 122,
+      "symbol": "Airline.phone",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 123,
+      "symbol": "Airline.shortname",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 124,
+      "symbol": "Airline.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 125,
+      "symbol": "Airline.wikiUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 126,
+      "symbol": "Airline.alternatives",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 128,
+      "symbol": "Airline.active",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 130,
+      "symbol": "Airline.operates",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 131,
+      "symbol": "Airline.facebook",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 132,
+      "symbol": "Airline.twitter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 133,
+      "symbol": "Airline.instagram",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 134,
+      "symbol": "Airline.youtube",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 135,
+      "symbol": "Airline.reservations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 136,
+      "symbol": "Airline.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 137,
+      "symbol": "Airline.website",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 138,
+      "symbol": "Airline.loyalty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 139,
+      "symbol": "Airline.ally",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/Airline.swift",
+      "line": 265,
+      "symbol": "String.airline",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 10,
+      "symbol": "AirlineFlightsResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 21,
+      "symbol": "AirlineFlightsRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 23,
+      "symbol": "AirlineFlightsRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 36,
+      "symbol": "AirlineFlightsRequest.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 37,
+      "symbol": "AirlineFlightsRequest.requestType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 38,
+      "symbol": "AirlineFlightsRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 40,
+      "symbol": "AirlineFlightsRequest.init(airline:dateRange:maxPages:cursor:requestType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 73,
+      "symbol": "AirlineFlightsRequestType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 74,
+      "symbol": "AirlineFlightsRequestType.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 75,
+      "symbol": "AirlineFlightsRequestType.enroute",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 76,
+      "symbol": "AirlineFlightsRequestType.arrivals",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airlines/AirlineFlights.swift",
+      "line": 77,
+      "symbol": "AirlineFlightsRequestType.scheduled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 4,
+      "symbol": "AirportsRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 5,
+      "symbol": "AirportsRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 8,
+      "symbol": "AirportsRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 10,
+      "symbol": "AirportsRequest.init(maxPages:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 14,
+      "symbol": "AirportsResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 15,
+      "symbol": "AirportsResponse.airports",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 16,
+      "symbol": "AirportsResponse.numPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 17,
+      "symbol": "AirportsResponse.links",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 19,
+      "symbol": "AirportsResponse.AirportInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 20,
+      "symbol": "AirportsResponse.AirportInfo.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 21,
+      "symbol": "AirportsResponse.AirportInfo.airportInfoUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 25,
+      "symbol": "CanonicalAirportRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 26,
+      "symbol": "CanonicalAirportRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 29,
+      "symbol": "CanonicalAirportRequest.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 30,
+      "symbol": "CanonicalAirportRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 38,
+      "symbol": "CanonicalAirportResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 41,
+      "symbol": "CanonicalAirportResponse.AirportID",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 47,
+      "symbol": "AirportIDType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 48,
+      "symbol": "AirportIDType.icao",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 49,
+      "symbol": "AirportIDType.iata",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 50,
+      "symbol": "AirportIDType.lid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 55,
+      "symbol": "AirportInfoRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 59,
+      "symbol": "AirportInfoRequest.icao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 60,
+      "symbol": "AirportInfoRequest.iata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 61,
+      "symbol": "AirportInfoRequest.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 62,
+      "symbol": "AirportInfoRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 93,
+      "symbol": "Airport.search(using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 149,
+      "symbol": "Airport.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 150,
+      "symbol": "Airport.wikiUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 151,
+      "symbol": "Airport.airportFlightsUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 152,
+      "symbol": "Airport.alternatives",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 154,
+      "symbol": "Airport.facebook",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 155,
+      "symbol": "Airport.twitter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 156,
+      "symbol": "Airport.instagram",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 157,
+      "symbol": "Airport.youtube",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 158,
+      "symbol": "Airport.phone",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 159,
+      "symbol": "Airport.email",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 161,
+      "symbol": "Airport.coordinate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 165,
+      "symbol": "Airport.shortName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 174,
+      "symbol": "AirportType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 176,
+      "symbol": "AirportType.Airport",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 177,
+      "symbol": "AirportType.Heliport",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 178,
+      "symbol": "AirportType.SeaplaneBase",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 179,
+      "symbol": "AirportType.Balloonport",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 180,
+      "symbol": "AirportType.Ultralight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 181,
+      "symbol": "AirportType.Gliderport",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 182,
+      "symbol": "AirportType.Stolport",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/Airport.swift",
+      "line": 356,
+      "symbol": "String.airport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 10,
+      "symbol": "AirportFlightCounts",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 12,
+      "symbol": "AirportFlightCounts.departed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 13,
+      "symbol": "AirportFlightCounts.enroute",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 14,
+      "symbol": "AirportFlightCounts.scheduledArrivals",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 15,
+      "symbol": "AirportFlightCounts.scheduledDepartures",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 19,
+      "symbol": "AirportCountRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 21,
+      "symbol": "AirportCountRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 24,
+      "symbol": "AirportCountRequest.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 25,
+      "symbol": "AirportCountRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 27,
+      "symbol": "AirportCountRequest.init(code:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 33,
+      "symbol": "AirportFlightsResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 46,
+      "symbol": "FlightsBetweenAirportsRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 48,
+      "symbol": "FlightsBetweenAirportsRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 51,
+      "symbol": "FlightsBetweenAirportsRequest.origin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 52,
+      "symbol": "FlightsBetweenAirportsRequest.destination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 53,
+      "symbol": "FlightsBetweenAirportsRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 55,
+      "symbol": "FlightsBetweenAirportsRequest.init(airports:type:connectionType:dateRange:maxPages:cursor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 91,
+      "symbol": "FlightsBetweenAirportsResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 97,
+      "symbol": "FlightSegment",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 101,
+      "symbol": "AirportFlightsRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 103,
+      "symbol": "AirportFlightsRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 117,
+      "symbol": "AirportFlightsRequest.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 118,
+      "symbol": "AirportFlightsRequest.requestType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 119,
+      "symbol": "AirportFlightsRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 121,
+      "symbol": "AirportFlightsRequest.init(code:airline:type:dateRange:maxPages:cursor:requestType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 160,
+      "symbol": "AirportFlightsRequestType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 161,
+      "symbol": "AirportFlightsRequestType.all",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 162,
+      "symbol": "AirportFlightsRequestType.scheduledArrivals",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 163,
+      "symbol": "AirportFlightsRequestType.scheduledDepartures",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 164,
+      "symbol": "AirportFlightsRequestType.arrivals",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 165,
+      "symbol": "AirportFlightsRequestType.departures",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 168,
+      "symbol": "FlightType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 169,
+      "symbol": "FlightType.Airline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 170,
+      "symbol": "FlightType.GeneralAviation",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 173,
+      "symbol": "FlightConnectionType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 174,
+      "symbol": "FlightConnectionType.nonstop",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportFlights.swift",
+      "line": 175,
+      "symbol": "FlightConnectionType.onestop",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 10,
+      "symbol": "AirportRouteRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 12,
+      "symbol": "AirportRouteRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 15,
+      "symbol": "AirportRouteRequest.origin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 16,
+      "symbol": "AirportRouteRequest.destination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 17,
+      "symbol": "AirportRouteRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 19,
+      "symbol": "AirportRouteRequest.init(origin:destination:sortBy:maxFileAge:maxPages:cursor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 37,
+      "symbol": "AirportRouteResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 45,
+      "symbol": "AirportRoute",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 47,
+      "symbol": "AirportRoute.aircraftTypes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 48,
+      "symbol": "AirportRoute.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 49,
+      "symbol": "AirportRoute.filedAltitudeMax",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 50,
+      "symbol": "AirportRoute.filedAltitudeMin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 51,
+      "symbol": "AirportRoute.lastDepartureTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 52,
+      "symbol": "AirportRoute.route",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 53,
+      "symbol": "AirportRoute.routeDistance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 57,
+      "symbol": "RouteRequestSort",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 58,
+      "symbol": "RouteRequestSort.count",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportRoutes.swift",
+      "line": 58,
+      "symbol": "RouteRequestSort.last_departure_time",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 10,
+      "symbol": "AirportStatusRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 12,
+      "symbol": "AirportStatusRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 17,
+      "symbol": "AirportStatusRequest.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 18,
+      "symbol": "AirportStatusRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 38,
+      "symbol": "AirportsDelayedResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 44,
+      "symbol": "AirportStatus",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 46,
+      "symbol": "AirportStatus.airport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 47,
+      "symbol": "AirportStatus.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 48,
+      "symbol": "AirportStatus.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 49,
+      "symbol": "AirportStatus.delaySecs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 50,
+      "symbol": "AirportStatus.reasons",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 54,
+      "symbol": "DelayReason",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 55,
+      "symbol": "DelayReason.category",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 56,
+      "symbol": "DelayReason.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 57,
+      "symbol": "DelayReason.delaySecs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 58,
+      "symbol": "DelayReason.reason",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 61,
+      "symbol": "AirportStatusColor",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 62,
+      "symbol": "AirportStatusColor.green",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 62,
+      "symbol": "AirportStatusColor.red",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportStatus.swift",
+      "line": 62,
+      "symbol": "AirportStatusColor.yellow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 10,
+      "symbol": "AirportWeatherObservationRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 12,
+      "symbol": "AirportWeatherObservationRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 15,
+      "symbol": "AirportWeatherObservationRequest.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 16,
+      "symbol": "AirportWeatherObservationRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 18,
+      "symbol": "AirportWeatherObservationRequest.init(code:tempUnits:timestamp:returnNearby:maxPages:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 35,
+      "symbol": "AirportWeatherObservationsResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 37,
+      "symbol": "AirportWeatherObservationsResponse.observations",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 38,
+      "symbol": "AirportWeatherObservationsResponse.numPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 39,
+      "symbol": "AirportWeatherObservationsResponse.links",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 43,
+      "symbol": "WeatherObservation",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 45,
+      "symbol": "WeatherObservation.airportCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 46,
+      "symbol": "WeatherObservation.cloudFriendly",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 47,
+      "symbol": "WeatherObservation.clouds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 48,
+      "symbol": "WeatherObservation.conditions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 49,
+      "symbol": "WeatherObservation.pressure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 50,
+      "symbol": "WeatherObservation.pressureUnits",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 51,
+      "symbol": "WeatherObservation.rawData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 52,
+      "symbol": "WeatherObservation.tempAir",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 53,
+      "symbol": "WeatherObservation.tempDewpoint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 54,
+      "symbol": "WeatherObservation.tempPerceived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 55,
+      "symbol": "WeatherObservation.relativeHumidity",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 56,
+      "symbol": "WeatherObservation.time",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 57,
+      "symbol": "WeatherObservation.visibility",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 58,
+      "symbol": "WeatherObservation.visibilityUnits",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 59,
+      "symbol": "WeatherObservation.windDirection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 60,
+      "symbol": "WeatherObservation.windFriendly",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 61,
+      "symbol": "WeatherObservation.windSpeed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 62,
+      "symbol": "WeatherObservation.windSpeedGust",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 63,
+      "symbol": "WeatherObservation.windUnits",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 67,
+      "symbol": "ObservedClouds",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 69,
+      "symbol": "ObservedClouds.altitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 70,
+      "symbol": "ObservedClouds.symbol",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 71,
+      "symbol": "ObservedClouds.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 75,
+      "symbol": "PressureUnits",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 76,
+      "symbol": "PressureUnits.mb",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 77,
+      "symbol": "PressureUnits.hg",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 80,
+      "symbol": "VisibilityUnits",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 81,
+      "symbol": "VisibilityUnits.meters",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 82,
+      "symbol": "VisibilityUnits.SM",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 85,
+      "symbol": "WindUnits",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 86,
+      "symbol": "WindUnits.MPS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 87,
+      "symbol": "WindUnits.KT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 90,
+      "symbol": "AirportWeatherForecastRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 92,
+      "symbol": "AirportWeatherForecastRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 95,
+      "symbol": "AirportWeatherForecastRequest.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 96,
+      "symbol": "AirportWeatherForecastRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 98,
+      "symbol": "AirportWeatherForecastRequest.init(code:timestamp:returnNearby:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 111,
+      "symbol": "AirportWeatherForecastResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 113,
+      "symbol": "AirportWeatherForecastResponse.airportCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 114,
+      "symbol": "AirportWeatherForecastResponse.rawForecast",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 115,
+      "symbol": "AirportWeatherForecastResponse.time",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 116,
+      "symbol": "AirportWeatherForecastResponse.decodedForecast",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 120,
+      "symbol": "AirportWeatherForecast",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 122,
+      "symbol": "AirportWeatherForecast.start",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 123,
+      "symbol": "AirportWeatherForecast.end",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 124,
+      "symbol": "AirportWeatherForecast.lines",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 128,
+      "symbol": "ForecastLine",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 130,
+      "symbol": "ForecastLine.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 131,
+      "symbol": "ForecastLine.start",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 132,
+      "symbol": "ForecastLine.end",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 134,
+      "symbol": "ForecastLine.turbulenceLayers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 135,
+      "symbol": "ForecastLine.icingLayers",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 136,
+      "symbol": "ForecastLine.barometricPressure",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 137,
+      "symbol": "ForecastLine.significantWeather",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 139,
+      "symbol": "ForecastLine.winds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 140,
+      "symbol": "ForecastLine.windshear",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 141,
+      "symbol": "ForecastLine.visibility",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 142,
+      "symbol": "ForecastLine.clouds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 146,
+      "symbol": "ForecastWinds",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 147,
+      "symbol": "ForecastWinds.symbol",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 148,
+      "symbol": "ForecastWinds.direction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 149,
+      "symbol": "ForecastWinds.speed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 150,
+      "symbol": "ForecastWinds.units",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 151,
+      "symbol": "ForecastWinds.peakGusts",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 154,
+      "symbol": "ForecastWindshear",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 155,
+      "symbol": "ForecastWindshear.symbol",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 156,
+      "symbol": "ForecastWindshear.direction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 157,
+      "symbol": "ForecastWindshear.speed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 158,
+      "symbol": "ForecastWindshear.units",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 159,
+      "symbol": "ForecastWindshear.height",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 162,
+      "symbol": "ForecastVisibility",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 163,
+      "symbol": "ForecastVisibility.symbol",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 164,
+      "symbol": "ForecastVisibility.visibility",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 165,
+      "symbol": "ForecastVisibility.units",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 168,
+      "symbol": "ForecastClouds",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 169,
+      "symbol": "ForecastClouds.symbol",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 170,
+      "symbol": "ForecastClouds.coverage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 171,
+      "symbol": "ForecastClouds.altitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 172,
+      "symbol": "ForecastClouds.special",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 175,
+      "symbol": "ForecastCoverage",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 176,
+      "symbol": "ForecastCoverage.skyclear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 177,
+      "symbol": "ForecastCoverage.few",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 178,
+      "symbol": "ForecastCoverage.scattered",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 179,
+      "symbol": "ForecastCoverage.broken",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 180,
+      "symbol": "ForecastCoverage.overcast",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 183,
+      "symbol": "TemperatureUnits",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 184,
+      "symbol": "TemperatureUnits.C",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 184,
+      "symbol": "TemperatureUnits.Celsius",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 184,
+      "symbol": "TemperatureUnits.F",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportWeather.swift",
+      "line": 184,
+      "symbol": "TemperatureUnits.Fahrenheit",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 10,
+      "symbol": "AirportsNearbyRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 12,
+      "symbol": "AirportsNearbyRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 23,
+      "symbol": "AirportsNearbyRequest.init(code:radius:onlyIAP:maxPages:cursor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 41,
+      "symbol": "AirportsNearbyRequest.init(latitude:longitude:radius:onlyIAP:maxPages:cursor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 62,
+      "symbol": "AirportsNearbyResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 64,
+      "symbol": "AirportsNearbyResponse.airports",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 65,
+      "symbol": "AirportsNearbyResponse.numPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 66,
+      "symbol": "AirportsNearbyResponse.links",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 70,
+      "symbol": "AirportNearby",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 72,
+      "symbol": "AirportNearby.distance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 73,
+      "symbol": "AirportNearby.heading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 74,
+      "symbol": "AirportNearby.direction",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 78,
+      "symbol": "MapDirection",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.E",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.N",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.NE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.NW",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.SE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.SW",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Airports/AirportsNearby.swift",
+      "line": 79,
+      "symbol": "MapDirection.W",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 10,
+      "symbol": "DisruptionCountsRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 12,
+      "symbol": "DisruptionCountsRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 18,
+      "symbol": "DisruptionCountsRequest.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 19,
+      "symbol": "DisruptionCountsRequest.entityType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 20,
+      "symbol": "DisruptionCountsRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 22,
+      "symbol": "DisruptionCountsRequest.init(type:timePeriod:maxPages:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 34,
+      "symbol": "DisruptionCountsRequest.init(code:type:timePeriod:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 45,
+      "symbol": "DisruptionCountResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 57,
+      "symbol": "DisruptionEntity",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 67,
+      "symbol": "DisruptionCountType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 68,
+      "symbol": "DisruptionCountType.airline",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 69,
+      "symbol": "DisruptionCountType.origin",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 70,
+      "symbol": "DisruptionCountType.destination",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 73,
+      "symbol": "DisruptionCountTimePeriod",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 74,
+      "symbol": "DisruptionCountTimePeriod.yesterday",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 75,
+      "symbol": "DisruptionCountTimePeriod.today",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 76,
+      "symbol": "DisruptionCountTimePeriod.tomorrow",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 77,
+      "symbol": "DisruptionCountTimePeriod.plus2days",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 78,
+      "symbol": "DisruptionCountTimePeriod.twoDaysAgo",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 79,
+      "symbol": "DisruptionCountTimePeriod.minus2plus12hrs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 80,
+      "symbol": "DisruptionCountTimePeriod.next36hrs",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Disruption/DisruptionCounts.swift",
+      "line": 81,
+      "symbol": "DisruptionCountTimePeriod.aweek",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/AdvancedSearch.swift",
+      "line": 12,
+      "symbol": "AeroAPI.advancedSearch(param:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/AdvancedSearch.swift",
+      "line": 70,
+      "symbol": "AdvancedSearchParameter",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/AdvancedSearch.swift",
+      "line": 72,
+      "symbol": "AdvancedSearchParameter.Origin(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/AdvancedSearch.swift",
+      "line": 73,
+      "symbol": "AdvancedSearchParameter.OriginOrDest(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/AdvancedSearch.swift",
+      "line": 74,
+      "symbol": "AdvancedSearchParameter.Destination(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/AdvancedSearch.swift",
+      "line": 76,
+      "symbol": "AdvancedSearchParameter.MapBounds(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Codeshare.swift",
+      "line": 3,
+      "symbol": "Codeshare",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Codeshare.swift",
+      "line": 5,
+      "symbol": "Codeshare.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Codeshare.swift",
+      "line": 6,
+      "symbol": "Codeshare.identIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Codeshare.swift",
+      "line": 7,
+      "symbol": "Codeshare.identIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Codeshare.swift",
+      "line": 9,
+      "symbol": "Codeshare.actualIdent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Codeshare.swift",
+      "line": 11,
+      "symbol": "Codeshare.init(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Codeshare.swift",
+      "line": 18,
+      "symbol": "Codeshare.init(_:actual:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 16,
+      "symbol": "FlightDataResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 17,
+      "symbol": "FlightDataResponse.numPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 18,
+      "symbol": "FlightDataResponse.flights",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 19,
+      "symbol": "FlightDataResponse.links",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 22,
+      "symbol": "FlightDataRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 24,
+      "symbol": "FlightDataRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 27,
+      "symbol": "FlightDataRequest.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 28,
+      "symbol": "FlightDataRequest.historical",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 29,
+      "symbol": "FlightDataRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 67,
+      "symbol": "FlightDataRequest.init(ident:type:historical:filters:maxPages:cursor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 81,
+      "symbol": "CanonicalFlightIDRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 82,
+      "symbol": "CanonicalFlightIDRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 85,
+      "symbol": "CanonicalFlightIDRequest.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 86,
+      "symbol": "CanonicalFlightIDRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 102,
+      "symbol": "CanonicalFlightIDResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 105,
+      "symbol": "CanonicalFlightIDResponse.FlightID",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 111,
+      "symbol": "Flight",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 115,
+      "symbol": "Flight.identIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 116,
+      "symbol": "Flight.identIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 117,
+      "symbol": "Flight.faFlightId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 118,
+      "symbol": "Flight.operatorIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 119,
+      "symbol": "Flight.operatorIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 120,
+      "symbol": "Flight.flightNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 121,
+      "symbol": "Flight.registration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 122,
+      "symbol": "Flight.atcIdent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 123,
+      "symbol": "Flight.inboundFaFlightId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 124,
+      "symbol": "Flight.codeshares",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 125,
+      "symbol": "Flight.codesharesIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 126,
+      "symbol": "Flight.blocked",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 127,
+      "symbol": "Flight.diverted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 128,
+      "symbol": "Flight.cancelled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 129,
+      "symbol": "Flight.positionOnly",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 130,
+      "symbol": "Flight.origin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 131,
+      "symbol": "Flight.destination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 132,
+      "symbol": "Flight.departureDelay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 133,
+      "symbol": "Flight.arrivalDelay",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 134,
+      "symbol": "Flight.filedEte",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 136,
+      "symbol": "Flight.scheduledOut",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 137,
+      "symbol": "Flight.estimatedOut",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 138,
+      "symbol": "Flight.actualOut",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 140,
+      "symbol": "Flight.scheduledOff",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 141,
+      "symbol": "Flight.estimatedOff",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 142,
+      "symbol": "Flight.actualOff",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 144,
+      "symbol": "Flight.scheduledOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 145,
+      "symbol": "Flight.estimatedOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 146,
+      "symbol": "Flight.actualOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 148,
+      "symbol": "Flight.scheduledIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 149,
+      "symbol": "Flight.estimatedIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 150,
+      "symbol": "Flight.actualIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 152,
+      "symbol": "Flight.progressPercent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 153,
+      "symbol": "Flight.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 154,
+      "symbol": "Flight.aircraftType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 155,
+      "symbol": "Flight.routeDistance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 156,
+      "symbol": "Flight.filedAirspeed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 157,
+      "symbol": "Flight.filedAltitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 158,
+      "symbol": "Flight.route",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 159,
+      "symbol": "Flight.baggageClaim",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 160,
+      "symbol": "Flight.seatsCabinBusiness",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 161,
+      "symbol": "Flight.seatsCabinCoach",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 162,
+      "symbol": "Flight.seatsCabinFirst",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 163,
+      "symbol": "Flight.gateOrigin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 164,
+      "symbol": "Flight.gateDestination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 165,
+      "symbol": "Flight.terminalOrigin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 166,
+      "symbol": "Flight.terminalDestination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 167,
+      "symbol": "Flight.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/Flight.swift",
+      "line": 169,
+      "symbol": "Flight.lastPosition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightAirport.swift",
+      "line": 10,
+      "symbol": "FlightAirport",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightAirport.swift",
+      "line": 11,
+      "symbol": "FlightAirport.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightAirport.swift",
+      "line": 12,
+      "symbol": "FlightAirport.codeIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightAirport.swift",
+      "line": 13,
+      "symbol": "FlightAirport.codeIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightAirport.swift",
+      "line": 14,
+      "symbol": "FlightAirport.codeLid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightAirport.swift",
+      "line": 15,
+      "symbol": "FlightAirport.airportInfoUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightAirport.swift",
+      "line": 17,
+      "symbol": "FlightAirport.airport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 11,
+      "symbol": "FlightPositionRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 13,
+      "symbol": "FlightPositionRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 16,
+      "symbol": "FlightPositionRequest.faId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 17,
+      "symbol": "FlightPositionRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 19,
+      "symbol": "FlightPositionRequest.init(faId:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 25,
+      "symbol": "FlightSearchResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 27,
+      "symbol": "FlightSearchResponse.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 28,
+      "symbol": "FlightSearchResponse.identIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 29,
+      "symbol": "FlightSearchResponse.identIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 30,
+      "symbol": "FlightSearchResponse.faFlightId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 32,
+      "symbol": "FlightSearchResponse.origin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 33,
+      "symbol": "FlightSearchResponse.destination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 35,
+      "symbol": "FlightSearchResponse.waypoints",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 37,
+      "symbol": "FlightSearchResponse.firstPositionTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 38,
+      "symbol": "FlightSearchResponse.lastPosition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 40,
+      "symbol": "FlightSearchResponse.boundingBox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 41,
+      "symbol": "FlightSearchResponse.identPrefix",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 42,
+      "symbol": "FlightSearchResponse.aircraftType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 43,
+      "symbol": "FlightSearchResponse.foresightPredictionsAvailable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 45,
+      "symbol": "FlightSearchResponse.actualOff",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 46,
+      "symbol": "FlightSearchResponse.actualOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 47,
+      "symbol": "FlightSearchResponse.predictedOut",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 48,
+      "symbol": "FlightSearchResponse.predictedOff",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 49,
+      "symbol": "FlightSearchResponse.predictedOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 50,
+      "symbol": "FlightSearchResponse.predictedIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 52,
+      "symbol": "FlightSearchResponse.predictedOutSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 53,
+      "symbol": "FlightSearchResponse.predictedOffSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 54,
+      "symbol": "FlightSearchResponse.predictedOnSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 55,
+      "symbol": "FlightSearchResponse.predictedInSource",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 59,
+      "symbol": "FlightPositionAirport",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 60,
+      "symbol": "FlightPositionAirport.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 61,
+      "symbol": "FlightPositionAirport.codeIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 62,
+      "symbol": "FlightPositionAirport.codeIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 63,
+      "symbol": "FlightPositionAirport.codeLid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 64,
+      "symbol": "FlightPositionAirport.timezone",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 65,
+      "symbol": "FlightPositionAirport.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 66,
+      "symbol": "FlightPositionAirport.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 67,
+      "symbol": "FlightPositionAirport.airportInfoUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 70,
+      "symbol": "LastPosition",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 71,
+      "symbol": "LastPosition.faFlightId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 72,
+      "symbol": "LastPosition.altitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 73,
+      "symbol": "LastPosition.altitudeChange",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 74,
+      "symbol": "LastPosition.groundspeed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 75,
+      "symbol": "LastPosition.heading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 76,
+      "symbol": "LastPosition.latitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 77,
+      "symbol": "LastPosition.longitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 78,
+      "symbol": "LastPosition.timestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 79,
+      "symbol": "LastPosition.updateType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 81,
+      "symbol": "LastPosition.coordinate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 85,
+      "symbol": "PredictionType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 86,
+      "symbol": "PredictionType.Foresight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightPosition.swift",
+      "line": 87,
+      "symbol": "PredictionType.HistoricalAvg",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 10,
+      "symbol": "FlightRouteRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 12,
+      "symbol": "FlightRouteRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 15,
+      "symbol": "FlightRouteRequest.faId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 16,
+      "symbol": "FlightRouteRequest.historical",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 17,
+      "symbol": "FlightRouteRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 33,
+      "symbol": "FlightRoute",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 35,
+      "symbol": "FlightRoute.routeDistance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 36,
+      "symbol": "FlightRoute.fixes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 40,
+      "symbol": "FlightFix",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 42,
+      "symbol": "FlightFix.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 43,
+      "symbol": "FlightFix.latitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 44,
+      "symbol": "FlightFix.longitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 45,
+      "symbol": "FlightFix.distanceFromOrigin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 46,
+      "symbol": "FlightFix.distanceThisLeg",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 47,
+      "symbol": "FlightFix.distanceToDestination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 48,
+      "symbol": "FlightFix.outboundCourse",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightRoute.swift",
+      "line": 49,
+      "symbol": "FlightFix.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 16,
+      "symbol": "FlightStatus",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 81,
+      "symbol": "FlightStatus.Diverted",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 82,
+      "symbol": "FlightStatus.ReturnedToGate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 85,
+      "symbol": "FlightStatus.Arrived",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 86,
+      "symbol": "FlightStatus.GateArrival",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 87,
+      "symbol": "FlightStatus.DelayedArrival",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 90,
+      "symbol": "FlightStatus.LeftGate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 91,
+      "symbol": "FlightStatus.Taxiing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 92,
+      "symbol": "FlightStatus.TaxxingDelayed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 93,
+      "symbol": "FlightStatus.LandedTaxiing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 96,
+      "symbol": "FlightStatus.OnTime",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 97,
+      "symbol": "FlightStatus.Delayed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 98,
+      "symbol": "FlightStatus.EnRoute",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 99,
+      "symbol": "FlightStatus.EnrouteOnTime",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 100,
+      "symbol": "FlightStatus.EnrouteDelayed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 103,
+      "symbol": "FlightStatus.Scheduled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 104,
+      "symbol": "FlightStatus.Unknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 105,
+      "symbol": "FlightStatus.ResultUnknown",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 106,
+      "symbol": "FlightStatus.Cancelled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 108,
+      "symbol": "FlightStatus.ScheduledDelay",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 110,
+      "symbol": "FlightStatus.hasArrived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 119,
+      "symbol": "FlightStatus.isTaxiing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 129,
+      "symbol": "FlightStatus.isInflight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 140,
+      "symbol": "FlightStatus.isDelayed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 151,
+      "symbol": "FlightStatus.hasDiverted",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightStatus.swift",
+      "line": 159,
+      "symbol": "FlightStatus.label",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 13,
+      "symbol": "FlightTrackRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 15,
+      "symbol": "FlightTrackRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 18,
+      "symbol": "FlightTrackRequest.faId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 19,
+      "symbol": "FlightTrackRequest.historical",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 20,
+      "symbol": "FlightTrackRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 22,
+      "symbol": "FlightTrackRequest.init(_:showEstimated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 37,
+      "symbol": "FlightTrack",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 41,
+      "symbol": "FlightTrack.altitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 42,
+      "symbol": "FlightTrack.altitudeChange",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 43,
+      "symbol": "FlightTrack.groundspeed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 44,
+      "symbol": "FlightTrack.heading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 45,
+      "symbol": "FlightTrack.latitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 46,
+      "symbol": "FlightTrack.longitude",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 47,
+      "symbol": "FlightTrack.timestamp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 48,
+      "symbol": "FlightTrack.updateType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 50,
+      "symbol": "FlightTrack.coord",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 54,
+      "symbol": "AltChange",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 55,
+      "symbol": "AltChange.Null",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 56,
+      "symbol": "AltChange.C",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 56,
+      "symbol": "AltChange.D",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 59,
+      "symbol": "UpdateType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.A",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.D",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.M",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.O",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.P",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.S",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.X",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/FlightTrack.swift",
+      "line": 60,
+      "symbol": "UpdateType.Z",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 8,
+      "symbol": "ScheduledFlightResponse",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 10,
+      "symbol": "ScheduledFlightResponse.dummy()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 23,
+      "symbol": "ScheduledFlightResponse.numPages",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 24,
+      "symbol": "ScheduledFlightResponse.scheduled",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 25,
+      "symbol": "ScheduledFlightResponse.links",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 28,
+      "symbol": "ScheduledFlightRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 30,
+      "symbol": "ScheduledFlightRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 34,
+      "symbol": "ScheduledFlightRequest.day",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 35,
+      "symbol": "ScheduledFlightRequest.year",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 36,
+      "symbol": "ScheduledFlightRequest.origin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 38,
+      "symbol": "ScheduledFlightRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 40,
+      "symbol": "ScheduledFlightRequest.init(for:of:from:to:filters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 54,
+      "symbol": "ScheduledFlightRequest.init(for:of:from:ident:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 69,
+      "symbol": "ScheduledFlight.faFlightId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 71,
+      "symbol": "ScheduledFlight.ident",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 72,
+      "symbol": "ScheduledFlight.identIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 73,
+      "symbol": "ScheduledFlight.identIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 75,
+      "symbol": "ScheduledFlight.actualIdent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 76,
+      "symbol": "ScheduledFlight.actualIdentIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 77,
+      "symbol": "ScheduledFlight.actualIdentIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 79,
+      "symbol": "ScheduledFlight.aircraftType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 81,
+      "symbol": "ScheduledFlight.scheduledIn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 82,
+      "symbol": "ScheduledFlight.scheduledOut",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 84,
+      "symbol": "ScheduledFlight.origin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 85,
+      "symbol": "ScheduledFlight.originIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 86,
+      "symbol": "ScheduledFlight.originIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 87,
+      "symbol": "ScheduledFlight.originLid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 89,
+      "symbol": "ScheduledFlight.destination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 90,
+      "symbol": "ScheduledFlight.destinationIcao",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 91,
+      "symbol": "ScheduledFlight.destinationIata",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 92,
+      "symbol": "ScheduledFlight.destinationLid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 94,
+      "symbol": "ScheduledFlight.mealService",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 95,
+      "symbol": "ScheduledFlight.seatsCabinBusiness",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 96,
+      "symbol": "ScheduledFlight.seatsCabinCoach",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 97,
+      "symbol": "ScheduledFlight.seatsCabinFirst",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 99,
+      "symbol": "ScheduledFlight.codeshares",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 102,
+      "symbol": "ScheduledFlight.updated",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 104,
+      "symbol": "ScheduledFlight.archived",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 106,
+      "symbol": "ScheduledFlight.originAirport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 109,
+      "symbol": "ScheduledFlight.destinationAirport",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/Flights/ScheduledFlight.swift",
+      "line": 133,
+      "symbol": "AeroAPI.dummyGetScheduled()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 10,
+      "symbol": "MapDataRequest",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 12,
+      "symbol": "MapDataRequest.path()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 15,
+      "symbol": "MapDataRequest.faId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 16,
+      "symbol": "MapDataRequest.filters",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 18,
+      "symbol": "MapDataRequest.historical",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 20,
+      "symbol": "MapDataRequest.init(faId:height:width:layersOn:layersOff:showData:airportsExpand:showAirports:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 60,
+      "symbol": "FlightAwareMapLayer",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 62,
+      "symbol": "FlightAwareMapLayer.USCities",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 63,
+      "symbol": "FlightAwareMapLayer.EuropeBoundaries",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 64,
+      "symbol": "FlightAwareMapLayer.AsiaBoundaries",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 65,
+      "symbol": "FlightAwareMapLayer.MajorAirports",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 66,
+      "symbol": "FlightAwareMapLayer.CountryBoundaries",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 67,
+      "symbol": "FlightAwareMapLayer.USStateBoundaries",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 68,
+      "symbol": "FlightAwareMapLayer.Water",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 69,
+      "symbol": "FlightAwareMapLayer.USMajorRoads",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 70,
+      "symbol": "FlightAwareMapLayer.Radar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 71,
+      "symbol": "FlightAwareMapLayer.Track",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 72,
+      "symbol": "FlightAwareMapLayer.Flights",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 73,
+      "symbol": "FlightAwareMapLayer.Airports",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 80,
+      "symbol": "AeroAPI.getMap(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Volumes/ISS/Github/AeroAPI/Sources/AeroAPI/Models/MapData/MapData.swift",
+      "line": 84,
+      "symbol": "AeroAPI.getMap(for:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Volumes/ISS/Github/AeroAPI"
+}

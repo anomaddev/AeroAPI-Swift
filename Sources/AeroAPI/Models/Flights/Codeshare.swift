@@ -1,6 +1,5 @@
 import Foundation
 
-#if !os(macOS)
 public struct Codeshare: Codable {
     
     public var ident: String
@@ -22,4 +21,3 @@ public struct Codeshare: Codable {
         actualIdent = actual
     }
 }
-#endif

@@ -1,0 +1,2554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Structures  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+    <a title="Structures  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AeroAPI Docs</a> (16% documented)</p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AeroAPI Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        Structures  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AeroAPI.html">AeroAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Airport.html">Airport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AirportNearby.html">AirportNearby</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TimezoneMapper.html">TimezoneMapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AdvancedSearchParameter.html">AdvancedSearchParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AeroAPIError.html">AeroAPIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirlineFlightsRequestType.html">AirlineFlightsRequestType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirlineIDType.html">AirlineIDType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportFlightsRequestType.html">AirportFlightsRequestType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportIDType.html">AirportIDType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportStatusColor.html">AirportStatusColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportType.html">AirportType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AltChange.html">AltChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DisruptionCountTimePeriod.html">DisruptionCountTimePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DisruptionCountType.html">DisruptionCountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightAwareMapLayer.html">FlightAwareMapLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightConnectionType.html">FlightConnectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightStatus.html">FlightStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightType.html">FlightType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ForecastCoverage.html">ForecastCoverage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/IdentType.html">IdentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MapDirection.html">MapDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PredictionType.html">PredictionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PressureUnits.html">PressureUnits</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RequestFilters.html">RequestFilters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RouteRequestSort.html">RouteRequestSort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TemperatureUnits.html">TemperatureUnits</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/UpdateType.html">UpdateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/VisibilityUnits.html">VisibilityUnits</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/WindUnits.html">WindUnits</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKMapView.html">MKMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Aircraft.html">Aircraft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftOwnerRequest.html">AircraftOwnerRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftOwnerResponse.html">AircraftOwnerResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftOwnerResponse.html#/s:7AeroAPI21AircraftOwnerResponseV0D0V">– Owner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftTypeInfoRequest.html">AircraftTypeInfoRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Airline.html">Airline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineFlightCountRequest.html">AirlineFlightCountRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineFlightCountResponse.html">AirlineFlightCountResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineFlightsRequest.html">AirlineFlightsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI22AirlineFlightsResponseV">AirlineFlightsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineInfoRequest.html">AirlineInfoRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlinesRequest.html">AirlinesRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlinesResponse.html">AirlinesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlinesResponse.html#/s:7AeroAPI16AirlinesResponseV9OperatorsV">– Operators</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportCountRequest.html">AirportCountRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportFlightCounts.html">AirportFlightCounts</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportFlightsRequest.html">AirportFlightsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI22AirportFlightsResponseV">AirportFlightsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportInfoRequest.html">AirportInfoRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportRoute.html">AirportRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportRouteRequest.html">AirportRouteRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI20AirportRouteResponseV">AirportRouteResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportStatus.html">AirportStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportStatusRequest.html">AirportStatusRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherForecast.html">AirportWeatherForecast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherForecastRequest.html">AirportWeatherForecastRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherForecastResponse.html">AirportWeatherForecastResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherObservationRequest.html">AirportWeatherObservationRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherObservationsResponse.html">AirportWeatherObservationsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI23AirportsDelayedResponseV">AirportsDelayedResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsNearbyRequest.html">AirportsNearbyRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsNearbyResponse.html">AirportsNearbyResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsRequest.html">AirportsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsResponse.html">AirportsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsResponse/AirportInfo.html">– AirportInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BlockedCheck.html">BlockedCheck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BlockedReponse.html">BlockedReponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirlineRequest.html">CanonicalAirlineRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirlineResponse.html">CanonicalAirlineResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirlineResponse.html#/s:7AeroAPI24CanonicalAirlineResponseV0D2IDV">– AirlineID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirportRequest.html">CanonicalAirportRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirportResponse.html">CanonicalAirportResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirportResponse.html#/s:7AeroAPI24CanonicalAirportResponseV0D2IDV">– AirportID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalFlightIDRequest.html">CanonicalFlightIDRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalFlightIDResponse.html">CanonicalFlightIDResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalFlightIDResponse.html#/s:7AeroAPI25CanonicalFlightIDResponseV0D2IDV">– FlightID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Codeshare.html">Codeshare</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CursorRequest.html">CursorRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DelayReason.html">DelayReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI23DisruptionCountResponseV">DisruptionCountResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DisruptionCountsRequest.html">DisruptionCountsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI16DisruptionEntityV">DisruptionEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Flight.html">Flight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightAirport.html">FlightAirport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightDataRequest.html">FlightDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightDataResponse.html">FlightDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightFix.html">FlightFix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightPositionAirport.html">FlightPositionAirport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightPositionRequest.html">FlightPositionRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightRoute.html">FlightRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightRouteRequest.html">FlightRouteRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightSearchResponse.html">FlightSearchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI13FlightSegmentV">FlightSegment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightTrack.html">FlightTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightTrackRequest.html">FlightTrackRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightsBetweenAirportsRequest.html">FlightsBetweenAirportsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI30FlightsBetweenAirportsResponseV">FlightsBetweenAirportsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastClouds.html">ForecastClouds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastLine.html">ForecastLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastVisibility.html">ForecastVisibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastWinds.html">ForecastWinds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastWindshear.html">ForecastWindshear</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LastFlightRequest.html">LastFlightRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LastFlightResponse.html">LastFlightResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LastPosition.html">LastPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapBounds.html">MapBounds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapDataRequest.html">MapDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ObservedClouds.html">ObservedClouds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ScheduledFlight.html">ScheduledFlight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ScheduledFlightRequest.html">ScheduledFlightRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ScheduledFlightResponse.html">ScheduledFlightResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/WeatherObservation.html">WeatherObservation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI13CursorRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CursorRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI13CursorRequestV">CursorRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CursorRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CursorRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI9MapBoundsV"></a>
+                    <a name="//apple_ref/swift/Struct/MapBounds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI9MapBoundsV">MapBounds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/MapBounds.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MapBounds</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI23AircraftTypeInfoRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AircraftTypeInfoRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI23AircraftTypeInfoRequestV">AircraftTypeInfoRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AircraftTypeInfoRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AircraftTypeInfoRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI12BlockedCheckV"></a>
+                    <a name="//apple_ref/swift/Struct/BlockedCheck" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI12BlockedCheckV">BlockedCheck</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/BlockedCheck.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BlockedCheck</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI14BlockedReponseV"></a>
+                    <a name="//apple_ref/swift/Struct/BlockedReponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI14BlockedReponseV">BlockedReponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/BlockedReponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">BlockedReponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI17LastFlightRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/LastFlightRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI17LastFlightRequestV">LastFlightRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/LastFlightRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LastFlightRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18LastFlightResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/LastFlightResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18LastFlightResponseV">LastFlightResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/LastFlightResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LastFlightResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI8AircraftV"></a>
+                    <a name="//apple_ref/swift/Struct/Aircraft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI8AircraftV">Aircraft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Aircraft.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Aircraft</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI20AircraftOwnerRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AircraftOwnerRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI20AircraftOwnerRequestV">AircraftOwnerRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AircraftOwnerRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AircraftOwnerRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI21AircraftOwnerResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AircraftOwnerResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI21AircraftOwnerResponseV">AircraftOwnerResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AircraftOwnerResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AircraftOwnerResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI15AirlinesRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirlinesRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI15AirlinesRequestV">AirlinesRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirlinesRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirlinesRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI16AirlinesResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirlinesResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI16AirlinesResponseV">AirlinesResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirlinesResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirlinesResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI23CanonicalAirlineRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CanonicalAirlineRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI23CanonicalAirlineRequestV">CanonicalAirlineRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CanonicalAirlineRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CanonicalAirlineRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI24CanonicalAirlineResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CanonicalAirlineResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI24CanonicalAirlineResponseV">CanonicalAirlineResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CanonicalAirlineResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CanonicalAirlineResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI26AirlineFlightCountResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirlineFlightCountResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI26AirlineFlightCountResponseV">AirlineFlightCountResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirlineFlightCountResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirlineFlightCountResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI25AirlineFlightCountRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirlineFlightCountRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI25AirlineFlightCountRequestV">AirlineFlightCountRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirlineFlightCountRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirlineFlightCountRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18AirlineInfoRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirlineInfoRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18AirlineInfoRequestV">AirlineInfoRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirlineInfoRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirlineInfoRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI7AirlineV"></a>
+                    <a name="//apple_ref/swift/Struct/Airline" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI7AirlineV">Airline</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Airline.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Airline</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI22AirlineFlightsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirlineFlightsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI22AirlineFlightsResponseV">AirlineFlightsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirlineFlightsResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI21AirlineFlightsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirlineFlightsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI21AirlineFlightsRequestV">AirlineFlightsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirlineFlightsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirlineFlightsRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI15AirportsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI15AirportsRequestV">AirportsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportsRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI16AirportsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI16AirportsResponseV">AirportsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportsResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI23CanonicalAirportRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CanonicalAirportRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI23CanonicalAirportRequestV">CanonicalAirportRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CanonicalAirportRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CanonicalAirportRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI24CanonicalAirportResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CanonicalAirportResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI24CanonicalAirportResponseV">CanonicalAirportResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CanonicalAirportResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CanonicalAirportResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18AirportInfoRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportInfoRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18AirportInfoRequestV">AirportInfoRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this request for getting more Airport info from the AeroAPI</p>
+
+                        <a href="Structs/AirportInfoRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportInfoRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI19AirportFlightCountsV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportFlightCounts" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI19AirportFlightCountsV">AirportFlightCounts</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportFlightCounts.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportFlightCounts</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI19AirportCountRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportCountRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI19AirportCountRequestV">AirportCountRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportCountRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportCountRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI22AirportFlightsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportFlightsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI22AirportFlightsResponseV">AirportFlightsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportFlightsResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI29FlightsBetweenAirportsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightsBetweenAirportsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI29FlightsBetweenAirportsRequestV">FlightsBetweenAirportsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightsBetweenAirportsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightsBetweenAirportsRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI30FlightsBetweenAirportsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightsBetweenAirportsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI30FlightsBetweenAirportsResponseV">FlightsBetweenAirportsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightsBetweenAirportsResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI13FlightSegmentV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightSegment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI13FlightSegmentV">FlightSegment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightSegment</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI21AirportFlightsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportFlightsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI21AirportFlightsRequestV">AirportFlightsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportFlightsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportFlightsRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI19AirportRouteRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportRouteRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI19AirportRouteRequestV">AirportRouteRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportRouteRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportRouteRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI20AirportRouteResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportRouteResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI20AirportRouteResponseV">AirportRouteResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportRouteResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI12AirportRouteV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportRoute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI12AirportRouteV">AirportRoute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportRoute.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportRoute</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI20AirportStatusRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportStatusRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI20AirportStatusRequestV">AirportStatusRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportStatusRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportStatusRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI23AirportsDelayedResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportsDelayedResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI23AirportsDelayedResponseV">AirportsDelayedResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportsDelayedResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI13AirportStatusV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI13AirportStatusV">AirportStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportStatus.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportStatus</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI11DelayReasonV"></a>
+                    <a name="//apple_ref/swift/Struct/DelayReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI11DelayReasonV">DelayReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/DelayReason.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DelayReason</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI32AirportWeatherObservationRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportWeatherObservationRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI32AirportWeatherObservationRequestV">AirportWeatherObservationRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportWeatherObservationRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportWeatherObservationRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI34AirportWeatherObservationsResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportWeatherObservationsResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI34AirportWeatherObservationsResponseV">AirportWeatherObservationsResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportWeatherObservationsResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportWeatherObservationsResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18WeatherObservationV"></a>
+                    <a name="//apple_ref/swift/Struct/WeatherObservation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18WeatherObservationV">WeatherObservation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/WeatherObservation.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">WeatherObservation</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI14ObservedCloudsV"></a>
+                    <a name="//apple_ref/swift/Struct/ObservedClouds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI14ObservedCloudsV">ObservedClouds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ObservedClouds.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObservedClouds</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI29AirportWeatherForecastRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportWeatherForecastRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI29AirportWeatherForecastRequestV">AirportWeatherForecastRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportWeatherForecastRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportWeatherForecastRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI30AirportWeatherForecastResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportWeatherForecastResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI30AirportWeatherForecastResponseV">AirportWeatherForecastResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportWeatherForecastResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportWeatherForecastResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI22AirportWeatherForecastV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportWeatherForecast" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI22AirportWeatherForecastV">AirportWeatherForecast</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportWeatherForecast.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportWeatherForecast</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI12ForecastLineV"></a>
+                    <a name="//apple_ref/swift/Struct/ForecastLine" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI12ForecastLineV">ForecastLine</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ForecastLine.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ForecastLine</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI13ForecastWindsV"></a>
+                    <a name="//apple_ref/swift/Struct/ForecastWinds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI13ForecastWindsV">ForecastWinds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ForecastWinds.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ForecastWinds</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI17ForecastWindshearV"></a>
+                    <a name="//apple_ref/swift/Struct/ForecastWindshear" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI17ForecastWindshearV">ForecastWindshear</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ForecastWindshear.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ForecastWindshear</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18ForecastVisibilityV"></a>
+                    <a name="//apple_ref/swift/Struct/ForecastVisibility" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18ForecastVisibilityV">ForecastVisibility</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ForecastVisibility.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ForecastVisibility</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI14ForecastCloudsV"></a>
+                    <a name="//apple_ref/swift/Struct/ForecastClouds" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI14ForecastCloudsV">ForecastClouds</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ForecastClouds.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ForecastClouds</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI21AirportsNearbyRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportsNearbyRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI21AirportsNearbyRequestV">AirportsNearbyRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportsNearbyRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportsNearbyRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI22AirportsNearbyResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/AirportsNearbyResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI22AirportsNearbyResponseV">AirportsNearbyResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/AirportsNearbyResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AirportsNearbyResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI23DisruptionCountsRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/DisruptionCountsRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI23DisruptionCountsRequestV">DisruptionCountsRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/DisruptionCountsRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisruptionCountsRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI23DisruptionCountResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/DisruptionCountResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI23DisruptionCountResponseV">DisruptionCountResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisruptionCountResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI16DisruptionEntityV"></a>
+                    <a name="//apple_ref/swift/Struct/DisruptionEntity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI16DisruptionEntityV">DisruptionEntity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DisruptionEntity</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI9CodeshareV"></a>
+                    <a name="//apple_ref/swift/Struct/Codeshare" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI9CodeshareV">Codeshare</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Codeshare.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Codeshare</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18FlightDataResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightDataResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18FlightDataResponseV">FlightDataResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightDataResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightDataResponse</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="n">_DefaultsSerializable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI17FlightDataRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightDataRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI17FlightDataRequestV">FlightDataRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightDataRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightDataRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI24CanonicalFlightIDRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/CanonicalFlightIDRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI24CanonicalFlightIDRequestV">CanonicalFlightIDRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CanonicalFlightIDRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CanonicalFlightIDRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI25CanonicalFlightIDResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/CanonicalFlightIDResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI25CanonicalFlightIDResponseV">CanonicalFlightIDResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/CanonicalFlightIDResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CanonicalFlightIDResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI6FlightV"></a>
+                    <a name="//apple_ref/swift/Struct/Flight" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI6FlightV">Flight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Flight.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Flight</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI13FlightAirportV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightAirport" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI13FlightAirportV">FlightAirport</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightAirport.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightAirport</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI21FlightPositionRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightPositionRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI21FlightPositionRequestV">FlightPositionRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightPositionRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightPositionRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI20FlightSearchResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightSearchResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI20FlightSearchResponseV">FlightSearchResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightSearchResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightSearchResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI21FlightPositionAirportV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightPositionAirport" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI21FlightPositionAirportV">FlightPositionAirport</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightPositionAirport.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightPositionAirport</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI12LastPositionV"></a>
+                    <a name="//apple_ref/swift/Struct/LastPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI12LastPositionV">LastPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/LastPosition.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LastPosition</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18FlightRouteRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightRouteRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18FlightRouteRequestV">FlightRouteRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightRouteRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightRouteRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI11FlightRouteV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightRoute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI11FlightRouteV">FlightRoute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightRoute.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightRoute</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI9FlightFixV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightFix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI9FlightFixV">FlightFix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightFix.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightFix</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI18FlightTrackRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightTrackRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI18FlightTrackRequestV">FlightTrackRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightTrackRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightTrackRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI11FlightTrackV"></a>
+                    <a name="//apple_ref/swift/Struct/FlightTrack" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI11FlightTrackV">FlightTrack</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/FlightTrack.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlightTrack</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI23ScheduledFlightResponseV"></a>
+                    <a name="//apple_ref/swift/Struct/ScheduledFlightResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI23ScheduledFlightResponseV">ScheduledFlightResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ScheduledFlightResponse.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScheduledFlightResponse</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI22ScheduledFlightRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/ScheduledFlightRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI22ScheduledFlightRequestV">ScheduledFlightRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ScheduledFlightRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScheduledFlightRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI15ScheduledFlightV"></a>
+                    <a name="//apple_ref/swift/Struct/ScheduledFlight" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI15ScheduledFlightV">ScheduledFlight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>AeroAPI object for flight schedule search</p>
+
+                        <a href="Structs/ScheduledFlight.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ScheduledFlight</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AeroAPI14MapDataRequestV"></a>
+                    <a name="//apple_ref/swift/Struct/MapDataRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AeroAPI14MapDataRequestV">MapDataRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/MapDataRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MapDataRequest</span> <span class="p">:</span> <span class="kt"><a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-02-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

@@ -6,7 +6,11 @@
 //
 
 // Core iOS
+import Foundation
+
+#if os(iOS)
 import UIKit
+#endif
 
 public struct AirlinesRequest: AeroAPIRequest {
     public func path() throws -> String
@@ -137,9 +141,10 @@ public struct Airline: Codable {
     // MARK: - Computed
     
     // TODO: Add 'unkwn' image asset
+    #if os(iOS)
     public var icon: UIImage?
     { UIImage(named: icao ?? "unkwn", in: .module, compatibleWith: nil) }
-    
+    #endif
 }
 
 extension AeroAPI {

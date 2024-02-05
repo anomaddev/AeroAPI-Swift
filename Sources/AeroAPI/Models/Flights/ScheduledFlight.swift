@@ -144,7 +144,7 @@ extension AeroAPI {
     
     /// Parse scheduled flight results to merge child codeshares with parent
     /// - Parameter flights: all flights returned in search
-    /// - Returns: remapped [ScheduledFlight] with codeshares associated to parent
+    /// - Returns: remapped [`ScheduledFlight`] with codeshares associated to parent
     private func mergeCodeshares(_ flights: [ScheduledFlight]) -> [ScheduledFlight] {
         let children = flights.filter { $0.actualIdent != nil && $0.actualIdent != "" }
         let parents = flights.filter { $0.actualIdent == nil }

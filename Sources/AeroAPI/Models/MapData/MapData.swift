@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 public struct MapDataRequest: AeroAPIRequest {
     
@@ -78,23 +77,17 @@ public enum FlightAwareMapLayer: String, Codable {
 extension AeroAPI {
     
     // MARK: - AeroAPI Public
-    
-    public func getMap(for request: MapDataRequest) async throws -> UIImage {
-        let data = try await getData(request)
-        guard let image = UIImage(data: data)
-        else { throw AeroAPIError.invalidUIImageFromData }
-        return image
+    public func getMap(for request: MapDataRequest) async throws -> Data {
+        return try await getData(request)
     }
-    
+
     public func getMap(for request: MapDataRequest,
-                       _ completion: @escaping (Result<UIImage, Error>) -> Void) {
+                       _ completion: @escaping (Result<Data, Error>) -> Void) {
         getData(request)
         { (result: Result<Data, Error>) in
             switch result {
             case .success(let data):
-                guard let image = UIImage(data: data)
-                else { completion(.failure(AeroAPIError.invalidUIImageFromData)); return }
-                completion(.success(image))
+                completion(.success(data))
                 
             case .failure(let error):
                 completion(.failure(error))

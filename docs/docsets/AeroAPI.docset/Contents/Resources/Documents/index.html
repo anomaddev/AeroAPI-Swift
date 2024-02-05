@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AeroAPI  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="AeroAPI  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AeroAPI Docs</a> (16% documented)</p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AeroAPI Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        AeroAPI  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AeroAPI.html">AeroAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Airport.html">Airport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AirportNearby.html">AirportNearby</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TimezoneMapper.html">TimezoneMapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AdvancedSearchParameter.html">AdvancedSearchParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AeroAPIError.html">AeroAPIError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirlineFlightsRequestType.html">AirlineFlightsRequestType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirlineIDType.html">AirlineIDType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportFlightsRequestType.html">AirportFlightsRequestType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportIDType.html">AirportIDType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportStatusColor.html">AirportStatusColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AirportType.html">AirportType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AltChange.html">AltChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DisruptionCountTimePeriod.html">DisruptionCountTimePeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DisruptionCountType.html">DisruptionCountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightAwareMapLayer.html">FlightAwareMapLayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightConnectionType.html">FlightConnectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightStatus.html">FlightStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlightType.html">FlightType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ForecastCoverage.html">ForecastCoverage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/IdentType.html">IdentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/MapDirection.html">MapDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PredictionType.html">PredictionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PressureUnits.html">PressureUnits</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RequestFilters.html">RequestFilters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RouteRequestSort.html">RouteRequestSort</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/TemperatureUnits.html">TemperatureUnits</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/UpdateType.html">UpdateType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/VisibilityUnits.html">VisibilityUnits</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/WindUnits.html">WindUnits</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Bundle.html">Bundle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/MKMapView.html">MKMapView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AeroAPIRequest.html">AeroAPIRequest</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Aircraft.html">Aircraft</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftOwnerRequest.html">AircraftOwnerRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftOwnerResponse.html">AircraftOwnerResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftOwnerResponse.html#/s:7AeroAPI21AircraftOwnerResponseV0D0V">– Owner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AircraftTypeInfoRequest.html">AircraftTypeInfoRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Airline.html">Airline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineFlightCountRequest.html">AirlineFlightCountRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineFlightCountResponse.html">AirlineFlightCountResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineFlightsRequest.html">AirlineFlightsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI22AirlineFlightsResponseV">AirlineFlightsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlineInfoRequest.html">AirlineInfoRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlinesRequest.html">AirlinesRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlinesResponse.html">AirlinesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirlinesResponse.html#/s:7AeroAPI16AirlinesResponseV9OperatorsV">– Operators</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportCountRequest.html">AirportCountRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportFlightCounts.html">AirportFlightCounts</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportFlightsRequest.html">AirportFlightsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI22AirportFlightsResponseV">AirportFlightsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportInfoRequest.html">AirportInfoRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportRoute.html">AirportRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportRouteRequest.html">AirportRouteRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI20AirportRouteResponseV">AirportRouteResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportStatus.html">AirportStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportStatusRequest.html">AirportStatusRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherForecast.html">AirportWeatherForecast</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherForecastRequest.html">AirportWeatherForecastRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherForecastResponse.html">AirportWeatherForecastResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherObservationRequest.html">AirportWeatherObservationRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportWeatherObservationsResponse.html">AirportWeatherObservationsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI23AirportsDelayedResponseV">AirportsDelayedResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsNearbyRequest.html">AirportsNearbyRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsNearbyResponse.html">AirportsNearbyResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsRequest.html">AirportsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsResponse.html">AirportsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AirportsResponse/AirportInfo.html">– AirportInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BlockedCheck.html">BlockedCheck</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BlockedReponse.html">BlockedReponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirlineRequest.html">CanonicalAirlineRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirlineResponse.html">CanonicalAirlineResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirlineResponse.html#/s:7AeroAPI24CanonicalAirlineResponseV0D2IDV">– AirlineID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirportRequest.html">CanonicalAirportRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirportResponse.html">CanonicalAirportResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalAirportResponse.html#/s:7AeroAPI24CanonicalAirportResponseV0D2IDV">– AirportID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalFlightIDRequest.html">CanonicalFlightIDRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalFlightIDResponse.html">CanonicalFlightIDResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CanonicalFlightIDResponse.html#/s:7AeroAPI25CanonicalFlightIDResponseV0D2IDV">– FlightID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Codeshare.html">Codeshare</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CursorRequest.html">CursorRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DelayReason.html">DelayReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI23DisruptionCountResponseV">DisruptionCountResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DisruptionCountsRequest.html">DisruptionCountsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI16DisruptionEntityV">DisruptionEntity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Flight.html">Flight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightAirport.html">FlightAirport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightDataRequest.html">FlightDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightDataResponse.html">FlightDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightFix.html">FlightFix</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightPositionAirport.html">FlightPositionAirport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightPositionRequest.html">FlightPositionRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightRoute.html">FlightRoute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightRouteRequest.html">FlightRouteRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightSearchResponse.html">FlightSearchResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI13FlightSegmentV">FlightSegment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightTrack.html">FlightTrack</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightTrackRequest.html">FlightTrackRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FlightsBetweenAirportsRequest.html">FlightsBetweenAirportsRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:7AeroAPI30FlightsBetweenAirportsResponseV">FlightsBetweenAirportsResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastClouds.html">ForecastClouds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastLine.html">ForecastLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastVisibility.html">ForecastVisibility</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastWinds.html">ForecastWinds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ForecastWindshear.html">ForecastWindshear</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LastFlightRequest.html">LastFlightRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LastFlightResponse.html">LastFlightResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LastPosition.html">LastPosition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapBounds.html">MapBounds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MapDataRequest.html">MapDataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ObservedClouds.html">ObservedClouds</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ScheduledFlight.html">ScheduledFlight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ScheduledFlightRequest.html">ScheduledFlightRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ScheduledFlightResponse.html">ScheduledFlightResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/WeatherObservation.html">WeatherObservation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='aeroapi' class='heading'>AeroAPI</h1>
+
+<p>A Swift library to integrate the FlightAware AeroAPI into you app. This library is currently a work in progress.</p>
+<h3 id='in-progress' class='heading'>In Progress</h3>
+
+<p>Since this library is still a work in progress. You can use the chart below to track which AeroAPI functions are supported in the library at current.</p>
+<h3 id='getting-started' class='heading'>Getting Started</h3>
+<h4 id='installing-library' class='heading'>Installing Library</h4>
+
+<p><a href="https://swift.org/package-manager/">Swift Package Manager</a> is Apple&rsquo;s dependency manager tool. It can be used alongside other tools like CocoaPods and Carthage as well.</p>
+
+<p>To install the AeroAPI package into your packages, add a reference to AeroAPI and a targeting branch (versioning will coming in future releases) in the dependencies section in Package.swift file:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
+
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"YOUR_PROJECT_NAME"</span><span class="p">,</span>
+    <span class="nv">products</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/anomaddev/AeroAPI-Swift.git"</span><span class="p">,</span> <span class="nv">branch</span><span class="p">:</span> <span class="s">"main"</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>To install the AeroAPI package via Xcode</p>
+
+<ul>
+<li>Go to File -&gt; Swift Packages -&gt; Add Package Dependency&hellip;</li>
+<li>Then search for <a href="https://github.com/anomaddev/AeroAPI-Swift.git">https://github.com/anomaddev/AeroAPI-Swift.git</a></li>
+<li>And choose the branch/version you want</li>
+</ul>
+<h4 id='setting-the-api-key' class='heading'>Setting the API key</h4>
+
+<p>You will need to set your API key before you can use the library in your application. You can do this in your AppDelegate or in the initialization of your SwiftUI app.</p>
+<pre class="highlight swift"><code><span class="kt">AeroAPI</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="s">"api-key-goes-here"</span><span class="p">)</span>
+</code></pre>
+<h3 id='using-the-library' class='heading'>Using the Library</h3>
+
+<p>Examples coming soon&hellip;</p>
+<h3 id='supported-endpoints-a-href-https-www-flightaware-com-aeroapi-portal-documentation-flightaware-docs-a' class='heading'>Supported Endpoints - <a href="https://www.flightaware.com/aeroapi/portal/documentation">FlightAware Docs</a></h3>
+<h5 id='alerts' class='heading'>Alerts</h5>
+
+<p>[ ❌ ] - GET /alerts<br>
+[ ❌ ] - PUT /alerts<br>
+[ ❌ ] - GET /alerts/{id}<br>
+[ ❌ ] - PUT /alerts/{id}<br>
+[ ❌ ] - DELETE /alerts/{id}<br>
+[ ❌ ] - GET /alerts/endpoint<br>
+[ ❌ ] - PUT /alerts/endpoint<br>
+[ ❌ ] - DELETE /alerts/endpoint<br></p>
+<h5 id='flights' class='heading'>Flights</h5>
+
+<p>[ ✅ ] - GET /flights/{id}/map - Bounding Box parameter is not currently active<br>
+[ ✅ ] - GET /flights/{id}/position<br>
+[ ✅ ] - GET /flights/{id}/route<br>
+[ ✅ ] - GET /flights/{id}/track<br>
+[ ✅ ] - GET /flights/{ident}<br>
+[ ✅ ] - GET /flights/{ident}/canonical<br>
+[ ❌ ] - POST /flights/{ident}/intents<br>
+[ ❌ ] - GET /flights/search/<br>
+[ ❌ ] - GET /flights/search/advanced<br>
+[ ❌ ] - GET /flights/search/count<br>
+[ ❌ ] - GET /flights/search/positions<br></p>
+<h5 id='foresight' class='heading'>Foresight</h5>
+
+<p>[ ❌ ] - GET /foresight/flights/{id}/position<br>
+[ ❌ ] - GET /foresight/flights/{ident}/<br>
+[ ❌ ] - GET /foresight/flights/search/advanced<br></p>
+<h5 id='airports' class='heading'>Airports</h5>
+
+<p>[ ✅ ] - GET /airports<br>
+[ ✅ ] - GET /airports/{id}<br>
+[ ✅ ] - GET /airports/{id}/canonical<br>
+[ ✅ ] - GET /airports/{id}/delays<br>
+[ ✅ ] - GET /airports/{id}/flights<br>
+[ ✅ ] - GET /airports/{id}/flights/arrivals<br>
+[ ✅ ] - GET /airports/{id}/flights/counts<br>
+[ ✅ ] - GET /airports/{id}/flights/departures<br>
+[ ✅ ] - GET /airports/{id}/flights/scheduled_arrivals<br>
+[ ✅ ] - GET /airports/{id}/flights/scheduled_departures<br>
+[ ✅ ] - GET /airports/{id}/flights/to/{dest_id}<br>
+[ ✅ ] - GET /airports/{id}/nearby<br>
+[ ✅ ] - GET /airports/{id}/routes/{dest_id}<br>
+[ ✅ ] - GET /airports/{id}/weather/forecast<br>
+[ ✅ ] - GET /airports/{id}/observation<br>
+[ ✅ ] - GET /airports/delays<br>
+[ ✅ ] - GET /airports/nearby<br></p>
+<h5 id='operators' class='heading'>Operators</h5>
+
+<p>[ ✅ ] - GET /operators<br>
+[ ✅ ] - GET /operators/{id}<br>
+[ ✅ ] - GET /operators/{id}/canonical<br>
+[ ✅ ] - GET /operators/{id}/flights<br>
+[ ✅ ] - GET /operators/{id}/flights/arrivals<br>
+[ ✅ ] - GET /operators/{id}/flights/counts<br>
+[ ✅ ] - GET /operators/{id}/flights/enroute<br>
+[ ✅ ] - GET /operators/{id}/flights/scheduled<br></p>
+<h5 id='history' class='heading'>History</h5>
+
+<p>[ ✅ ] - GET /history/aircraft/{registration}/last_flight<br>
+[ ✅ ] - GET /history/flights/{id}/map - Bounding Box parameter is not currently active<br>
+[ ✅ ] - GET /history/flights/{id}/route<br>
+[ ✅ ] - GET /history/flights/{id}/track<br>
+[ ✅ ] - GET /history/flights/{ident}<br></p>
+<h5 id='miscellaneous' class='heading'>Miscellaneous</h5>
+
+<p>[ ✅ ] - GET /aircraft/{ident}/blocked<br>
+[ ✅ ] - GET /aircraft/{ident}/owner<br>
+[ ✅ ] - GET /aircraft/types/{type}<br>
+[ ✅ ] - GET /disruption_counts/{entity_type}<br>
+[ ✅ ] - GET /disruption_counts/{entity_type}/{id}<br>
+[ ❌ ] - GET /schedules/{date_start}/{date_end}<br></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-02-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

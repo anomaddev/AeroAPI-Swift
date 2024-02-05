@@ -6,7 +6,11 @@
 //
 
 // Core iOS
+import Foundation
+
+#if os(iOS)
 import UIKit
+#endif
 
 public struct AircraftTypeInfoRequest: AeroAPIRequest {
     public func path() throws -> String
@@ -70,8 +74,10 @@ public struct Aircraft: Codable {
     public var cruise: Double?
     public var range: Int?
     
+    #if os(iOS)
     public var png: UIImage?
     { UIImage(named: ident ?? "blank", in: .module, compatibleWith: nil) }
+    #endif
     
 }
 
